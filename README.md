@@ -25,7 +25,6 @@
 * React
   * [Resource 1][react-questions-1]
   * [Resource 2][react-questions-2]
-  * [Resource 3][react-questions-3]
 
 ### Systems Design
 * [Raymond Lee's Repo][raymond-systems-design]
@@ -51,7 +50,6 @@
 [frontend-handbook]: https://frontendmasters.com/books/front-end-handbook/2017/
 [react-questions-1]: https://www.codementor.io/reactjs/tutorial/5-essential-reactjs-interview-questions
 [react-questions-2]: https://www.toptal.com/react/interview-questions
-[react-questions-3]: https://www.toptal.com/react/interview-questions
 <!-- Systems Design -->
 [raymond-systems-design]: https://github.com/rlee0525/TechnicalConceptsForInterviews
 [systems-study-guide]: https://github.com/donnemartin/system-design-primer
