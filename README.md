@@ -2,9 +2,9 @@
 
 ## Quick Links:
 
-* [Week One](./week-one)
-* [Week Two](./week-two)
-* [Week Three](./week-three)
+* [Week One](./week-1)
+* [Week Two](./week-2)
+* [Week Three](./week-3)
 
 ## Resources:
 
