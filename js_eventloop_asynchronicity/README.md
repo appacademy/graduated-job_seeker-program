@@ -75,3 +75,39 @@ When an API task is complete, such as an event is triggered or a timer has finis
 The event loop is in charge of cyclically monitoring the call stack and the task queue. It will watch the call stack until all synchronous commands have been executed and the stack is empty.  Once the stack is empty, the Event loop will look at the task queue, remove the first item from the queue (if there are any), and then place that task onto the call stack to execute.  This gif shows the process in action:
 
 <img src='https://cdn-images-1.medium.com/max/800/1*TozSrkk92l8ho6d8JxqF_w.gif' style='width: 600px'>
+
+You can read more about the different phases of the Node.js event loop here: [Walking Inside the Node.js Event Loop](https://medium.freecodecamp.org/walking-inside-nodejs-event-loop-85caeca391a9)
+
+### Closures
+
+The quick and concise definition is as follows:
+
+_'A closure is an inner function that has access to the outer (enclosing) function’s variables—scope chain.'_
+
+Another way to describe closures is when a function 'closes over' a variable or parameter from the global scope, it's parent function's scope, it's parent function's parameters, or it's internal variables, and then maintains a reference to that information regardless of the function's context.
+
+
+In this example, ```addNum``` closes over ```count``` and maintains that reference when it is called.  It is also worth noting that closure is what allows ```addNum``` to be passed ```nums``` in the for loop.
+```
+function sum(nums) {
+  let count = 0;
+
+  function addNum(num) {
+    count += num;
+  }
+
+  for (let i = 0; i < nums.length; i++){
+    addNum(nums[i]);
+  }
+
+  return count;
+}
+
+sum([1, 3, 5]) // => 9
+```
+
+
+Refer to the app/Academy curriculum readings for more examples: [Closure and Scope](https://github.com/appacademy/curriculum/blob/master/javascript/readings/closures.md)
+
+### Promises
+In JavaScript a Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.
