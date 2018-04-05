@@ -1,5 +1,7 @@
 # Graduated Job Seeker Program
 
+Welcome! We're excited to spend the next several weeks with you. Together, we'll be making a strong effort to land you a job as quickly as possible. We'll be covering technical topics ranging from algorithms to React, as well as reviewing tips for interviewing, whiteboarding, and pitching yourself to employers. Let's get started!
+
 ## Quick Links:
 
 * [Week One](./week-1)
