@@ -7,6 +7,7 @@ Welcome! We're excited to spend the next several weeks with you. Together, we'll
 * [Week One](./week-1)
 * [Week Two](./week-2)
 * [Week Three](./week-3)
+* [Pairboarding Problem Sets](./pairboarding-problems)
 
 ## Resources:
 
