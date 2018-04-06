@@ -110,4 +110,36 @@ sum([1, 3, 5]) // => 9
 Refer to the app/Academy curriculum readings for more examples: [Closure and Scope](https://github.com/appacademy/curriculum/blob/master/javascript/readings/closures.md)
 
 ### Promises
-In JavaScript a Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.
+In JavaScript a Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.  Promises are what we can attach and chain callbacks to to be executed on success or failure.
+
+Check out the [MDN docs on using promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)  for a great practical look at typical promise use.
+
+**Promise.all()**
+
+```Promise.all()``` is a very powerful way to monitor multiple promise running concurrently and then execute some command only after all the promises are resolved.  
+
+```Promise.all()``` takes an iterable (typically an array of asynchronous functions) as an argument.
+
+```
+const promise1 = Promise.resolve(3);
+const promise2 = 42;
+const promise3 = new Promise(function(resolve, reject) {
+  setTimeout(resolve, 100, 'foo');
+});
+
+Promise.all([promise1, promise2, promise3]).then(function(values) {
+  console.log(values);
+});
+
+```
+
+In the above case, ```values``` is what the promise object passes to the callback argument to ```.then()```.  ```values``` is an array of the return values of all the asynchronous functions in the same order as those functions.  So, after all three asynchronous functions resolve, we would expect the return value to be:
+
+```
+Promise.all([promise1, promise2, promise3]).then(function(values) {
+  console.log(values);
+});
+
+// #=>  [3, 42, 'foo']
+```
+```Promise.all()``` is a very powerful tool that can make organizing the functionality of your program much easier.  Read more on [MDN for Promise.all(). ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)
