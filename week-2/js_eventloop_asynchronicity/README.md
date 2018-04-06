@@ -216,6 +216,8 @@ async function getProcessedData(url) {
 }
 ```
 
-both are completely valid and usable blocks of code, but the async/await version is shorter and cleaner. ```async/await``` is not the perfect solution for every problem, but it is another valuable tool to have when you are building the functionality of your JavaScript code.
+both are completely valid and usable blocks of code, but the async/await version is shorter and cleaner. [Read more about usage and syntax on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function).
+
+```async/await``` is not the perfect solution for every problem, but it is another valuable tool to have when you are building the functionality of your JavaScript code.
 
 ## Now it's time for [JavaScript Trivia!]()
