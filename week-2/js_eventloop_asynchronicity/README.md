@@ -143,3 +143,5 @@ Promise.all([promise1, promise2, promise3]).then(function(values) {
 // #=>  [3, 42, 'foo']
 ```
 ```Promise.all()``` is a very powerful tool that can make organizing the functionality of your program much easier.  Read more on [MDN for Promise.all(). ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)
+
+### Asynchronicity
