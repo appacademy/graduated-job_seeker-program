@@ -70,7 +70,7 @@ The JavaScript Engine and the Runtime Environment are the two things that make u
 
 The APIs provided by the runtime environment are what make JavaScript asynchronous. Normal JS code is synchronous, executing one command at a time in order.  Environment APIs however do not need to be executed one at a time or wait for one another. The environment is able allocate resources, or threads, to multiple tasks simultaneously (either in parallel or concurrently depending on the environment and your hardware).  
 
-When an API task is complete, such as an event is triggered or a timer has finished, the callback applied to be executed on completion is placed in the task queue and waits to be added to the call stack.  
+When an API task is complete, such as an event is triggered or a timer has finished, the callback to be executed on completion (ie: when the Promise is resolved. _See below for more info on Promises_) is placed in the task queue and waits to be added to the call stack.  
 
 The event loop is in charge of cyclically monitoring the call stack and the task queue. It will watch the call stack until all synchronous commands have been executed and the stack is empty.  Once the stack is empty, the Event loop will look at the task queue, remove the first item from the queue (if there are any), and then place that task onto the call stack to execute.  This gif shows the process in action:
 
@@ -176,7 +176,7 @@ async function asyncCall() {
 
 ```async``` let's the runtime environment executing the code know that this function should be handled asynchronously and set's it processing aside like it would any other asynchronous action. **The most important thing to remember when using async is that it returns a Promise**.
 
-  ****NB***: _It's important to note that the function_ ```resolveAfter2seconds()```_ is still utilizing the Runtime Environment APIs.  These APIs could be replaced with anything, but should be reserved for typically asynchronous operations or extremely demanding computational tasks. _
+  ****NB***: _It's important to note that the function_ ```resolveAfter2seconds()``` _is still utilizing the Runtime Environment APIs.  These APIs could be replaced with anything, but should be reserved for typically asynchronous operations or extremely demanding computational tasks._
 
 **Await**
 
