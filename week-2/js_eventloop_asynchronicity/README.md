@@ -33,7 +33,7 @@ by the following terms:
 * **Concurrent**(capable of delegating multiple tasks simultaneously)*
 * **Never Blocking** (I/O does not interfere with user input and activity)
 
-  * **NB**: _Although this seems contrary to JS being single threaded, concurrency is achieved by relying
+  ****NB***: _Although this seems contrary to JS being single threaded, concurrency is achieved by relying
   on the host environment to execute certain tasks and then organizing the return values/callbacks of those tasks back into
   JavaScript's single thread via the Event Loop._
 
@@ -145,3 +145,77 @@ Promise.all([promise1, promise2, promise3]).then(function(values) {
 ```Promise.all()``` is a very powerful tool that can make organizing the functionality of your program much easier.  Read more on [MDN for Promise.all(). ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)
 
 ### Asynchronicity
+
+First off, a quick refresher: [JavaScript for Beginners: Async](https://rowanmanning.com/posts/javascript-for-beginners-async/)
+
+At the end of the day, asynchronicity, or async, is a way get complicated or time consuming code out of the way so that it doesn't slow down the execution of the rest of our code.  The concurrency we discussed above is how JavaScript achieves async.
+
+As of ECMAScript2017, we now have two very useful tools for declaring async operations in our code:  ```async``` and ```await```.
+
+**Async**
+
+```async``` is used at the definition of a function to declare it as asynchronous.  Ex:
+
+```
+function resolveAfter2Seconds() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('resolved');
+    }, 2000);
+  });
+}
+
+async function asyncCall() {
+  console.log('calling');
+  var result = await resolveAfter2Seconds();
+  console.log(result);
+  // expected output: "resolved"
+}
+
+```
+
+```async``` let's the runtime environment executing the code know that this function should be handled asynchronously and set's it processing aside like it would any other asynchronous action. **The most important thing to remember when using async is that it returns a Promise**.
+
+  ****NB***: _It's important to note that the function_ ```resolveAfter2seconds()```_ is still utilizing the Runtime Environment APIs.  These APIs could be replaced with anything, but should be reserved for typically asynchronous operations or extremely demanding computational tasks. _
+
+**Await**
+
+Take a look at the code above again.  You'll notice that ```await``` is used on the assignment of the variable ```result```.  ```await```'s job is to pause the synchronous code being executed and wait for the asynchronous or time consuming code to finish before continuing.  
+
+**!!! Await is not the same as Promise.all() !!!**
+
+This is a very important distinction.  ```Promise.all``` will execute it's async code concurrently so that as soon as all operations are done, it returns.  ```await``` will actually pause all other execution of code until it receives the return value of whatever operation it is waiting for (be it asynchronous or just time consuming).  Successive ```await``` calls will pause at each ```await```.
+
+**When to use async/await**
+
+The main purpose of async/await is to make writing and utilizing Promises simpler.  See the example below:
+
+```
+function getProcessedData(url) {
+  return downloadData(url) // returns a promise
+    .catch(e => {
+      return downloadFallbackData(url)  // returns a promise
+    })
+    .then(v => {
+      return processDataInWorker(v); // returns a promise
+    });
+}
+```
+
+can be rewritten into a much simpler single function:
+
+```
+async function getProcessedData(url) {
+  let v;
+  try {
+    v = await downloadData(url);
+  } catch(e) {
+    v = await downloadFallbackData(url);
+  }
+  return processDataInWorker(v);
+}
+```
+
+both are completely valid and usable blocks of code, but the async/await version is shorter and cleaner. ```async/await``` is not the perfect solution for every problem, but it is another valuable tool to have when you are building the functionality of your JavaScript code.
+
+## Now it's time for [JavaScript Trivia!]()
