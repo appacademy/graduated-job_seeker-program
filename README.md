@@ -22,6 +22,13 @@ Welcome! We're excited to spend the next several weeks with you. Together, we'll
 ### Khan Academy:
 * [How the internet works][khan-internet]
 
+### Algorithms Resources
+* [Algorithms Notes for Professionals](http://books.goalkicker.com/AlgorithmsBook/)
+* [Grokking Algorithms](https://www.amazon.com/Grokking-Algorithms-illustrated-programmers-curious/dp/1617292230)
+* [Algorithms Unlocked](https://www.amazon.com/dp/B00H4D1W94/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)
+* [Introduction to Algorithms](https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844)
+* [Algorithm Design Manual](https://www.amazon.com/Algorithm-Design-Manual-Steven-Skiena/dp/1848000693/ref=pd_lpo_sbs_14_t_0?_encoding=UTF8&psc=1&refRID=G4YR0N6WN61RQDGS0888)
+
 ### Frontend Resources
 * [Frontend Questions][frontend-questions]
 * [Frontend Handbook][frontend-handbook]
