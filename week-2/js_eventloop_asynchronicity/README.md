@@ -30,7 +30,7 @@ by the following terms:
 * **Prototype-Based** (OOP style based on sharing behavior through objects or 'prototypes')
 * **Multi-paradigm** (permits the use of different programming paradigms)
 * **Single-threaded** (it can only execute one action at any given time)
-* **Concurrent**(capable of delegating multiple tasks simultaneously)*
+* **Concurrent** (capable of delegating multiple tasks simultaneously)*
 * **Never Blocking** (I/O does not interfere with user input and activity)
 
   ****NB***: _Although this seems contrary to JS being single threaded, concurrency is achieved by relying
