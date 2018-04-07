@@ -30,7 +30,7 @@ by the following terms:
 * **Prototype-Based** (OOP style based on sharing behavior through objects or 'prototypes')
 * **Multi-paradigm** (permits the use of different programming paradigms)
 * **Single-threaded** (it can only execute one action at any given time)
-* **Concurrent**(capable of delegating multiple tasks simultaneously)*
+* **Concurrent** (capable of delegating multiple tasks simultaneously)*
 * **Never Blocking** (I/O does not interfere with user input and activity)
 
   ****NB***: _Although this seems contrary to JS being single threaded, concurrency is achieved by relying
@@ -59,7 +59,7 @@ JavaScript is able to run operations concurrently through the Event Loop. **Conc
 
 The JavaScript Engine and the Runtime Environment are the two things that make up how we use JavaScript.  
 
-**The Engine** interprets your JS code and turns it into runnable commands.  Examples include V8(Google), Chakra(Microsoft), and SpiderMonkey(Mozilla). It is made up of the **Heap** for memory allocation, and the **Call Stack** for execution of code.
+**The Engine** interprets your JS code and turns it into runnable commands.  Examples include V8 (Google), Chakra (Microsoft), and SpiderMonkey (Mozilla). It is made up of the **Heap** for memory allocation, and the **Call Stack** for execution of code.
 
 **The Runtime Environment** supports your JavaScript by providing it with common objects and ways to communicate with the world outside your code.  Examples include the web browser and Node.js. It provides your **APIs**, such as setTimeout() and AJAX requests, the **Task/Callback Queue** for organizing executable tasks, and the **Event Loop** to feed tasks from the queue into the call stack.
 
@@ -68,7 +68,7 @@ The JavaScript Engine and the Runtime Environment are the two things that make u
 
 ### Environment APIs, the Task Queue, and the Event Loop
 
-The APIs provided by the runtime environment are what make JavaScript asynchronous. Normal JS code is synchronous, executing one command at a time in order.  Environment APIs however do not need to be executed one at a time or wait for one another. The environment is able allocate resources, or threads, to multiple tasks simultaneously (either in parallel or concurrently depending on the environment and your hardware).  
+The APIs provided by the runtime environment are what make JavaScript asynchronous. Normal JS code is synchronous, executing one command at a time in order.  Environment APIs however do not need to be executed one at a time or wait for one another. The environment is able to allocate resources, or threads, to multiple tasks simultaneously (either in parallel or concurrently depending on the environment and your hardware).  
 
 When an API task is complete, such as an event is triggered or a timer has finished, the callback to be executed on completion (ie: when the Promise is resolved. _See below for more info on Promises_) is placed in the task queue and waits to be added to the call stack.  
 
@@ -116,7 +116,7 @@ Check out the [MDN docs on using promises](https://developer.mozilla.org/en-US/d
 
 **Promise.all()**
 
-```Promise.all()``` is a very powerful way to monitor multiple promise running concurrently and then execute some command only after all the promises are resolved.  
+```Promise.all()``` is a very powerful way to monitor multiple promises running concurrently and then execute some command only after all the promises are resolved.  
 
 ```Promise.all()``` takes an iterable (typically an array of asynchronous functions) as an argument.
 
