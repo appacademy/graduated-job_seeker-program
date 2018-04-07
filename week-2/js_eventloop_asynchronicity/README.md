@@ -116,7 +116,7 @@ Check out the [MDN docs on using promises](https://developer.mozilla.org/en-US/d
 
 **Promise.all()**
 
-```Promise.all()``` is a very powerful way to monitor multiple promise running concurrently and then execute some command only after all the promises are resolved.  
+```Promise.all()``` is a very powerful way to monitor multiple promises running concurrently and then execute some command only after all the promises are resolved.  
 
 ```Promise.all()``` takes an iterable (typically an array of asynchronous functions) as an argument.
 
