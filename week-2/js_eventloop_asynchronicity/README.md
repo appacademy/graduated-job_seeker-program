@@ -59,7 +59,7 @@ JavaScript is able to run operations concurrently through the Event Loop. **Conc
 
 The JavaScript Engine and the Runtime Environment are the two things that make up how we use JavaScript.  
 
-**The Engine** interprets your JS code and turns it into runnable commands.  Examples include V8(Google), Chakra(Microsoft), and SpiderMonkey(Mozilla). It is made up of the **Heap** for memory allocation, and the **Call Stack** for execution of code.
+**The Engine** interprets your JS code and turns it into runnable commands.  Examples include V8 (Google), Chakra (Microsoft), and SpiderMonkey (Mozilla). It is made up of the **Heap** for memory allocation, and the **Call Stack** for execution of code.
 
 **The Runtime Environment** supports your JavaScript by providing it with common objects and ways to communicate with the world outside your code.  Examples include the web browser and Node.js. It provides your **APIs**, such as setTimeout() and AJAX requests, the **Task/Callback Queue** for organizing executable tasks, and the **Event Loop** to feed tasks from the queue into the call stack.
 
