@@ -88,7 +88,7 @@ Another way to describe closures is when a function 'closes over' a variable or 
 
 
 In this example, ```addNum``` closes over ```count``` and maintains that reference when it is called.  It is also worth noting that closure is what allows ```addNum``` to be passed ```nums``` in the for loop.
-```
+```javascript
 function sum(nums) {
   let count = 0;
 
@@ -120,7 +120,7 @@ Check out the [MDN docs on using promises](https://developer.mozilla.org/en-US/d
 
 ```Promise.all()``` takes an iterable (typically an array of asynchronous functions) as an argument.
 
-```
+```javascript
 const promise1 = Promise.resolve(3);
 const promise2 = 42;
 const promise3 = new Promise(function(resolve, reject) {
@@ -135,7 +135,7 @@ Promise.all([promise1, promise2, promise3]).then(function(values) {
 
 In the above case, ```values``` is what the promise object passes to the callback argument to ```.then()```.  ```values``` is an array of the return values of all the asynchronous functions in the same order as those functions.  So, after all three asynchronous functions resolve, we would expect the return value to be:
 
-```
+```javascript
 Promise.all([promise1, promise2, promise3]).then(function(values) {
   console.log(values);
 });
@@ -156,7 +156,7 @@ As of ECMAScript2017, we now have two very useful tools for declaring async oper
 
 ```async``` is used at the definition of a function to declare it as asynchronous.  Ex:
 
-```
+```javascript
 function resolveAfter2Seconds() {
   return new Promise(resolve => {
     setTimeout(() => {
@@ -190,7 +190,7 @@ This is a very important distinction.  ```Promise.all``` will execute it's async
 
 The main purpose of async/await is to make writing and utilizing Promises simpler.  See the example below:
 
-```
+```javascript
 function getProcessedData(url) {
   return downloadData(url) // returns a promise
     .catch(e => {
@@ -204,7 +204,7 @@ function getProcessedData(url) {
 
 can be rewritten into a much simpler single function:
 
-```
+```javascript
 async function getProcessedData(url) {
   let v;
   try {
