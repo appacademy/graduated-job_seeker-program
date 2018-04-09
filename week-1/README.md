@@ -5,7 +5,7 @@ Today we'll be introducing the program, as well as doing some fun activities wit
 * Intro Lecture (9:00 - 10:00)
 * Group Exercise (10:00 - 12:00)
 * Alumni Lunch (12:00 - 1:30)
-* Pairboarding 101, Hopper (1:30 - 3:00)
+* Pairboarding 101 (1:30 - 3:00)
 * [Pairboarding](https://github.com/appacademy/graduated-job_seeker-program/tree/master/pairboarding-problems) (3:00 - 5:00)
 
 ### Homework 
