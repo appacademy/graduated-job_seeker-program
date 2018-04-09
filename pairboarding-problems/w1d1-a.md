@@ -107,7 +107,7 @@ What is the maximum total sum that the height of the buildings can be increased?
 
 ### Example
 
-Input: grid = [[3,0,8,4],[2,4,5,7],[9,2,6,3],[0,3,1,0]]
+Input: ```grid = [[3,0,8,4],[2,4,5,7],[9,2,6,3],[0,3,1,0]]```
 Output: 35
 
 ### Explanation
@@ -134,8 +134,8 @@ gridNew = [ [8, 4, 8, 7],
 
 ### Solution
 
-For grid[i][j], it can’t be higher than the maximun of its row nor the maximum of its col.
-So the maximum increasing height for a building at (i, j) is min(row[i], col[j]) - grid[i][j]
+For ```grid[i][j]```, it can’t be higher than the maximun of its row nor the maximum of its col.
+So the maximum increasing height for a building at (i, j) is ```min(row[i], col[j]) - grid[i][j]```
 
 #### Code
 
