@@ -15,7 +15,7 @@ Whenever we are answering technical questions, we should always keep the followi
 
 
 
-*** _NB_**: _This is just a sample of some common technical trivia questions. The reality is there's no knowing what trivia might be asked, so it's important to maintain your study habits on practical coding._   
+***_NB_**: _This is just a sample of some common technical trivia questions. The reality is there's no knowing what trivia might be asked, so it's important to maintain your study habits on practical coding._   
 
 * Why do you need doctype?
 * What is the use of data-* attribute?
