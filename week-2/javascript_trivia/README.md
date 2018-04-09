@@ -31,4 +31,4 @@ Whenever we are answering technical questions, we should always keep the followi
 * How to select svg or canvas for your site?
 * How to serve html in multiple languages?
 * Explain standard and quirks mode.
-What is semantic tag?
+* What is semantic tag?
