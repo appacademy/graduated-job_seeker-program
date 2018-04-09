@@ -6,7 +6,7 @@ Today we'll be introducing the program, as well as doing some fun activities wit
 * Group Exercise (10:00 - 12:00)
 * Alumni Lunch (12:00 - 1:30)
 * Pairboarding 101, Hopper (1:30 - 3:00)
-* [Pairboarding](../pairboarding-problems/w1d1) (3:00 - 5:00)
+* [Pairboarding](https://github.com/appacademy/graduated-job_seeker-program/tree/master/pairboarding-problems) (3:00 - 5:00)
 
 ### Homework 
 
@@ -45,7 +45,7 @@ Today we'll be introducing the program, as well as doing some fun activities wit
 * Mindset Lecture (9:30 - 10:30)
 * Online Networking (10:30 - 12:00)
 * Application Sprint (1:00 - 3:00)
-* [Pairboarding](../pairboarding-problems/w1d4) (3:00 - 5:00)
+* [Pairboarding](https://github.com/appacademy/graduated-job_seeker-program/tree/master/pairboarding-problems) (3:00 - 5:00)
 
 ### Homework: Review Heaps and Heapsort
 
@@ -65,5 +65,5 @@ Today we'll be introducing the program, as well as doing some fun activities wit
 
 * In Place Sorts Lecture (9:30 - 10:30)
 * Online Networking (10:30 - 12:00)
-* [Pairboarding](../pairboarding-problems/w1d5) (1:00 - 3:00)
+* [Pairboarding](https://github.com/appacademy/graduated-job_seeker-program/tree/master/pairboarding-problems) (1:00 - 3:00)
 * Application Sprint (3:00 - 4:00)
