@@ -10,7 +10,7 @@ Initially, there is a Robot at position (0, 0). Given a sequence of its moves, j
 
 The move sequence is represented by a string. And each move is represent by a character. The valid robot moves are R (Right), L (Left), U (Up) and D (down). The output should be true or false representing whether the robot makes a circle.
 
-### Example 1:
+### Example
 
 ```
 Input: "UD"
@@ -50,10 +50,10 @@ Also, a self-dividing number is not allowed to contain the digit zero.
 
 Given a lower and upper number bound, output a list of every possible self dividing number, including the bounds if possible.
 
-### Example 1
+### Example
 
-Input: ```left = 1, right = 22```
-Output: ```[1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22]```
+* Input: ```left = 1, right = 22```
+* Output: ```[1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22]```
 
 ### Solution
 
