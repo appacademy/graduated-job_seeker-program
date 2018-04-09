@@ -40,7 +40,7 @@ All root-to-leaf paths are: ```["1->2->5", "1->3"]```
 
 ### Solution
 
-```
+```javascript
 var binaryTreePaths = function(root) {
     var paths = [];
     if(!root) return [];
