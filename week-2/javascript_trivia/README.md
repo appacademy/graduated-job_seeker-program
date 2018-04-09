@@ -35,6 +35,6 @@ The trivia will be divided into four rounds.  Each participant will
 * [Explain standard and quirks mode.]()
 * [What is a semantic tag?]()
 
-<a href='#A1:1'/>
+<a name='#A1:1'/>
 
 * test test
