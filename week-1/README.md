@@ -7,7 +7,6 @@ Today we'll be introducing the program, as well as doing some fun activities wit
 * Alumni Lunch (12:00 - 1:30)
 * Onsite 101 Lecture (1:30 - 2:30)
 * [Pairboarding](https://github.com/appacademy/graduated-job_seeker-program/tree/master/pairboarding-problems) (2:30 - 4:30)
-* Circle time (4:30 - 5:00)
 
 ### Homework 
 
