@@ -185,7 +185,12 @@ The second loop calculate the maximum increasing height for every building
     }
 ```
 ```python
-   def maxIncreaseKeepingSkyline(self, grid):
-        row, col = map(max, grid), map(max, zip(*grid))
-        return sum(min(i, j) for i in row for j in col) - sum(map(sum, grid))
+   class Solution(object):
+    def maxIncreaseKeepingSkyline(self, grid):
+        row_maxes = [max(row) for row in grid]
+        col_maxes = [max(col) for col in zip(*grid)]
+
+        return sum(min(row_maxes[r], col_maxes[c]) - val
+                   for r, row in enumerate(grid)
+                   for c, val in enumerate(row))
 ```
