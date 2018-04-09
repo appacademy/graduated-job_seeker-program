@@ -1,3 +1,9 @@
+## Behavioral
+
+* Tell me about yourself
+* What are some of your professional development goals?
+* Tell me about a goal that you set that took a long time to achieve or that you are still working towards. How do you keep focused on the goal given the other priorities you have?
+
 ## Easy
 
 Initially, there is a Robot at position (0, 0). Given a sequence of its moves, judge if this robot makes a circle, which means it moves back to the original place.
