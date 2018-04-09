@@ -36,6 +36,8 @@ Today we'll be introducing the program, as well as doing some fun activities wit
 
 ### Readings:
 
+* [How to Overcome Immunity to Change](https://experiencelife.com/article/how-to-overcome-immunity-to-change/)
+
 ## Day Four
 
 ## Day Five
