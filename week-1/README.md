@@ -20,7 +20,7 @@ Today we'll be introducing the program, as well as doing some fun activities wit
 * Lunch (12:00 - 1:00)
 * Behavioral Workshop (1:00 - 5:00)
 
-## Readings:
+### Readings:
 
 * [CSS Selectors](https://github.com/appacademy/curriculum/blob/master/html-css/readings/advanced_selectors.md)
 * [The Box Model](https://github.com/appacademy/curriculum/blob/master/html-css/readings/box_model.md)
@@ -40,4 +40,28 @@ Today we'll be introducing the program, as well as doing some fun activities wit
 
 ## Day Four
 
+* Mindset Lecture (9:30 - 10:30)
+* Online Networking (10:30 - 12:00)
+* Application Sprint (1:00 - 3:00)
+* Pairboarding (3:00 - 5:00)
+
+### Homework: Review Heaps and Heapsort
+
+* [Heaps 1][heaps1]
+* [Heaps 2][heaps2]
+* [Heaps 3][heaps3]
+* [Heapsort 1][heapsort1]
+* [Heapsort 2][heapsort2]
+
+[heaps1]: https://vimeo.com/191997749/b59a137b19
+[heaps2]: https://vimeo.com/191997750/83ff39ba6a
+[heaps3]: https://vimeo.com/191997751/6db2554bbb
+[heapsort1]: https://vimeo.com/191997808/3d0a223bb1
+[heapsort2]: https://vimeo.com/191997809/849cf1b7ad
+
 ## Day Five
+
+* In Place Sorts Lecture (9:30 - 10:30)
+* Online Networking (10:30 - 12:00)
+* Pairboarding (1:00 - 3:00)
+* Application Sprint (3:00 - 4:00)
