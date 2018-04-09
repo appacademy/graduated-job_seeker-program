@@ -13,7 +13,7 @@ Given an array of length N, with integer values between 0 and N (not including 0
 * Easy: O(n) space
 * Hard: O(1) space
 
-## Solution
+### Solution
 
 For each number (K), multiply the value at index K by -1. If the value at that index is already negative, that is the duplicate value.
 
