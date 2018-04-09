@@ -220,4 +220,4 @@ both are completely valid and usable blocks of code, but the async/await version
 
 ```async/await``` is not the perfect solution for every problem, but it is another valuable tool to have when you are building the functionality of your JavaScript code.
 
-## Now it's time for [JavaScript Trivia!]()
+## Now it's time for [Technical Trivia!]()
