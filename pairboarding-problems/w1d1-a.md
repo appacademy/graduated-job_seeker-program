@@ -49,6 +49,46 @@ Given a lower and upper number bound, output a list of every possible self divid
 Input: left = 1, right = 22
 Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22]
 
+### Solution
+
+For each number in the given range, we will directly test if that number is self-dividing.
+
+By definition, we want to test each whether each digit is non-zero and divides the number. For example, with 128, we want to test ```d != 0 && 128 % d == 0``` for ```d = 1, 2, 8```. To do that, we need to iterate over each digit of the number.
+
+A straightforward approach to that problem would be to convert the number into a character array (string in Python), and then convert back to integer to perform the modulo operation when checking n % d == 0.
+
+We could also continually divide the number by 10 and peek at the last digit. That is shown as a variation in a comment.
+
+```ruby
+def self_dividing_number(left, right)
+  result = []
+  i = left
+
+  while i <= right
+    str = i.to_s
+    j = 0
+    c = 0
+
+    while j < str.length
+      if str[j].to_i == 0
+        break
+      elsif i % str[j].to_i == 0
+        c+=1
+      end
+
+      j+=1
+    end
+
+    if c == str.length
+      result.push(i)
+    end
+
+    i+=1
+  end
+  return result
+end
+```
+
 ## Hard
 
 In a 2 dimensional array grid, each value ```grid[i][j]``` represents the height of a building located there. We are allowed to increase the height of any number of buildings, by any amount (the amounts can be different for different buildings). Height 0 is considered to be a building as well. 
