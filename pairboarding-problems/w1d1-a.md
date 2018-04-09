@@ -89,6 +89,8 @@ def self_dividing_number(left, right)
 end
 ```
 
+### Time complexity: ```O(D)```, where D is the number of integers in the range [left, right]
+
 ## Hard
 
 In a 2 dimensional array grid, each value ```grid[i][j]``` represents the height of a building located there. We are allowed to increase the height of any number of buildings, by any amount (the amounts can be different for different buildings). Height 0 is considered to be a building as well. 
