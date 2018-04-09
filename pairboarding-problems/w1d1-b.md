@@ -1,6 +1,6 @@
 ## Easy
 
-Given an array of length N, with integer values between 0 and N (not including 0 or N), return any integer that appears in the array more than once . I.e. 
+Given an array of length N, with integer values between 0 and N (not including 0 or N), return any integer that appears in the array more than once, i.e. 
 
 ```
 [ 1, 2, 3, 3, 4 ] => 3
