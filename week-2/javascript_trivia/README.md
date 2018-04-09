@@ -17,9 +17,9 @@ The trivia will be divided into four rounds.  Each participant will
 
 
 
-*** _NB_**: _This is just a sample of some common technical trivia questions. The reality is there's no knowing what trivia might be asked, so it's important to maintain your study habits on practical coding._   
+***_NB_**: _This is just a sample of some common technical trivia questions. The reality is there's no knowing what trivia might be asked, so it's important to maintain your study habits on practical coding._   
   <a href='#Q1:1'/>
-* [Why do you need doctype?](#A1:1)
+* [Why do you need doctype?](https://github.com/appacademy/graduated-job_seeker-program/tree/master/week-2/javascript_trivia#A1:1)
 * [What is the use of data-* attribute?]()
 * [How can you generate public key in html?]()
 * [How do you change direction of html text?]()
@@ -36,4 +36,5 @@ The trivia will be divided into four rounds.  Each participant will
 * [What is a semantic tag?]()
 
 <a href='#A1:1'/>
+
 * test test
