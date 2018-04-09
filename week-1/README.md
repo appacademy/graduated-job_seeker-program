@@ -12,8 +12,8 @@ Today we'll be introducing the program, as well as doing some fun activities wit
 
 * [Add the Google Calendar](https://calendar.google.com/calendar?cid=YXBwYWNhZGVteS5pb183cWw3MjhraWFocDRjYzkxdnNtYWQ5djNza0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t)
 * [Install Clearbit Connect](https://clearbit.com/)
-* [Read *The Master Guide to Behavioral Interview Questions*](https://biginterview.com/blog/behavioral-interview-questions)
-* [Watch *Behavioral Questions* (password: go_video_go)](https://vimeo.com/176198799)
+* [Read: The Master Guide to Behavioral Interview Questions](https://biginterview.com/blog/behavioral-interview-questions)
+* [Watch: Behavioral Questions (password: go_video_go)](https://vimeo.com/176198799)
 
 ## Day Two
 
