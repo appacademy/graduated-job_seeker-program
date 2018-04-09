@@ -1,3 +1,9 @@
+## Behavioral
+
+* Tell me about yourself
+* What three things are you working on to improve your overall effectiveness?
+* You have been assigned to a project in a new technology you haven’t worked with before. How do you get started? Have you ever done this before? How did it go?
+
 ## Easy
 
 Given an array of length N, with integer values between 0 and N (not including 0 or N), return any integer that appears in the array more than once, i.e. 
