@@ -24,12 +24,12 @@ The trivia will be divided into four rounds.  Each participant will
 #### Round One
 
 * [Why do you need doctype?](#why-do-you-need-doctype)
-* [What is the use of data-* attribute?](#what-is-the-use-of-data-*-attribute)
-* [How can you generate public key in html?](#how-can-you-generate-public-key-in-htl)
+* [What is the use of data-* attribute?](#what-is-the-use-of-data--attribute)
+* [How can you generate public key in html?](#how-can-you-generate-public-key-in-html)
 * [How do you change direction of html text?](#how-do-you-change-direction-of-html-text)
 * [How can you highlight text in html?](#how-can-you-highlight-text-in-html)
-* [Can you apply css to a part of html document only?](#can-you-apply-css-to-a-part-of-html-document)
-* [Will browser make http request for the following cases?](#will-browser-make-http-request-for-the-following-cases?)
+* [Can you apply css to a part of html document only?](#can-you-apply-css-to-a-part-of-html-document-only)
+* [Will browser make http request for the following cases?](#will-browser-make-http-request-for-the-following-cases)
 * [Which resource would be downloaded first?](#which-resource-would-be-downloaded-first)
 * [What is optional tag?](#what-is-optional-tag)
 * [What are the differences between div and span?](#what-are-the-differences-between-div-and-span)
