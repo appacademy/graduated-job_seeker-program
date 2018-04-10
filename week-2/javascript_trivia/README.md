@@ -23,7 +23,7 @@ The trivia will be divided into four rounds.  Each participant will
 
 #### Round One
   
-* [Why do you need doctype?](A11)
+* [Why do you need doctype?](#why-do-you-need-doctype)
 * [What is the use of data-* attribute?]()
 * [How can you generate public key in html?]()
 * [How do you change direction of html text?]()
@@ -38,8 +38,6 @@ The trivia will be divided into four rounds.  Each participant will
 * [How to serve html in multiple languages?]()
 * [Explain standard and quirks mode.]()
 * [What is a semantic tag?]()
-
-<a name='#A1:1'/>
 
 ##### Why do you need doctype?
 
