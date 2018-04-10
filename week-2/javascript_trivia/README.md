@@ -34,7 +34,7 @@ The trivia will be divided into four rounds.  Each participant will
 * [What is optional tag?](#what-is-optional-tag)
 * [What are the differences between div and span?](#what-are-the-differences-between-div-and-span)
 * [How would you differentiate div, section and article?](#how-would-you-differentiate-div,-section-and-article)
-* [How to select svg or canvas for your site?](how-to-select-svg-or-canvas-for-your-site)
+* [How to select svg or canvas for your site?](#how-to-select-svg-or-canvas-for-your-site)
 * [How to serve html in multiple languages?](#how-to-serve-html-in-multiple-languages)
 * [Explain standard and quirks mode.](#explain-standard-and-quirks-mode)
 * [What is a semantic tag?](#what-is-a-semantic-tag)
