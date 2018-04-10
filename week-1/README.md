@@ -33,8 +33,8 @@ Today we'll be introducing the program, as well as doing some fun activities wit
 
 * CSS Lecture (9:30 - 10:30)
 * Online Networking (10:30 - 12:00)
-* Take the [CSS quz](https://www.w3schools.com/css/css_quiz.asp) (1:00 - 1:15)
-* [CSS Project](https://github.com/appacademy/graduated-job_seeker-program/blob/master/projects/css.md) (1:15 - 3:00)
+* Take the [CSS quiz](https://www.w3schools.com/css/css_quiz.asp) (1:00 - 1:15)
+* CSS Practical (1:15 - 3:00)
 * Application Sprint (3:00 - 5:00)
 
 ### Readings:
