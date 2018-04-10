@@ -15,8 +15,14 @@ Whenever we are answering technical questions, we should always keep the followi
 
 ## Instructions:
 
-The trivia will be divided into four rounds.  Each participant will
-
+* Groups of three will ask one another trivia in four rounds.  
+* One person will ask the questions
+* One person will answer the questions
+* One person will keep track of how many answers are correct and the time.
+* Answerers will have a maximum of ten minutes to answer as many questions as they can.
+* After the first three rounds, the two participants with the highest scores will take turns answering trivia Spelling-Bee style while the other participant asks the questions.  
+* If one player misses a question, the other player has the opportunity to answer.  If the second player answers correctly, they are the winner!  
+* Questions are asked until a winner is declared.
 
 
 *** _NB_**: _This is just a sample of some common technical trivia questions. The reality is there's no knowing what trivia might be asked, so it's important to maintain your study habits on practical coding._   
@@ -26,75 +32,103 @@ The trivia will be divided into four rounds.  Each participant will
 * [Why do you need doctype?](#why-do-you-need-doctype)
 * [What is the use of data-* attribute?](#what-is-the-use-of-data--attribute)
 * [How can you generate public key in html?](#how-can-you-generate-public-key-in-html)
+
+#### Round Two
+
 * [How do you change direction of html text?](#how-do-you-change-direction-of-html-text)
-* [How can you highlight text in html?](#how-can-you-highlight-text-in-html)
-* [Can you apply css to a part of html document only?](#can-you-apply-css-to-a-part-of-html-document-only)
-* [Will browser make http request for the following cases?](#will-browser-make-http-request-for-the-following-cases)
+* [How do you highlight text in html?](#how-can-you-highlight-text-in-html)
+* [How can you apply css to only part of an html document](#can-you-apply-css-to-a-part-of-html-document-only)
+
+#### Round Three
+
+* [Will the browser make an http request for the following cases?](#will-browser-make-http-request-for-the-following-cases)
+  * test
 * [Which resource would be downloaded first?](#which-resource-would-be-downloaded-first)
 * [What is optional tag?](#what-is-optional-tag)
+
+#### Round Four
+
 * [What are the differences between div and span?](#what-are-the-differences-between-div-and-span)
 * [How would you differentiate div, section and article?](#how-would-you-differentiate-div,-section-and-article)
 * [How to select svg or canvas for your site?](#how-to-select-svg-or-canvas-for-your-site)
-* [How to serve html in multiple languages?](#how-to-serve-html-in-multiple-languages)
-* [Explain standard and quirks mode.](#explain-standard-and-quirks-mode)
-* [What is a semantic tag?](#what-is-a-semantic-tag)
+
+=====
+
+## Answers
 
 ##### Why do you need doctype?
 
 * Answer [Back to Round One qs](#round-one)
 
-##### What is the use of data-* attribute?
+##### What is the use of the data-* attribute?
 
 * Answer [Back to Round One qs](#round-one)
 
-##### How can you generate public key in html?
+##### How can you generate a public key in html?
 
 * Answer [Back to Round One qs](#round-one)
+
+
+=====
+
+
 
 ##### How do you change direction of html text?
 
-* Answer [Back to Round One qs](#round-one)
+* Answer [Back to Round Two qs](#round-one)
 
 ##### How can you highlight text in html?
 
-* Answer [Back to Round One qs](#round-one)
+* Answer [Back to Round Two qs](#round-one)
 
 ##### Can you apply css to a part of html document only?
 
-* Answer [Back to Round One qs](#round-one)
+* Answer [Back to Round Two qs](#round-one)
+
+=====
 
 ##### Will browser make http request for the following cases?
 
-* Answer [Back to Round One qs](#round-one)
+* Answer [Back to Round Three qs](#round-one)
 
 ##### Which resource would be downloaded first?
 
-* Answer [Back to Round One qs](#round-one)
+* Answer [Back to Round Three qs](#round-one)
 
 ##### What is optional tag?
 
-* Answer [Back to Round One qs](#round-one)
+* Answer [Back to Round Three qs](#round-one)
+
+=====
 
 ##### What are the differences between div and span?
 
-* Answer [Back to Round One qs](#round-one)
+* Answer [Back to Round Four qs](#round-one)
 
 ##### How would you differentiate div, section and article?
 
-* Answer [Back to Round One qs](#round-one)
+* Answer [Back to Round Four qs](#round-one)
 
 ##### How to select svg or canvas for your site?
 
-* Answer [Back to Round One qs](#round-one)
+* Answer [Back to Round Four qs](#round-one)
+
+=====
+
+## Extra
+
+* [How to serve html in multiple languages?](#how-to-serve-html-in-multiple-languages)
+* [Explain standard and quirks mode.](#explain-standard-and-quirks-mode)
+* [What is a semantic tag?](#what-is-a-semantic-tag)
 
 ##### How to serve html in multiple languages?
 
-* Answer [Back to Round One qs](#round-one)
+* Answer [Back to Extra qs](#extra)
 
 ##### Explain standard and quirks mode.
 
-* Answer [Back to Round One qs](#round-one)
+* Answer [Back to Extra qs](#extra)
 
 ##### What is a semantic tag?
 
-* Answer [Back to Round One qs](#round-one)
+* Answer [Back to Extra qs](#extra)
