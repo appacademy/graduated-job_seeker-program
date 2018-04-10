@@ -21,9 +21,9 @@ The trivia will be divided into four rounds.  Each participant will
 
 ***_NB_**: _This is just a sample of some common technical trivia questions. The reality is there's no knowing what trivia might be asked, so it's important to maintain your study habits on practical coding._   
 
-  <a name='#Q1:1'/>
+#### Round One
   
-* [Why do you need doctype?](#A1:1)
+* [Why do you need doctype?](A11)
 * [What is the use of data-* attribute?]()
 * [How can you generate public key in html?]()
 * [How do you change direction of html text?]()
@@ -40,4 +40,8 @@ The trivia will be divided into four rounds.  Each participant will
 * [What is a semantic tag?]()
 
 <a name='#A1:1'/>
-* test test
+
+##### Why do you need doctype?
+
+* Answer [Back to round one q's]()
+
