@@ -1,3 +1,5 @@
+
+
 # Technical Trivia
 
 Technical trivia is a huge part of the interview process.  Both phone screens and on-sites can include a round or rounds of technical trivia. Making sure you are comfortable with the the trivia environment, the questions themselves, and how to answer them is invaluable in your job search.
@@ -17,9 +19,9 @@ The trivia will be divided into four rounds.  Each participant will
 
 
 
-*** _NB_**: _This is just a sample of some common technical trivia questions. The reality is there's no knowing what trivia might be asked, so it's important to maintain your study habits on practical coding._   
-  <a href='#Q1:1'/>
-* [Why do you need doctype?](#A1:1)
+***_NB_**: _This is just a sample of some common technical trivia questions. The reality is there's no knowing what trivia might be asked, so it's important to maintain your study habits on practical coding._   
+  <a name='#Q1:1'/>
+* <a href='#A1:1'>Why do we need DOCType?</a>
 * [What is the use of data-* attribute?]()
 * [How can you generate public key in html?]()
 * [How do you change direction of html text?]()
@@ -35,5 +37,5 @@ The trivia will be divided into four rounds.  Each participant will
 * [Explain standard and quirks mode.]()
 * [What is a semantic tag?]()
 
-<a href='#A1:1'/>
+<a name='#A1:1'/>
 * test test
