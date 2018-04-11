@@ -32,8 +32,8 @@ Whenever we are answering technical questions, we should always keep the followi
 #### Round One
 
 * [Why do you need doctype?](#why-do-you-need-doctype)
-* [What is the use of data-* attribute?](#what-is-the-use-of-data--attribute)
-* [How can you generate public key in html?](#how-can-you-generate-public-key-in-html)
+* [What is the use of data-* attribute?](#what-is-the-use-of-the-data--attribute)
+* [How can you generate a public key in html?](#how-can-you-generate-a-public-key-in-html)
 
 #### Round Two
 
@@ -43,7 +43,7 @@ Whenever we are answering technical questions, we should always keep the followi
 
 #### Round Three
 
-* [Will the browser make an http request for the following case?](#will-browser-make-http-request-for-the-following-case)
+* [Will the browser make an http request for the following case?](#will-the-browser-make-an-http-request-for-the-following-case)
   ```HTML
   <img src="mypic.jpg" style="visibility: hidden" alt="My photo">
   ```
@@ -63,7 +63,7 @@ Whenever we are answering technical questions, we should always keep the followi
 #### Round Four
 
 * [What are the differences between div and span?](#what-are-the-differences-between-div-and-span)
-* [How would you differentiate div, section and article?](#how-would-you-differentiate-div,-section-and-article)
+* [How would you differentiate div, section, and article?](#how-would-you-differentiate-div-section-and-article)
 * [What is the difference between a canvas element and an SVG?](#what-is-the-difference-between-a-canvas-element-and-an-svg)
 
 =====
@@ -72,11 +72,13 @@ Whenever we are answering technical questions, we should always keep the followi
 
 ##### Why do you need doctype?
 
-* Doctype is an instruction to the browser to inform about the version of the html document and how browser should render it. [Back to Round One qs](#round-one)
+* Doctype is an instruction to the browser to inform about the version of the html document and how browser should render it. 
+[Back to Round One qs](#round-one)
 
 ##### What is the use of the data-* attribute?
 
-* It allows you to store extra information/ data in the DOM. You can write valid html with embedded private data. You can easily access the data attribute by using javascript and hence a lot of libraries like knockout use it. [Back to Round One qs](#round-one)
+* It allows you to store extra information/ data in the DOM. You can write valid html with embedded private data. You can easily access the data attribute by using javascript and hence a lot of libraries like knockout use it. 
+[Back to Round One qs](#round-one)
 
 ##### How can you generate a public key in html?
 
@@ -110,11 +112,12 @@ Whenever we are answering technical questions, we should always keep the followi
 ##### Can you apply css to a part of html document only?
 
 * Yes. by using "scoped" in the style tag. [MDN reference.](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style)
+  
   [Back to Round Two qs](#round-one)
 
 =====
 
-##### Will browser make http request for the following cases?
+##### Will the browser make an http request for the following case?
 
 * Yes! [Back to Round Three qs](#round-one)
 
@@ -150,7 +153,7 @@ is read as:
 
 * Div is a block element and span is inline element. [Back to Round Four qs](#round-one)
 
-##### How would you differentiate div, section and article?
+##### How would you differentiate div, section, and article?
 
 * ```<section>``` , group of content inside is related to a single theme, and should appear as an entry in an outline of the page. It’s a chunk of related content, like a subsection of a long article, a major part of the page (eg the news section on the homepage), or a page in a webapp’s tabbed interface. A section normally has a heading (title) and maybe a footer too.
 
