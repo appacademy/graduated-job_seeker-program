@@ -112,6 +112,27 @@ sum([1, 3, 5]) // => 9
 
 Refer to the app/Academy curriculum readings for more examples: [Closure and Scope](https://github.com/appacademy/curriculum/blob/master/javascript/readings/closures.md)
 
+### Callbacks
+
+A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
+
+Example:
+
+```javascript
+function greeting(name) {
+  alert('Hello ' + name);
+}
+
+function processUserInput(callback) {
+  var name = prompt('Please enter your name.');
+  callback(name);
+}
+
+processUserInput(greeting);
+
+```
+It's important to note that the above is an example of a synchronous callback. The function is executed immediately; it does not wait for any asynchronous actions.
+
 ### Promises
 In JavaScript a Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.  Promises are what we can attach and chain callbacks to to be executed on success or failure.
 
