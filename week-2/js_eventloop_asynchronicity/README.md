@@ -78,6 +78,9 @@ The event loop is in charge of cyclically monitoring the call stack and the task
 
 You can read more about the different phases of the Node.js event loop here: [Walking Inside the Node.js Event Loop](https://medium.freecodecamp.org/walking-inside-nodejs-event-loop-85caeca391a9)
 
+And, here is a list of [Web APIs on MDN](https://developer.mozilla.org/en-US/docs/Web/API) for some context on how many different things the runtime environment can do.
+
+
 ### Closures
 
 The quick and concise definition is as follows:
