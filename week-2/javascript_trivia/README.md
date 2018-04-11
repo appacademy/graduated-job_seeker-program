@@ -10,19 +10,21 @@ Whenever we are answering technical questions, we should always keep the followi
 
 * **Simple and concise answers:** There's no need to go in depth.  Try to keep your answers in one sentence.  If the interviewer wants you to go more into depth, they will ask you to.
 * **Examples:** In some cases, a single sentence isn't enough, or perhaps your understanding of a concept isn't 100%.  In those cases use an example of whatever the answer is to the question, but try to keep the example in as few sentences as possible. as well.
-* **Be honest:** Do not try to answer if you know you do not have the answer. Dead air (especially over the phone) is never helpful. State confidently that you are not familiar with the answer and let the process continue.
+* **Be honest:** Do not try to answer if you know you do not have the answer. Dead air when you are grasping for an answer (especially over the phone) is never helpful. State confidently that you are not familiar with the answer and let the process continue.
 * **KEEP STUDYING!** At the end of the day, the only sure fire way to get better is to keep studying.  We can never know all the answers, but we can always learn more.
 
 ## Instructions:
 
 * Groups of three will ask one another trivia in four rounds.  
-* One person will ask the questions
-* One person will answer the questions
-* One person will keep track of how many answers are correct and the time.
+* for each round:
+  * One person will ask the questions
+  * One person will answer the questions
+  * One person will be score keeper, keeping track of how many answers are correct and the time. Correct answers are at the score keeper's discretion.
 * Answerers will have a maximum of ten minutes to answer as many questions as they can.
 * After the first three rounds, the two participants with the highest scores will take turns answering trivia Spelling-Bee style while the other participant asks the questions.  
 * If one player misses a question, the other player has the opportunity to answer.  If the second player answers correctly, they are the winner!  
 * Questions are asked until a winner is declared.
+* Questions are different for each round and will vary in difficulty.
 
 
 *** _NB_**: _This is just a sample of some common technical trivia questions. The reality is there's no knowing what trivia might be asked, so it's important to maintain your study habits on practical coding._   
@@ -35,22 +37,34 @@ Whenever we are answering technical questions, we should always keep the followi
 
 #### Round Two
 
-* [How do you change direction of html text?](#how-do-you-change-direction-of-html-text)
+* [How can you change the direction of html text?](#how-can-you-change-the-direction-of-html-text)
 * [How do you highlight text in html?](#how-can-you-highlight-text-in-html)
 * [How can you apply css to only part of an html document](#can-you-apply-css-to-a-part-of-html-document-only)
 
 #### Round Three
 
-* [Will the browser make an http request for the following cases?](#will-browser-make-http-request-for-the-following-cases)
-  * test
-* [Which resource would be downloaded first?](#which-resource-would-be-downloaded-first)
-* [What is optional tag?](#what-is-optional-tag)
+* [Will the browser make an http request for the following case?](#will-browser-make-http-request-for-the-following-case)
+  ```HTML
+  <img src="mypic.jpg" style="visibility: hidden" alt="My photo">
+  ```
+* [Does style1.css have to be downloaded before Paragraph 1 is rendered?](#which-resource-would-be-downloaded-first)
+```HTML
+<head>
+    <link href="style1.css" rel="stylesheet">
+</head>
+<body>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <link href="style2.css" rel="stylesheet">
+</body>
+```
+* [What is an optional closing tag?](#what-is-an-optional-closing-tag)
 
 #### Round Four
 
 * [What are the differences between div and span?](#what-are-the-differences-between-div-and-span)
 * [How would you differentiate div, section and article?](#how-would-you-differentiate-div,-section-and-article)
-* [How to select svg or canvas for your site?](#how-to-select-svg-or-canvas-for-your-site)
+* [What is the difference between a canvas element and an SVG?](#what-is-the-difference-between-a-canvas-element-and-an-svg)
 
 =====
 
@@ -58,60 +72,99 @@ Whenever we are answering technical questions, we should always keep the followi
 
 ##### Why do you need doctype?
 
-* Answer [Back to Round One qs](#round-one)
+* Doctype is an instruction to the browser to inform about the version of the html document and how browser should render it. [Back to Round One qs](#round-one)
 
 ##### What is the use of the data-* attribute?
 
-* Answer [Back to Round One qs](#round-one)
+* It allows you to store extra information/ data in the DOM. You can write valid html with embedded private data. You can easily access the data attribute by using javascript and hence a lot of libraries like knockout use it. [Back to Round One qs](#round-one)
 
 ##### How can you generate a public key in html?
 
-* Answer [Back to Round One qs](#round-one)
+*  Html has a keygen element that facilitates generation of a key and submission via a form.
+```html
+<keygen name="name" challenge="challenge string" keytype="type" keyparams="pqg-params">
+```
+[Back to Round One qs](#round-one)
 
 
 =====
 
 
 
-##### How do you change direction of html text?
+##### How can you change the direction of html text?
 
-* Answer [Back to Round Two qs](#round-one)
+* use bdo (bidirectional override) element of html.
+```html
+<p><bdo dir="rtl">This text will go right to left.</bdo></p>
+```
+ [Back to Round Two qs](#round-one)
 
 ##### How can you highlight text in html?
 
-* Answer [Back to Round Two qs](#round-one)
+* Use mark element.
+```html
+<p>Some part of this paragraph is <mark>highlighted</mark> by using mark element.</p>
+```
+[Back to Round Two qs](#round-one)
 
 ##### Can you apply css to a part of html document only?
 
-* Answer [Back to Round Two qs](#round-one)
+* Yes. by using "scoped" in the style tag. [MDN reference.](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style)
+  [Back to Round Two qs](#round-one)
 
 =====
 
 ##### Will browser make http request for the following cases?
 
-* Answer [Back to Round Three qs](#round-one)
+* Yes! [Back to Round Three qs](#round-one)
 
 ##### Which resource would be downloaded first?
 
-* Answer [Back to Round Three qs](#round-one)
+* Yes! [Back to Round Three qs](#round-one)
 
-##### What is optional tag?
+##### What is an optional closing tag?
 
-* Answer [Back to Round Three qs](#round-one)
+* p, li, td, tr, th, html, body, etc. do not have to provide an end tag. However, you have to escape the tag.
+```HTML
+<p>Some text
+<p>Some more text
+<ul>
+ <li>A list item
+ <li>Another list item
+</ul>
+```
+is read as:
+```HTML
+<p>Some text</p>
+<p>Some more text</p>
+<ul>
+ <li>A list item</li>
+ <li>Another list item</li>
+</ul>
+```
+[Back to Round Three qs](#round-one)
 
 =====
 
 ##### What are the differences between div and span?
 
-* Answer [Back to Round Four qs](#round-one)
+* Div is a block element and span is inline element. [Back to Round Four qs](#round-one)
 
 ##### How would you differentiate div, section and article?
 
-* Answer [Back to Round Four qs](#round-one)
+* ```<section>``` , group of content inside is related to a single theme, and should appear as an entry in an outline of the page. It’s a chunk of related content, like a subsection of a long article, a major part of the page (eg the news section on the homepage), or a page in a webapp’s tabbed interface. A section normally has a heading (title) and maybe a footer too.
 
-##### How to select svg or canvas for your site?
+* ```<article>``` , represents a complete, or self-contained, composition in a document, page, application, or site and that is, in principle, independently distributable or reusable, e.g. in syndication. This could be a forum post, a magazine or newspaper article, a blog entry, a user-submitted comment, an interactive widget or gadget, or any other independent item of content.
 
-* Answer [Back to Round Four qs](#round-one)
+* ```<div>``` , on the other hand, does not convey any meaning, aside from any found in its class, lang and title attributes.
+[Back to Round Four qs](#round-one)
+
+##### What is the difference between a canvas element and an SVG?
+(Any of these points will suffice to illustrate the differences.)
+* SVG: Object Model-based (SVG elements are similar to HTML elements).  Graphical elements become part of the DOM. Visual presentation created with markup and modified by CSS or script. API supports accessibility. API does not support accessibility; markup-based techniques must be used in addition to canvas.
+
+* Canvas: Pixel-based (canvas is essentially an image element with a drawing API). Single HTML element similar to <img> in behavior. Visual presentation created and modified programmatically through script.
+[Back to Round Four qs](#round-one)
 
 =====
 
@@ -120,15 +173,21 @@ Whenever we are answering technical questions, we should always keep the followi
 * [How to serve html in multiple languages?](#how-to-serve-html-in-multiple-languages)
 * [Explain standard and quirks mode.](#explain-standard-and-quirks-mode)
 * [What is a semantic tag?](#what-is-a-semantic-tag)
+* [Why would you use semantic tags?](#why-would-you-use-semantic-tags)
 
 ##### How to serve html in multiple languages?
 
-* Answer [Back to Extra qs](#extra)
+* CMS could be used to deliver content in different language with same structure and style. [Back to Extra qs](#extra)
 
 ##### Explain standard and quirks mode.
 
-* Answer [Back to Extra qs](#extra)
+* Quirks mode in the browser allows you to render pages for older browsers. This is for backwards compatibility. [Back to Extra qs](#extra)
 
 ##### What is a semantic tag?
 
-* Answer [Back to Extra qs](#extra)
+* Semantic HTML, or "semantically-correct HTML", is HTML where the tags used to structure content are selected and applied appropriately to the meaning of the content.
+For example, <b></b> (for bold), and <i></i> (for italic) should never be used, because they’re to do with formatting, not with the meaning or structure of the content. Instead, use the replacements <strong></strong> and <em></em> (meaning emphasis), which by default will turn text bold and italic (but don’t have to do so in all browsers), while adding meaning to the structure of the content. [Back to Extra qs](#extra)
+
+##### Why would you use semantic tags?
+
+* Search Engine Optimization, accessibility, repurposing, light code. Many visually impaired person rely on browser speech and semantic tag helps to interpret page content clearly.
