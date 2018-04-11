@@ -32,10 +32,10 @@ Today we'll be introducing the program, as well as doing some fun activities wit
 ## Day Three
 
 * CSS Lecture (9:30 - 11:00)
-* Online Networking (11:00 - 12:00)
+* Flex work time (11:00 - 12:00)
 * Take the [CSS quiz](https://www.w3schools.com/css/css_quiz.asp) (1:00 - 1:15)
 * Application Sprint (1:15 - 2:00)
-* Flex Work Time (2:00 - 3:00)
+* Application sprint (2:00 - 3:00)
 * CSS Practical (3:00 - 5:00)
 
 ### Readings:
