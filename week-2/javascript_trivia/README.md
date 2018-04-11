@@ -29,19 +29,19 @@ Whenever we are answering technical questions, we should always keep the followi
 
 *** _NB_**: _This is just a sample of some common technical trivia questions. The reality is there's no knowing what trivia might be asked, so it's important to maintain your study habits on practical coding._   
 
-#### Round One
+## Round One
 
 * [Why do you need doctype?](#why-do-you-need-doctype)
 * [What is the use of data-* attribute?](#what-is-the-use-of-the-data--attribute)
 * [How can you generate a public key in html?](#how-can-you-generate-a-public-key-in-html)
 
-#### Round Two
+## Round Two
 
 * [How can you change the direction of html text?](#how-can-you-change-the-direction-of-html-text)
 * [How do you highlight text in html?](#how-can-you-highlight-text-in-html)
 * [How can you apply css to only part of an html document](#can-you-apply-css-to-a-part-of-html-document-only)
 
-#### Round Three
+## Round Three
 
 * [Will the browser make an http request for the following case?](#will-the-browser-make-an-http-request-for-the-following-case)
   ```HTML
@@ -60,7 +60,7 @@ Whenever we are answering technical questions, we should always keep the followi
 ```
 * [What is an optional closing tag?](#what-is-an-optional-closing-tag)
 
-#### Round Four
+## Round Four
 
 * [What are the differences between div and span?](#what-are-the-differences-between-div-and-span)
 * [How would you differentiate div, section, and article?](#how-would-you-differentiate-div-section-and-article)
