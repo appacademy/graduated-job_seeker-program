@@ -4,10 +4,6 @@
 * [Student A](./w1d1-a.md)
 * [Student B](./w1d1-b.md)
 
-### Week 1, Day 4
-* [Student A](./w1d4-a.md)
-* [Student B](./w1d4-b.md)
-
 ### Week 1, Day 5
 * [Student A](./w1d5-a.md)
 * [Student B](./w1d5-b.md)
