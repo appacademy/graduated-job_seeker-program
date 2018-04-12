@@ -34,12 +34,21 @@ Whenever we are answering technical questions, we should always keep the followi
 * [Why do you need doctype?](#why-do-you-need-doctype)
 * [What is the use of data-* attribute?](#what-is-the-use-of-the-data--attribute)
 * [How can you generate a public key in html?](#how-can-you-generate-a-public-key-in-html)
+* [What does float do?](#what-does-float-do)
+* [Are CSS properties case sensitive?](#are-css-properties-case-sensitive?)
+
+* [What is position static?](#what-is-position-static?)
+
+* [How can you apply css rules specific to media/screen-size?](#how-can-you-apply-css-rules-specific-to-media/scree-size)
 
 ## Round Two
 
 * [How can you change the direction of html text?](#how-can-you-change-the-direction-of-html-text)
 * [How do you highlight text in html?](#how-can-you-highlight-text-in-html)
 * [How can you apply css to only part of an html document](#can-you-apply-css-to-a-part-of-html-document-only)
+* [Does margin-top or margin-bottom effect inline elements?](#does-margin-top-or-margin-bottom-effect-inline-elements)
+* [What is position relative?](#what-is-position-relative)
+* [Name three pseudo selectors](#name-three-pseudo-selectors)
 
 ## Round Three
 
@@ -59,6 +68,11 @@ Whenever we are answering technical questions, we should always keep the followi
 </body>
 ```
 * [What is an optional closing tag?](#what-is-an-optional-closing-tag)
+* [Does padding-top or padding-bottom effect inline elements?](#does-padding-top-or-padding-bottom-effect-inline-elements)
+
+* [What is position absolute?](#what-is-position-absolute)
+
+* [List css specificity rules from most specific to least specific](#list-css-specificity-rules-from-most-specific-to-least-specific)
 
 ## Round Four
 
@@ -66,18 +80,20 @@ Whenever we are answering technical questions, we should always keep the followi
 * [How would you differentiate div, section, and article?](#how-would-you-differentiate-div-section-and-article)
 * [What is the difference between a canvas element and an SVG?](#what-is-the-difference-between-a-canvas-element-and-an-svg)
 
+* [What is position fixed?](#what-is-position-fixed)
+
 =====
 
 ## Answers
 
 ##### Why do you need doctype?
 
-* Doctype is an instruction to the browser to inform about the version of the html document and how browser should render it. 
+* Doctype is an instruction to the browser to inform about the version of the html document and how browser should render it.
 [Back to Round One qs](#round-one)
 
 ##### What is the use of the data-* attribute?
 
-* It allows you to store extra information/ data in the DOM. You can write valid html with embedded private data. You can easily access the data attribute by using javascript and hence a lot of libraries like knockout use it. 
+* It allows you to store extra information/ data in the DOM. You can write valid html with embedded private data. You can easily access the data attribute by using javascript and hence a lot of libraries like knockout use it.
 [Back to Round One qs](#round-one)
 
 ##### How can you generate a public key in html?
@@ -88,6 +104,32 @@ Whenever we are answering technical questions, we should always keep the followi
 ```
 [Back to Round One qs](#round-one)
 
+##### What does float do?
+
+*  Float removes the element from the normal flow of the document and pushes the element to the sides of the page with text wrapping around it.
+
+[Back to Round One qs](#round-one)
+
+##### Are CSS properties case sensitive?
+
+* No
+
+[Back to Round One qs](#round-one)
+
+##### What is position static?
+
+* The default position value for an html element.  Not relative, absolute, fixed, or sticky.
+
+[Back to Round One qs](#round-one)
+
+##### How can you apply css rules specific to media/screen-size?
+
+* Use @media to set rules based on media width, orientation, etc. Example:
+```CSS
+@media (max-width: 700px) and (orientation: landscape){}
+```
+
+[Back to Round One qs](#round-one)
 
 =====
 
@@ -99,7 +141,7 @@ Whenever we are answering technical questions, we should always keep the followi
 ```html
 <p><bdo dir="rtl">This text will go right to left.</bdo></p>
 ```
- [Back to Round Two qs](#round-one)
+ [Back to Round Two qs](#round-two)
 
 ##### How can you highlight text in html?
 
@@ -107,23 +149,46 @@ Whenever we are answering technical questions, we should always keep the followi
 ```html
 <p>Some part of this paragraph is <mark>highlighted</mark> by using mark element.</p>
 ```
-[Back to Round Two qs](#round-one)
+
+[Back to Round Two qs](#round-two)
 
 ##### Can you apply css to a part of html document only?
 
 * Yes. by using "scoped" in the style tag. [MDN reference.](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style)
-  
-  [Back to Round Two qs](#round-one)
+
+[Back to Round Two qs](#round-two)
+
+##### Does margin-top or margin-bottom effect inline elements?
+
+* No
+
+[Back to Round Two qs](#round-two)
+
+##### What is position relative?
+
+* The computed position of the element where it can be spaced in relation to its' normal position in the flow of the document using ```top```, ```bottom```, ```left```, and ```right```
+
+[Back to Round Two qs](#round-two)
+
+##### Name three pseudo selectors:
+
+* :hover, :nth-of-type, :visited, :focus, :link, :first, :child, :checked, :last-child, :target, etc.
+
+[Back to Round Two qs](#round-two)
 
 =====
 
 ##### Will the browser make an http request for the following case?
 
-* Yes! [Back to Round Three qs](#round-one)
+* Yes!
+
+[Back to Round Three qs](#round-three)
 
 ##### Which resource would be downloaded first?
 
-* Yes! [Back to Round Three qs](#round-one)
+* Yes!
+
+[Back to Round Three qs](#round-three)
 
 ##### What is an optional closing tag?
 
@@ -145,13 +210,32 @@ is read as:
  <li>Another list item</li>
 </ul>
 ```
-[Back to Round Three qs](#round-one)
+
+[Back to Round Three qs](#round-three)
+
+##### Does padding-top or padding-bottom effect inline elements?
+
+* No
+
+[Back to Round Three qs](#round-three)
+
+##### What is position absolute?
+
+* The computed position of the element where it can be spaced after being removed to from the normal flow of the document.  It is spaced in relation to its' first non-static parent container with ```top```, ```bottom```, ```left```, and ```right```.
+
+[Back to Round Three qs](#round-three)
+
+##### List css specificity rules from most specific to least specific:
+
+* inline, ID, class, element, universal (4 out of 5 is acceptable)
+
+[Back to Round Three qs](#round-three)
 
 =====
 
 ##### What are the differences between div and span?
 
-* Div is a block element and span is inline element. [Back to Round Four qs](#round-one)
+* Div is a block element and span is inline element. [Back to Round Four qs](#round-four)
 
 ##### How would you differentiate div, section, and article?
 
@@ -160,14 +244,32 @@ is read as:
 * ```<article>``` , represents a complete, or self-contained, composition in a document, page, application, or site and that is, in principle, independently distributable or reusable, e.g. in syndication. This could be a forum post, a magazine or newspaper article, a blog entry, a user-submitted comment, an interactive widget or gadget, or any other independent item of content.
 
 * ```<div>``` , on the other hand, does not convey any meaning, aside from any found in its class, lang and title attributes.
-[Back to Round Four qs](#round-one)
+[Back to Round Four qs](#round-four)
 
 ##### What is the difference between a canvas element and an SVG?
 (Any of these points will suffice to illustrate the differences.)
 * SVG: Object Model-based (SVG elements are similar to HTML elements).  Graphical elements become part of the DOM. Visual presentation created with markup and modified by CSS or script. API supports accessibility. API does not support accessibility; markup-based techniques must be used in addition to canvas.
 
 * Canvas: Pixel-based (canvas is essentially an image element with a drawing API). Single HTML element similar to <img> in behavior. Visual presentation created and modified programmatically through script.
-[Back to Round Four qs](#round-one)
+[Back to Round Four qs](#round-four)
+
+##### Do padding-left, padding-right, margin-left, or margin-right effect inline elements?
+
+* Yes!
+
+[Back to Round Four qs](#round-four)
+
+##### What is position fixed?
+
+* The computed position of an element where it's position is constant or 'fixed' in relation to the window.  Its' position and presence never change.
+
+[Back to Round Four qs](#round-four)
+
+##### What is position sticky?
+
+* From MDN: It's treated as relatively positioned until its containing block crosses a specified threshold (such as setting top to value other than auto) within its flow root (or the container it scrolls within), at which point it is treated as "stuck" (it doesn't move) until meeting the opposite edge of its containing block.
+
+[Back to Round Four qs](#round-four)
 
 =====
 
