@@ -1,135 +1,127 @@
-## Behavioral Questions
+# Partner A interviews Partner B
 
-* Tell me about yourself. What makes you a good fit for a full stack developer job at Uber?
-* What is your greatest weakness as a software developer, and what are you doing to overcome that weakness?
-
-## Trivia
-
-* [What happens when you type in Google.com and hit enter?](https://github.com/alex/what-happens-when)
-* [What is a closure in JavaScript?](http://javascriptissexy.com/understand-javascript-closures-with-ease/)
-
-## Non-Comparison Sorts
-
-Part 1: Say that I gave you an array of length `n`, containing the
-numbers `1..n` in jumbled order. "Sort" this array in `O(n)` time. You
-should be able to do this without looking at the input.
-
-Part 2: Say that I give you an array of length `n` with numbers in the
-range `1..N` (`N >= n`). Sort this array in `O(n + N)` time. You may
-use `O(N)` memory.
-
-Part 3: Say I give you an array of `n` strings, each of length `k`. I
-claim that, using merge sort, you can sort this in `O(knlog(n))`,
-since comparing a pair of strings takes `O(k)` time.
-
-I want you to beat that. Sort the strings in `O(kn)`. **Hint**: do not
-compare any two strings. You may assume all strings contain only
-lowercase letters `a..z` without whitespace or punctuation.
-
-### Solutions
-
-```ruby
-def sort1(arr)
-  (1..(arr.length)).to_a
-end
-```
-Our first sort is simple - if we have an array of elements from 1 to arr.length, we can simply make a new array using the range `1..arr.length`! No comparisons here!
-
-```ruby
-def sort2(arr, max_val)
-  counts = Array.new(max_val + 1, 0)
-  arr.each { |el| counts[el] += 1 }
-
-  arr = []
-  counts.each_index do |val|
-    counts[val].times { arr << val }
-  end
-  arr
-end
-```
-
-In our second sort, we know that we have n items in our array from the range `1..N`. To solve this in `O(n + N)` time, we can start off with an array of counts of length `N + 1`. We iterate through the array, incrementing the value at the correct index every time we find an item. We then iterate through the counts array and add the correct number of elements into our final ordered results array.
-
-```ruby
-def sort3(strings, length)
-  (length - 1).downto(0) do |i|
-    buckets = Array.new(26) { [] }
-    strings.each do |string|
-      letter = string[i]
-      buckets[letter.ord - "a".ord] << string
-    end
-
-    strings = []
-    buckets.each do |bucket|
-      bucket.each { |string| strings << string }
-    end
-  end
-
-  strings
-end
-```
-
-Our last sort is a little bit trickier. Our general strategy will be to go through the entire array of strings and sort them into buckets letter by letter, starting with the last (and least significant) letter, then join the buckets together. Once we've done this, we can rest assured that the strings are now sorted by the last letter.
-
-We then move up to the second-to-last letter and do the same, sorting the strings into buckets based on this letter. When we add these strings into buckets based on the second-to-last letter, the order within each bucket will maintain its relative orders based on the last letter, so on and so forth through the string until it is entirely sorted.
+## Make Change
+Write a function that takes in an amount and a set of coins.  Return the minimum number of coins needed to make change for the given amount.  You may assume you have an unlimited supply of each type of coin. If it's not possible to make change for a given amount, return nil or NaN.
 
 Example:
+``` ruby
+make_change(14, [10, 7, 1])
+# return 2 because [7, 7] is the smallest combination
+```
+
+## Solution
+
+### Brute Force Iterative
 ```ruby
-sort3([`cat`, `car`, `bat`])
+def make_change(amount, coins = [25, 10, 5, 1])
+  coins = coins.sort.reverse
 
-# buckets after sorting by last letter
-buckets = [[], ... , [`car`], ..., [`cat`, `bat`],  ...]
+  best_change = nil
 
-# strings after we join the buckets back together, now sorted by last letter
-strings = [`car`, `cat`, `bat`]
+  (0...coins.count).each do |index|
+    change = []
+    total = 0
+    coins.drop(index).each do |coin|
+      until (coin + total) > amount
+        change << coin    
+        total += coin
+      end
+    end
 
-# buckets after sorting by second to last letter - note that they retain their relative ordering by last letter in the buckets
-buckets = [[`car`, `cat`, `bat`], ..., []]
+    if (best_change.nil? || change.count < best_change.count)
+      best_change = change
+    end
+  end
 
-# strings after we join the buckets back together, now sorted by last letter and second-to-last letter
-strings = [`car`, `cat`, `bat`]
-
-# lastly, buckets sorted by the first and most important letter
-buckets = [[], ..., [`bat`], [`car`, `cat`] ...]
-
-strings = [`bat`, `car`, `cat`]
+  return best_change if best_change.nil?
+  best_change.count
+end
 ```
 
-We have a loop that goes through each string `O(n)` nested within a loop that goes through each letter `O(k)` for a total time complexity of `O(n * k)`.
+### Recursive
+Taken from recursion day of main curriculum
 
-## Remove Duplicates from Sorted Array
+```ruby
+def make_change(target, coins = [25, 10, 5, 1])
+  # Don't need any coins to make 0 cents change
+  return [] if target == 0
+  # Can't make change if all the coins are too big. This is in case
+  # the coins are so weird that there isn't a 1 cent piece.
+  return nil if coins.none? { |coin| coin <= target }
 
-Given a sorted array, remove the duplicates in-place such that each element appear only once and return the new length.
+  # Optimization: make sure coins are always sorted descending in
+  # size. We'll see why later.
+  coins = coins.sort.reverse
 
-Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+  best_change = nil
+  coins.each_with_index do |coin, index|
+    # can't use this coin, it's too big
+    next if coin > target
 
-### Example
+    # use this coin
+    remainder = target - coin
 
-Input: ```[1, 1, 2]```
+    # Find the best way to make change with the remainder (recursive
+    # call). Why `coins.drop(index)`? This is an optimization. Because
+    # we want to avoid double counting; imagine two ways to make
+    # change for 6 cents:
+    #   (1) first use a nickel, then a penny
+    #   (2) first use a penny, then a nickel
+    # To avoid double counting, we should require that we use *larger
+    # coins first*. This is what `coins.drop(index)` enforces; if we
+    # use a smaller coin, we can never go back to using larger coins
+    # later.
+    best_remainder = make_change(remainder, coins.drop(index))
 
-Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively.
+    # We may not be able to make the remaining amount of change (e.g.,
+    # if coins doesn't have a 1cent piece), in which case we shouldn't
+    # use this coin.
+    next if best_remainder.nil?
 
-It doesn't matter what you leave beyond the new length.
+    # Otherwise, the best way to make the change **using this coin**,
+    # is the best way to make the remainder, plus this one coin.
+    this_change = [coin] + best_remainder
 
-### Solution
+    # Is this better than anything we've seen so far?
+    if (best_change.nil? || (this_change.count < best_change.count))
+      best_change = this_change
+    end
+  end
 
-Since the array is already sorted, we can keep two pointers ```i``` and ```j```, where ```i``` is the slow-runner while ```j``` is the fast-runner. As long as ```nums[i] = nums[j]```, we increment ```j``` to skip the duplicate.
-
-When we encounter ```nums[j] != nums[i]```, the duplicate run has ended so we must copy its value to ```nums[i + 1]```. ```i``` is then incremented and we repeat the same process again until ```j``` reaches the end of array.
-
-```javascript
-const removeDuplicates = function(nums) {
-    if (nums.length === 0) return 0;
-    
-    let i = 0;
-    
-    for (let j = 1; j < nums.length; j++) {
-        if (nums[j] !== nums[i]) {
-            i++;
-            nums[i] = nums[j];
-        }
-    }
-    
-    return i + 1;
-}
+  return best_change if best_change.nil?
+  best_change.count
+end
 ```
+
+### Dynamic Programming
+Bottom-up implementation, with the variation that we're passing the cache through as we go rather than holding it as an instance variable.
+
+```ruby
+def make_change(amt, coins, coin_cache = {0 => 0})
+  return coin_cache[amt] if coin_cache[amt]
+  coins = coins.sort
+  return 0.0/0.0 if amt < coins[0]
+
+  min_change = amt
+  way_found = false
+  idx = 0
+  while idx < coins.length && coins[idx] <= amt
+    num_change = 1 + make_change(amt - coins[idx], coins, coin_cache)
+    if num_change.is_a?(Integer)
+      way_found = true
+      min_change = num_change if num_change < min_change
+    end
+    idx += 1
+  end
+
+  if way_found
+    coin_cache[amt] = min_change
+  else
+    coin_cache[amt] = 0.0/0.0
+  end
+end
+```
+
+## Detailed Explanation of mutliple approaches (highly recommended)
+
+https://leetcode.com/articles/coin-change/
