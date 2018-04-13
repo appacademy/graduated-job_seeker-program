@@ -65,7 +65,7 @@ Today we'll be introducing the program, as well as doing some fun activities wit
 
 ## Day Five
 
-* In Place Sorts Lecture (9:30 - 10:30)
+* Sorting (Bonus: Dynamic Programming) (9:30 - 10:30)
 * Online Networking (10:30 - 12:00)
 * [Pairboarding](https://github.com/appacademy/graduated-job_seeker-program/tree/master/pairboarding-problems) (1:00 - 3:00)
 * Application Sprint (3:00 - 4:00)
