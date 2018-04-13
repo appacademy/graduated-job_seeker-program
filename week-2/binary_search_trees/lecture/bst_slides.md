@@ -1,11 +1,11 @@
-#BST
-###(Binary Search Tree)
+# BST
+### (Binary Search Tree)
 
-<img style="height: 450px; width: 600px;"src="https://blog.penjee.com/wp-content/uploads/2015/11/binary-search-tree-degenerating-demo-animation.gif"/>
+<img style="height: 450px; width: 600px;" src="https://blog.penjee.com/wp-content/uploads/2015/11/binary-search-tree-degenerating-demo-animation.gif"/>
 
 ---
 
-#topics
+# topics
 * Refresher: What is a BST?
 * Balancing a Tree
 * Trees and Arrays
@@ -15,7 +15,8 @@ Note:
 Questions, what do you want to cover here?
 ---
 
-#Binary Search Tree
+# Binary Search Tree
+
 <img src="https://www.tutorialspoint.com/data_structures_algorithms/images/binary_search_tree.jpg"/>
 
 * Collection of nodes (it's all about the nodes)
@@ -29,6 +30,7 @@ What do we call a node with no parent?
 Can a node with a parent be a root node?
 How is this different from just a tree?  Just a binary tree?
 What common tool has a BST as an underlying structure?
+
 ---
 
 # What is the Basic API of a BST?
@@ -90,4 +92,4 @@ BST: collection of nodes each with max two children. L child is less than parent
 API: insert, find, delete
 Balanced vs unbalanced
 BSTs and sorted arrays.
----
+
