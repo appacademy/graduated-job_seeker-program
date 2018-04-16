@@ -16,16 +16,6 @@ To get started, download the [react-setup.zip](./react-setup.zip?raw=true). Don'
 ### Hints
 
 1. dateObj.getHours() returns the hour from 0 to 23.
-2. Interviewee should pad numbers with zeroes (ie. 02:45:06, not 2:45:6)
-Example:
-```javascript
-// call this pad function in render()
-pad(num) {
-  if (num < 10) {
-    return "0" + num;
-  }
-  return num;
-}
-```
+2. Numbers should be padded with zeroes (ie. 02:45:06, not 2:45:6)
 
 A solution will be posted this evening.
