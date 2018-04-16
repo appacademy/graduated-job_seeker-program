@@ -77,15 +77,15 @@ function toggleButton() {
     document.addEventListener('click', enableCallback);
   }
 
-	const enableCallback = () => {
-		button.setAttribute('disabled', '');
-		button.innerHTML = 'Don\'t Click Me!';
+  const enableCallback = () => {
+    button.setAttribute('disabled', '');
+    button.innerHTML = 'Don\'t Click Me!';
 
     document.removeEventListener('click', enableCallback);
-		document.addEventListener('click', disableCallback);
+    document.addEventListener('click', disableCallback);
   }
 
-	document.addEventListener('click', enableCallback);
-	button.addEventListener('click', e => e.stopPropagation());
+  document.addEventListener('click', enableCallback);
+  button.addEventListener('click', e => e.stopPropagation());
 }
 ```
