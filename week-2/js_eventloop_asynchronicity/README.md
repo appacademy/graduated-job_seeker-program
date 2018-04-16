@@ -4,7 +4,7 @@ JavaScript Event Loop and Asynchronicity
 
 ### Resources:
 
-  * 🎥 ["What the heck is the event loop anyway?"](https://chromium.googlesource.com/chromium/src/+/lkcr/docs/threading_and_tasks.md#Overview)
+  * 🎥 ["What the heck is the event loop anyway?"](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
   (an oldie but a goodie)
   * 📖 [Asynchronous Adventures in JavaScript]( https://medium.com/dailyjs/asynchronous-adventures-in-javascript-understanding-the-event-loop-fc6f968d5f72)
   * 📖 [Overview of the Engine, Runtime, and the Call Stack]( https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf)
