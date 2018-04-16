@@ -6,6 +6,44 @@
 
 ## Easy
 
+Write a function, `isDescendant`, that takes two DOM nodes as arguments, a `child` and a `parent`. This method should verify that the child node is a descendant of the parent node, and return `true` or `false`.
+
+### Example
+
+```html
+<div id='parent'>
+  <ul>
+    <li id='child'>I am a child</li>
+  </ul>
+  <p id='not-a-parent'></p>
+</div>
+```
+
+```js
+const child = document.getElementById('child');
+const parent = document.getElementById('parent');
+const notParent = document.getElementById('not-a-parent');
+
+isDescendant(parent, child) // true
+isDescendant(notParent, child) // false
+```
+
+### Solution
+
+```js
+function isDescendant(parent, child){
+  while (child.parentNode) {
+    if (child.parentNode == parent)
+      return true;
+    else
+      child = child.parentNode;
+  }
+
+  return false;
+}
+```
+
+>NOTE: Take note of the `==` vs. `===`. `child.parentNode` will return a _new_ instance of a node object.
 
 
 ## Medium
