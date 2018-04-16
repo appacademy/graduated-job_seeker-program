@@ -6,6 +6,10 @@
 
 ## Easy
 
+
+
+## Medium
+
 Write a function, `isDescendant`, that takes two DOM nodes as arguments, a `child` and a `parent`. This method should verify that the child node is a descendant of the parent node, and return `true` or `false`.
 
 ### Example
@@ -34,9 +38,9 @@ isDescendant(notParent, child) // false
 function isDescendant(parent, child){
   while (child.parentNode) {
     if (child.parentNode == parent)
-      return true;
+    return true;
     else
-      child = child.parentNode;
+    child = child.parentNode;
   }
 
   return false;
@@ -44,9 +48,6 @@ function isDescendant(parent, child){
 ```
 
 >NOTE: Take note of the `==` vs. `===`. `child.parentNode` will return a _new_ instance of a node object.
-
-
-## Medium
 
 ## Hard
 
