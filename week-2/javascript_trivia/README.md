@@ -89,7 +89,7 @@ Whenever we are answering technical questions, we should always keep the followi
 * [What is position fixed?](#what-is-position-fixed)
 
 * [Why can we call methods on certain primitive datatypes?](#why-can-we-call-methods-on-certain-primitive-datatypes)
-* [What are the differences between == and ===?](#what-are-the-differences-between-==-and-===)
+* [What are the differences between == and ===?](#equal)
 
 =====
 
@@ -310,7 +310,8 @@ is read as:
 
 [Back to Round Four qs](#round-four)
 
-##### What are the differences between `==` and `===` ?
+
+##### <a name="equal"></a> What are the differences between `==` and `===` ?
 
 * `==` will not check types and `===` will check whether both sides are of same type. `==` will convert to its convenient type to have both in same type and then do the comparison.
 
