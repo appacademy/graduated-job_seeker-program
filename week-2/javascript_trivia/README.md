@@ -44,6 +44,25 @@ Whenever we are answering technical questions, we should always keep the followi
 * [What are the 7 "falsey" values in javascript?](#what-are-the-7-falsey-values-in-javascript)
 
 * [What is a primitive datatype in Javascript?](#what-is-a-primitive-datatype-in-javascript)
+* [Consider the following expression: `var y = 1, x = y = typeof x`. What will be the value of x?](#value-of-x)
+* [If `const a = 2, b = 3` what would be value of `a && b`?](#a-and-b)
+* [Why does the following code work?](#why-does-the-following-code-work)
+
+```js
+sayHello(); // OUTPUT: "Hello";
+
+function sayHello() {
+  return "Hello";
+}
+```
+* [Is null an object?](#is-null-an-object)
+
+
+
+* [Are `let` and `const` hoisted?](#are-let-and-const-hoisted)
+* [Briefly describe the concept of memoization](#briefly-describe-the-concept-of-memoization)
+
+
 
 ## Round Two
 
@@ -55,6 +74,13 @@ Whenever we are answering technical questions, we should always keep the followi
 * [Name three pseudo selectors](#name-three-pseudo-selectors)
 * [Name all six primitive data-types in Javascript](#name-all-six-primitive-data-types-in-javascript)
 * [What is the difference between `null` and `undefined`?](#what-is-the-difference-between-null-and-undefined)
+* [What is the value of `this` inside of a `setTimeout` function?](#what-is-the-value-of-this-inside-of-a-settimeout-function)
+* [What is the Value of `this` inside of a constructor function?](#what-is-the-value-of-this-inside-of-a-constructor-function)
+* [What is the Temporal Dead Zone?](#what-is-the-temporal-dead-zone)
+* [Can you directly compare two objects in Javascript?](#can-you-directly-compare-two-objects-in-javascript)
+* [What does the bind method do?](#what-does-bind-do)
+* [What is the difference between window and document?](#what-is-the-difference-between-window-and-document)
+
 
 ## Round Three
 
@@ -79,6 +105,9 @@ Whenever we are answering technical questions, we should always keep the followi
 * [What is position absolute?](#what-is-position-absolute)
 
 * [List css specificity rules from most specific to least specific](#list-css-specificity-rules-from-most-specific-to-least-specific)
+* [Explain variable hoisting](#explain-variable-hoisting)
+* [Does javascript pass parameter by value or by reference?](#does-javascript-pass-parameter-by-value-or-by-reference?)
+
 
 ## Round Four
 
@@ -90,6 +119,27 @@ Whenever we are answering technical questions, we should always keep the followi
 
 * [Why can we call methods on certain primitive datatypes?](#why-can-we-call-methods-on-certain-primitive-datatypes)
 * [What are the differences between == and ===?](#equal)
+* [How could you run event handler in the capturing phase not in bubble phase?](#how-could-you-run-event-handler-in-the-capturing-phase-not-in-bubble-phase)
+* [If you create a function that takes 2 arguments, but invoke it with 3 arguments, how can you access the third variable?](#args)
+* [What is a potential pitfall with using typeof bar === "object" to determine if bar is an object? How can this pitfall be avoided?](#typeof)
+* [Consider the following two functions below. Will they both return the same thing? Why or why not?](#twofunctions)
+
+```js
+function foo1()
+{
+  return {
+      bar: "hello"
+  };
+}
+
+function foo2()
+{
+  return
+  {
+      bar: "hello"
+  };
+}
+```
 
 =====
 
@@ -152,6 +202,39 @@ Whenever we are answering technical questions, we should always keep the followi
 
 [Back to Round One qs](#round-one)
 
+##### <a name='value-of-x'></a> Consider the following expression: `var y = 1, x = y = typeof x`. What will be the value of x?
+
+* `undefined`
+
+[Back to Round One qs](#round-one)
+
+##### <a name='a-and-b'></a> If `const a = 2, b = 3`, what would be the value of `a && b`?
+* 3
+
+[Back to Round One qs](#round-one)
+
+##### Why does the following code work?
+* Because named functions are hoisted and can be used before their declaration
+
+[Back to Round One qs](#round-one)
+
+##### Are let and const hoisted?
+* Yes
+
+[Back to Round One qs](#round-one)
+
+##### Briefly describe the concept of memoization
+* Memoization is a programming technique which attempts to increase a function’s performance by caching its previously computed results. POJO's are often used to implement these caches.
+
+[Back to Round One qs](#round-one)
+
+##### Is `null` an object?
+* No. Even though `typeof null` returns `object`, this is a bug. You can not put any attributes on null, as it is a `primitive` datatype.
+
+[Back to Round One qs](#round-one)
+
+
+
 =====
 
 ##### How can you change the direction of html text?
@@ -209,6 +292,57 @@ Whenever we are answering technical questions, we should always keep the followi
 
 [Back to Round Two qs](#round-two)
 
+##### What is the Value of `this` inside of a setTimeout function?
+
+* The window
+
+[Back to Round Two qs](#round-two)
+
+##### What is the Value of `this` inside of a constructor function?
+
+* A newly created object
+
+[Back to Round Two qs](#round-two)
+
+##### What is the Value of `this` inside of a constructor function?
+
+* A newly created object
+
+[Back to Round Two qs](#round-two)
+
+##### What is the Temporal Dead Zone?
+
+* This has to do with the topic of hoisting. The temporal deadzone is the time between entering a scope where a variable is declared (i.e. an `if` statement or `while` loop), and the actual declaration and initialization of that variable. During this period, `let` and `const` variables cannot be accessed, even though they have been hoisted.
+
+[Back to Round Two qs](#round-two)
+
+##### What is the Temporal Dead Zone?
+
+* This has to do with the topic of hoisting. The temporal deadzone is the time between entering a scope where a variable is declared (i.e. an `if` statement or `while` loop), and the actual declaration and initialization of that variable. During this period, `let` and `const` variables cannot be accessed, even though they have been hoisted.
+
+[Back to Round Two qs](#round-two)
+
+##### Can you directly compare two objects in Javascript
+
+* No.
+
+[Back to Round Two qs](#round-two)
+
+##### What does bind do?
+
+* The bind method creates a _new_ function that, when called, has its `this` keyword set to the first parameter passed into it. All subsequent parameters are arguments for that bound function.
+
+[Back to Round Two qs](#round-two)
+
+##### What is the difference between window and document?
+
+* JavaScript has a global object and everything runs under it. `window` is that global object that holds global variables, global functions, location, history everything is under it.
+
+`document` is also under window. document is a property of the window object. document represents the DOM and DOM is the object oriented representation of the html markup you have written
+
+[Back to Round Two qs](#round-two)
+
+
 =====
 
 ##### Will the browser make an http request for the following case?
@@ -254,13 +388,25 @@ is read as:
 
 ##### What is position absolute?
 
-* The computed position of the element where it can be spaced after being removed to from the normal flow of the document.  It is spaced in relation to its' first non-static parent container with ```top```, ```bottom```, ```left```, and ```right```.
+* The computed position of the element where it can be spaced after being removed to from the normal flow of the document.  It is spaced in relation to its' first non-static parent container with `top`, `bottom`, `left`, and `right`.
 
 [Back to Round Three qs](#round-three)
 
 ##### List css specificity rules from most specific to least specific:
 
 * inline, ID, class, element, universal (4 out of 5 is acceptable)
+
+[Back to Round Three qs](#round-three)
+
+##### Explain variable hoisting:
+
+* At a broad level, hoisting is the concept of having access to named functions and variables (only `var`s) before they are declared in your code. This works because variable and function declarations are put into memory during the compile phase.
+
+[Back to Round Three qs](#round-three)
+
+##### Does javascript pass parameter by value or by reference?
+
+* It depends on the datatype. Primitive types (string, number, etc.) are passed by value and objects are passed by reference. If you change a property of the passed object, the object will be affected.
 
 [Back to Round Three qs](#round-three)
 
@@ -314,6 +460,30 @@ is read as:
 ##### <a name="equal"></a> What are the differences between `==` and `===` ?
 
 * `==` will not check types and `===` will check whether both sides are of same type. `==` will convert to its convenient type to have both in same type and then do the comparison.
+
+[Back to Round Four qs](#round-four)
+
+##### How could you run event handler in the capturing phase not in bubble phase?
+
+* There is a third (optional) parameter in addEventListener and removeEventLister. You can pass true or false to useCapture phase.
+
+[Back to Round Four qs](#round-four)
+
+##### <a name='args'></a> If you create a function that takes 2 arguments, but invoke it with 3 arguments, how can you access the third variable?
+
+* The `arguments` keyword that is available in all functions.
+
+[Back to Round Four qs](#round-four)
+
+##### <a name='typeof'></a> What is a potential pitfall with using typeof bar === "object" to determine if bar is an object? How can this pitfall be avoided?
+
+* Although `typeof bar === "object"` is a reliable way of checking if bar is an object, the surprising gotcha in JavaScript is that null is also considered an object!
+
+[Back to Round Four qs](#round-four)
+
+##### <a name='twofunctions'></a> Consider the following two functions below. Will they both return the same thing? Why or why not?
+
+* The first function will return `Object { bar: "hello" }`. The second function will return `undefined`. This is because of semicolon insertion. The compiler will automatically put a semicolon after the return in the second function, therefor returning undefined.
 
 [Back to Round Four qs](#round-four)
 
