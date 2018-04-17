@@ -15,7 +15,7 @@ const html = document.getElementsByTagName('html')[0];
 
 html.addEventListener('click', (e) => {
   e.stopPropagation();
-	alert('Defense!');
+  alert('Defense!');
 });
 ```
 
@@ -52,9 +52,9 @@ isDescendant(notParent, child) // false
 function isDescendant(parent, child){
   while (child.parentNode) {
     if (child.parentNode == parent)
-    return true;
+      return true;
     else
-    child = child.parentNode;
+      child = child.parentNode;
   }
 
   return false;
