@@ -54,6 +54,8 @@ Whenever we are answering technical questions, we should always keep the followi
 * [What is position relative?](#what-is-position-relative)
 * [Name three pseudo selectors](#name-three-pseudo-selectors)
 * [Name all six primitive data-types in Javascript](#name-all-six-primitive-data-types-in-javascript)
+* [What is the difference between `null` and `undefined`?](#what-is-the-difference-between-null-and-undefined)
+
 ## Round Three
 
 * [Will the browser make an http request for the following case?](#will-the-browser-make-an-http-request-for-the-following-case)
@@ -87,6 +89,7 @@ Whenever we are answering technical questions, we should always keep the followi
 * [What is position fixed?](#what-is-position-fixed)
 
 * [Why can we call methods on certain primitive datatypes?](#why-can-we-call-methods-on-certain-primitive-datatypes)
+* [What are the differences between == and ===?](#what-are-the-differences-between-==-and-===)
 
 =====
 
@@ -199,6 +202,13 @@ Whenever we are answering technical questions, we should always keep the followi
 
 [Back to Round Two qs](#round-two)
 
+##### What is the difference between `null` and `undefined`?
+
+* Undefined means the value of a variable is not defined. JS has a global variable called `undefined` whose value is `undefined`.
+* `null` means empty or non-existent value which is used by programmers to indicate “no value”. Must be explicitly assigned.
+
+[Back to Round Two qs](#round-two)
+
 =====
 
 ##### Will the browser make an http request for the following case?
@@ -284,7 +294,7 @@ is read as:
 
 ##### Why can we call methods on certain primitive datatypes?
 
-* Technically, you can't. **But**, certain primitive datatypes, like strings, numbers, and booleans, have _non_-primitive counterparts (String, Number, Boolean). So, if you call `"string".slice(5)`, that string will be implicitly cast to a `String` object, and the `slice` method will be called on that. 
+* Technically, you can't. **But**, certain primitive datatypes, like strings, numbers, and booleans, have _non_-primitive counterparts (String, Number, Boolean). So, if you call `"string".slice(5)`, that string will be implicitly cast to a `String` object, and the `slice` method will be called on that.
 
 [Back to Round Four qs](#round-four)
 
@@ -297,6 +307,12 @@ is read as:
 ##### What is position sticky?
 
 * From MDN: It's treated as relatively positioned until its containing block crosses a specified threshold (such as setting top to value other than auto) within its flow root (or the container it scrolls within), at which point it is treated as "stuck" (it doesn't move) until meeting the opposite edge of its containing block.
+
+[Back to Round Four qs](#round-four)
+
+##### What are the differences between `==` and `===` ?
+
+* `==` will not check types and `===` will check whether both sides are of same type. `==` will convert to its convenient type to have both in same type and then do the comparison.
 
 [Back to Round Four qs](#round-four)
 
