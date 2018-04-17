@@ -3,7 +3,10 @@
 * DOM Manipulation (9:30 - 11:00)
 * Online Networking (11:00 - 12:00)
 * Lunch (12:00 - 1:00)
-* DOM Manipulation Practical (1:00 - 3:00)
+* DOM Manipulation Practical, one hour each (1:00 - 3:00)
+  * [Coding Challenge 1](https://github.com/appacademy/graduated-job_seeker-program/blob/master/projects/react.md)
+  * [Coding Challenge 2](https://github.com/appacademy/graduated-job_seeker-program/blob/master/projects/tic-tac-toe.md)
+  * Push the finished challenges to a repo and email the link to ```tuptain@appacademy.io```
 * Application Sprint (3:00 - 5:00)
 
 ## Day Two

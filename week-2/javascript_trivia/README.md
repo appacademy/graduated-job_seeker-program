@@ -35,11 +35,15 @@ Whenever we are answering technical questions, we should always keep the followi
 * [What is the use of data-* attribute?](#what-is-the-use-of-the-data--attribute)
 * [How can you generate a public key in html?](#how-can-you-generate-a-public-key-in-html)
 * [What does float do?](#what-does-float-do)
-* [Are CSS properties case sensitive?](#are-css-properties-case-sensitive?)
+* [Are CSS properties case sensitive?](#are-css-properties-case-sensitive)
 
-* [What is position static?](#what-is-position-static?)
+* [What is position static?](#what-is-position-static)
 
 * [How can you apply css rules specific to media/screen-size?](#how-can-you-apply-css-rules-specific-to-media/scree-size)
+
+* [What are the 7 "falsey" values in javascript?](#what-are-the-7-falsey-values-in-javascript)
+
+* [What is a primitive datatype in Javascript?](#what-is-a-primitive-datatype-in-javascript)
 
 ## Round Two
 
@@ -49,6 +53,8 @@ Whenever we are answering technical questions, we should always keep the followi
 * [Does margin-top or margin-bottom effect inline elements?](#does-margin-top-or-margin-bottom-effect-inline-elements)
 * [What is position relative?](#what-is-position-relative)
 * [Name three pseudo selectors](#name-three-pseudo-selectors)
+* [Name all six primitive data-types in Javascript](#name-all-six-primitive-data-types-in-javascript)
+* [What is the difference between `null` and `undefined`?](#what-is-the-difference-between-null-and-undefined)
 
 ## Round Three
 
@@ -81,6 +87,9 @@ Whenever we are answering technical questions, we should always keep the followi
 * [What is the difference between a canvas element and an SVG?](#what-is-the-difference-between-a-canvas-element-and-an-svg)
 
 * [What is position fixed?](#what-is-position-fixed)
+
+* [Why can we call methods on certain primitive datatypes?](#why-can-we-call-methods-on-certain-primitive-datatypes)
+* [What are the differences between == and ===?](#equal)
 
 =====
 
@@ -131,9 +140,19 @@ Whenever we are answering technical questions, we should always keep the followi
 
 [Back to Round One qs](#round-one)
 
+##### What are the 7 falsey values in javascript?
+
+* `0`, `""`, `NaN`, `-0`, `null`, `undefined`, `false`
+
+[Back to Round One qs](#round-one)
+
+##### What is a primitive datatype in Javascript?
+
+* A primitive datatype is not an object, is **immutable**, and has no attributes/methods defined directly on it
+
+[Back to Round One qs](#round-one)
+
 =====
-
-
 
 ##### How can you change the direction of html text?
 
@@ -173,6 +192,20 @@ Whenever we are answering technical questions, we should always keep the followi
 ##### Name three pseudo selectors:
 
 * :hover, :nth-of-type, :visited, :focus, :link, :first, :child, :checked, :last-child, :target, etc.
+
+[Back to Round Two qs](#round-two)
+
+
+##### Name all six primitive data-types in Javascript:
+
+* boolean, string, number, null, undefined, and symbol (ES6 only)
+
+[Back to Round Two qs](#round-two)
+
+##### What is the difference between `null` and `undefined`?
+
+* Undefined means the value of a variable is not defined. JS has a global variable called `undefined` whose value is `undefined`.
+* `null` means empty or non-existent value which is used by programmers to indicate “no value”. Must be explicitly assigned.
 
 [Back to Round Two qs](#round-two)
 
@@ -259,6 +292,12 @@ is read as:
 
 [Back to Round Four qs](#round-four)
 
+##### Why can we call methods on certain primitive datatypes?
+
+* Technically, you can't. **But**, certain primitive datatypes, like strings, numbers, and booleans, have _non_-primitive counterparts (String, Number, Boolean). So, if you call `"string".slice(5)`, that string will be implicitly cast to a `String` object, and the `slice` method will be called on that.
+
+[Back to Round Four qs](#round-four)
+
 ##### What is position fixed?
 
 * The computed position of an element where it's position is constant or 'fixed' in relation to the window.  Its' position and presence never change.
@@ -268,6 +307,13 @@ is read as:
 ##### What is position sticky?
 
 * From MDN: It's treated as relatively positioned until its containing block crosses a specified threshold (such as setting top to value other than auto) within its flow root (or the container it scrolls within), at which point it is treated as "stuck" (it doesn't move) until meeting the opposite edge of its containing block.
+
+[Back to Round Four qs](#round-four)
+
+
+##### <a name="equal"></a> What are the differences between `==` and `===` ?
+
+* `==` will not check types and `===` will check whether both sides are of same type. `==` will convert to its convenient type to have both in same type and then do the comparison.
 
 [Back to Round Four qs](#round-four)
 
