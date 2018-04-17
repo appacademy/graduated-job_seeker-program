@@ -35,7 +35,7 @@ Whenever we are answering technical questions, we should always keep the followi
 * [What is the use of data-* attribute?](#what-is-the-use-of-the-data--attribute)
 * [How can you generate a public key in html?](#how-can-you-generate-a-public-key-in-html)
 * [What does float do?](#what-does-float-do)
-* [Are CSS properties case sensitive?](#are-css-properties-case-sensitive?)
+* [Are CSS properties case sensitive?](#are-css-properties-case-sensitive)
 
 * [What is position static?](#what-is-position-static?)
 
