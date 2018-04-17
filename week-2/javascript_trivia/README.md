@@ -88,7 +88,7 @@ function sayHello() {
   ```HTML
   <img src="mypic.jpg" style="visibility: hidden" alt="My photo">
   ```
-* [Does style1.css have to be downloaded before Paragraph 1 is rendered?](#which-resource-would-be-downloaded-first)
+* [Does style1.css have to be downloaded before Paragraph 1 is rendered?](#does-style1.css-have-to-be-downloaded-before-paragraph-1-is-rendered)
 ```HTML
 <head>
     <link href="style1.css" rel="stylesheet">
@@ -107,7 +107,19 @@ function sayHello() {
 * [List css specificity rules from most specific to least specific](#list-css-specificity-rules-from-most-specific-to-least-specific)
 * [Explain variable hoisting](#explain-variable-hoisting)
 * [Does javascript pass parameter by value or by reference?](#does-javascript-pass-parameter-by-value-or-by-reference?)
+* [In what order with the numbers 1-4 be logged to the console when the code below is executed? Why?](#event-loop)
 
+```js
+function counter() {
+    console.log(1);
+    setTimeout(function(){console.log(2)}, 1000);
+    setTimeout(function(){console.log(3)}, 0);
+    console.log(4);
+}
+
+counter();
+```
+* [What is the difference between classical inheritance and prototypal inheritance?](#what-is-the-difference-between-classical-inheritance-and-prototypal-inheritance)
 
 ## Round Four
 
@@ -141,6 +153,16 @@ function foo2()
 }
 ```
 
+* [What is NaN? What is its type? How can you reliably test if a value is equal to NaN?](#nan)
+* [What will the code below output? Explain your answer.](#what-will-the-code-below-output)
+
+```js
+console.log(0.1 + 0.2);
+console.log(0.1 + 0.2 == 0.3);
+```
+
+* [What is a closure in javascript?](#what-is-a-closure-in-javascript)
+* [When you zoom in on your browser and the page gets bigger, what exactly happens?](#zoom)
 =====
 
 ## Answers
@@ -218,6 +240,11 @@ function foo2()
 
 [Back to Round One qs](#round-one)
 
+##### Is `null` an object?
+* No. Even though `typeof null` returns `object`, this is a bug. You can not put any attributes on null, as it is a `primitive` datatype.
+
+[Back to Round One qs](#round-one)
+
 ##### Are let and const hoisted?
 * Yes
 
@@ -225,11 +252,6 @@ function foo2()
 
 ##### Briefly describe the concept of memoization
 * Memoization is a programming technique which attempts to increase a function’s performance by caching its previously computed results. POJO's are often used to implement these caches.
-
-[Back to Round One qs](#round-one)
-
-##### Is `null` an object?
-* No. Even though `typeof null` returns `object`, this is a bug. You can not put any attributes on null, as it is a `primitive` datatype.
 
 [Back to Round One qs](#round-one)
 
@@ -336,9 +358,7 @@ function foo2()
 
 ##### What is the difference between window and document?
 
-* JavaScript has a global object and everything runs under it. `window` is that global object that holds global variables, global functions, location, history everything is under it.
-
-`document` is also under window. document is a property of the window object. document represents the DOM and DOM is the object oriented representation of the html markup you have written
+* JavaScript has a global object and everything runs under it. `window` is that global object that holds global variables, global functions, location, history everything is under it. `document` is also under window. document is a property of the window object. document represents the DOM and DOM is the object oriented representation of the html markup you have written
 
 [Back to Round Two qs](#round-two)
 
@@ -351,7 +371,7 @@ function foo2()
 
 [Back to Round Three qs](#round-three)
 
-##### Which resource would be downloaded first?
+##### Does style1.css have to be downloaded before Paragraph 1 is rendered?
 
 * Yes!
 
@@ -407,6 +427,18 @@ is read as:
 ##### Does javascript pass parameter by value or by reference?
 
 * It depends on the datatype. Primitive types (string, number, etc.) are passed by value and objects are passed by reference. If you change a property of the passed object, the object will be affected.
+
+[Back to Round Three qs](#round-three)
+
+##### <a name='event-loop'></a> In what order with the numbers 1-4 be logged to the console when the code below is executed? Why?
+
+* `1, 4, 3, 2`. 1 and 4 come first because they are logged without delay. 3 comes before 2 because it has a shorter asynchronous delay. Even though `3` has a delay of `0`, it is still placed on the event queue while the browser is busy. You can think of a `setTimeout` of `0` as meaning "as soon as possible".
+
+[Back to Round Three qs](#round-three)
+
+##### What is the difference between classical inheritance and prototypal inheritance?
+
+* **Class Inheritance:**
 
 [Back to Round Three qs](#round-three)
 
@@ -484,6 +516,35 @@ is read as:
 ##### <a name='twofunctions'></a> Consider the following two functions below. Will they both return the same thing? Why or why not?
 
 * The first function will return `Object { bar: "hello" }`. The second function will return `undefined`. This is because of semicolon insertion. The compiler will automatically put a semicolon after the return in the second function, therefor returning undefined.
+
+[Back to Round Four qs](#round-four)
+
+##### <a name='nan'></a> What is NaN? What is its type? How can you reliably test if a value is equal to NaN?
+
+* `NaN`s type is `Number`. `NaN` compared to _anything_, even itself, is false. One way to check if they are equal is using the built in `isNaN()` function.
+
+[Back to Round Four qs](#round-four)
+
+##### What will the code below output?
+
+```js
+console.log(0.1 + 0.2);
+console.log(0.1 + 0.2 == 0.3)
+```
+
+* `NaN`s type is `Number`. `NaN` compared to _anything_, even itself, is false. One way to check if they are equal is using the built in `isNaN()` function.
+
+[Back to Round Four qs](#round-four)
+
+##### What is a closure in javascript?
+
+* Specifically: A closure is an inner function that has access to the variables in the outer (enclosing) function’s scope chain. The closure has access to variables in three scopes; specifically: (1) variable in its own scope, (2) variables in the enclosing function’s scope, and (3) global variables.
+
+[Back to Round Four qs](#round-four)
+
+##### When you zoom in on your browser and the page gets bigger, what exactly happens?
+
+* The browser increases the size of each pixel by the percentage of the zoom.
 
 [Back to Round Four qs](#round-four)
 
