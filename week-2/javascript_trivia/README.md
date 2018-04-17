@@ -41,6 +41,10 @@ Whenever we are answering technical questions, we should always keep the followi
 
 * [How can you apply css rules specific to media/screen-size?](#how-can-you-apply-css-rules-specific-to-media/scree-size)
 
+* [What are the 7 "falsey" values in javascript?](#what-are-the-7-falsey-values-in-javascript)
+
+* [What is a primitive datatype in Javascript?](#what-is-a-primitive-datatype-in-javascript)
+
 ## Round Two
 
 * [How can you change the direction of html text?](#how-can-you-change-the-direction-of-html-text)
@@ -49,7 +53,7 @@ Whenever we are answering technical questions, we should always keep the followi
 * [Does margin-top or margin-bottom effect inline elements?](#does-margin-top-or-margin-bottom-effect-inline-elements)
 * [What is position relative?](#what-is-position-relative)
 * [Name three pseudo selectors](#name-three-pseudo-selectors)
-
+* [Name all six primitive data-types in Javascript](#name-all-six-primitive-data-types-in-javascript)
 ## Round Three
 
 * [Will the browser make an http request for the following case?](#will-the-browser-make-an-http-request-for-the-following-case)
@@ -81,6 +85,8 @@ Whenever we are answering technical questions, we should always keep the followi
 * [What is the difference between a canvas element and an SVG?](#what-is-the-difference-between-a-canvas-element-and-an-svg)
 
 * [What is position fixed?](#what-is-position-fixed)
+
+* [Why can we call methods on certain primitive datatypes?](#why-can-we-call-methods-on-certain-primitive-datatypes)
 
 =====
 
@@ -131,9 +137,19 @@ Whenever we are answering technical questions, we should always keep the followi
 
 [Back to Round One qs](#round-one)
 
+##### What are the 7 falsey values in javascript?
+
+* `0`, `""`, `NaN`, `-0`, `null`, `undefined`, `false`
+
+[Back to Round One qs](#round-one)
+
+##### What is a primitive datatype in Javascript?
+
+* A primitive datatype is not an object, is **immutable**, and has no attributes/methods defined directly on it
+
+[Back to Round One qs](#round-one)
+
 =====
-
-
 
 ##### How can you change the direction of html text?
 
@@ -173,6 +189,13 @@ Whenever we are answering technical questions, we should always keep the followi
 ##### Name three pseudo selectors:
 
 * :hover, :nth-of-type, :visited, :focus, :link, :first, :child, :checked, :last-child, :target, etc.
+
+[Back to Round Two qs](#round-two)
+
+
+##### Name all six primitive data-types in Javascript:
+
+* boolean, string, number, null, undefined, and symbol (ES6 only)
 
 [Back to Round Two qs](#round-two)
 
@@ -256,6 +279,12 @@ is read as:
 ##### Do padding-left, padding-right, margin-left, or margin-right effect inline elements?
 
 * Yes!
+
+[Back to Round Four qs](#round-four)
+
+##### Why can we call methods on certain primitive datatypes?
+
+* Technically, you can't. **But**, certain primitive datatypes, like strings, numbers, and booleans, have _non_-primitive counterparts (String, Number, Boolean). So, if you call `"string".slice(5)`, that string will be implicitly cast to a `String` object, and the `slice` method will be called on that. 
 
 [Back to Round Four qs](#round-four)
 
