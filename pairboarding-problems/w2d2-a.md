@@ -4,7 +4,7 @@
 
 ## Easy
 
-Oh no! Somebody added a click handler to the top level of your webpage (`document`) that closes the browser window on `click` ☹️. There is no way for us to remove this event listener, but good thing we are DOM Wizards! Instead of allowing this event to fire, we alert `Defense!`. How might we utilize event listeners to accomplish this?
+Oh no! Somebody added a click handler to the top level of your webpage (`document`) that closes the browser window on `click` ☹️. There is no way for us to remove this event listener, but good thing we are DOM Wizards! Instead of allowing this event to fire, we want to alert `Defense!`. How might we utilize event listeners to accomplish this?
 
 ### Solution
 
