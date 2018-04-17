@@ -44,6 +44,7 @@ Chrome's V8, are built. From 2009-2015, the most recent _stable_ version of
 ECMAScript was ECMAScript 6, or ES6 for short.  Additionally, ECMAScript 7
 has been released, but browser support is not yet standard.
 
+
 ### Parallel vs Concurrent
 JavaScript is able to run operations concurrently through the Event Loop. **Concurrency** means that processes can run independently of one another, but they do not necessarily run at the same time. (JS is single threaded, so only one process can ever execute at a time.)  Concurrent processes can actually be paused so that other processes can be executed. **Parallelism** means that multiple processes can run at exactly the same time.  Parallel environments can be described as concurrent, but not all concurrent environments are parallel.  Ex:
 
