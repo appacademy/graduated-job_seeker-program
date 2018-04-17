@@ -1,8 +1,8 @@
 # Partner A Interviews Partner B
 
----
-
 ## Easy
+
+#### Pt. 1)
 
 Oh no! Somebody added a click handler to the top level of your webpage (`document`) that closes the browser window on `click` ☹️. There is no way for us to remove this event listener, but good thing we are DOM Wizards! Instead of allowing this event to fire, we want to alert `Defense!`. How might we utilize event listeners to accomplish this?
 
@@ -19,10 +19,16 @@ html.addEventListener('click', (e) => {
 });
 ```
 
+#### Pt. 2)
+_Non-whiteboarded_
+
+The DOM Villain is onto us. Every time we add a `click` listener to an element on our webpage, he proceeds to add another `click` listener to the **same** element that closes the browser window. Once again, our goal is to keep our website open! We want to add an event listener to our `body` element, but we know the DOM Villian will add one right after us. What `Event` method can we use to make sure no subsequent event listeners get fired on that same element?
+
+**A:** `e.stopImmediatePropagation()`. `e.stopPropagation` only prevents events from propagating outwards; not other events on the same DOM object.
+
 ---
 
 ## Medium
-
 
 Write a function, `isDescendant`, that takes two DOM nodes as arguments, a `child` and a `parent`. This method should verify that the child node is a descendant of the parent node, and return `true` or `false`. The child **does not** have to be a _direct_ descendant of the parent.
 
@@ -66,7 +72,6 @@ Take note of the `==` vs. `===`. `child.parentNode` will return a _new_ instance
 ---
 
 ## Hard
-
 
 Write a function, `makeNodeTree`, that takes in an array of HTML tagnames (as strings) and a root Node. Your function should accomplish the following:
 
