@@ -37,7 +37,7 @@ Whenever we are answering technical questions, we should always keep the followi
 * [What does float do?](#what-does-float-do)
 * [Are CSS properties case sensitive?](#are-css-properties-case-sensitive)
 
-* [What is position static?](#what-is-position-static?)
+* [What is position static?](#what-is-position-static)
 
 * [How can you apply css rules specific to media/screen-size?](#how-can-you-apply-css-rules-specific-to-media/scree-size)
 
