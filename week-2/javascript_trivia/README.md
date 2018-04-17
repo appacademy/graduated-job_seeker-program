@@ -47,8 +47,6 @@ Whenever we are answering technical questions, we should always keep the followi
 * [Consider the following expression: `var y = 1, x = y = typeof x`. What will be the value of x?](#value-of-x)
 * [If `const a = 2, b = 3` what would be value of `a && b`?](#a-and-b)
 * [Why does the following code work?](#why-does-the-following-code-work)
-* [Is null an object?](#is-null-an-object)
-
 
 ```js
 sayHello(); // OUTPUT: "Hello";
@@ -57,6 +55,9 @@ function sayHello() {
   return "Hello";
 }
 ```
+* [Is null an object?](#is-null-an-object)
+
+
 
 * [Are `let` and `const` hoisted?](#are-let-and-const-hoisted)
 * [Briefly describe the concept of memoization](#briefly-describe-the-concept-of-memoization)
