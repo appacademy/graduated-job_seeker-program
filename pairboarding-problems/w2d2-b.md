@@ -2,11 +2,23 @@
 
 ## Rapid Fire
 
+**Q:** We have a webpage that has a lot of different loading elements, and we want to let the user know when the page is done loading with an `alert`. What method might we use to implement this?
+**A:** There are three different ways we may do this:
++ `document.addEventListener('DOMContentLoaded', callback)`
++ `document.onreadystatechange = callback`
++ Put a script at the very bottom of the HTML page that runs the alert
+
+**Q:** The third, optional argument to `element.addEventListener` is `useCapture`, a boolean value that defaults to false. If you added a click handler to several elements in a document, how would setting `useCapture` to true change behavior?
+**A:** If this value is set to true, all elements will be invoked in the `capture` phase as opposed to the `bubbling` phase. What this means is that functions will run as the browser is walking _towards_ the target, as opposed to when the event is bubbling up _from_ the target.
+
+
 
 
 ## Easy
 
 
+
+---
 
 ## Medium
 
@@ -48,6 +60,8 @@ function isDescendant(parent, child){
 ```
 
 >NOTE: Take note of the `==` vs. `===`. `child.parentNode` will return a _new_ instance of a node object.
+
+---
 
 ## Hard
 
