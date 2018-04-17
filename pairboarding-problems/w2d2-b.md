@@ -1,65 +1,105 @@
-# Partner A Interviews Partner B
-
-## Rapid Fire
-
-**Q:** We have a webpage that has a lot of different loading elements, and we want to let the user know when the page is done loading with an `alert`. What method might we use to implement this?
-**A:** There are three different ways we may do this:
-+ `document.addEventListener('DOMContentLoaded', callback)`
-+ `document.onreadystatechange = callback`
-+ Put a script at the very bottom of the HTML page that runs the alert
-
-**Q:** The third, optional argument to `element.addEventListener` is `useCapture`, a boolean value that defaults to false. If you added a click handler to several elements in a document, how would setting `useCapture` to true change behavior?
-**A:** If this value is set to true, all elements will be invoked in the `capture` phase as opposed to the `bubbling` phase. What this means is that functions will run as the browser is walking _towards_ the target, as opposed to when the event is bubbling up _from_ the target.
-
-
-
+# Partner B Interviews Partner A
 
 ## Easy
 
+Write a method, `bringToTop`, that takes the very last HTML Element that was loaded onto the webpage, removes it, and places it at the very top.
 
-
----
-
-## Medium
-
-Write a function, `isDescendant`, that takes two DOM nodes as arguments, a `child` and a `parent`. This method should verify that the child node is a descendant of the parent node, and return `true` or `false`.
+> **HINT:** If your partner is making this harder than it needs to be, feel free to remind them of the `document.all` attribute, which returns an `HTMLCollection` (Array-like object) of all elements on the page. Because of the way this method works, the last element of this collection will be the last child rendered to the page.
 
 ### Example
 
+Given the following original layout:
+
 ```html
-<div id='parent'>
-  <ul>
-    <li id='child'>I am a child</li>
-  </ul>
-  <p id='not-a-parent'></p>
-</div>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div>
+      <p>Put me at the top!</p>
+    </div>
+  </body>
+</html>
 ```
 
-```js
-const child = document.getElementById('child');
-const parent = document.getElementById('parent');
-const notParent = document.getElementById('not-a-parent');
+The page should have this structure after the method is called:
 
-isDescendant(parent, child) // true
-isDescendant(notParent, child) // false
+```html
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <p>Put me at the top!</p>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div>
+    </div>
+  </body>
+</html>
 ```
 
 ### Solution
 
 ```js
-function isDescendant(parent, child){
-  while (child.parentNode) {
-    if (child.parentNode == parent)
-    return true;
-    else
-    child = child.parentNode;
-  }
+function bringToTop() {
+  const elements = document.all;
+  const lastElement = elements[elements.length - 1];
 
-  return false;
+  lastElement.remove();
+
+  elements[0].prepend(lastElement);
 }
 ```
 
->NOTE: Take note of the `==` vs. `===`. `child.parentNode` will return a _new_ instance of a node object.
+_Discussion points to consider (Optional):_
++ What order does an HTML page get loaded in? When, exactly, will a `DOMContentLoaded` listener get fired off?
++ How do you think the `document.all` method works?
+
+---
+
+## Medium
+
+We have a webpage with a hefty comments section; 1000 `li` elements inside of a `ul`! Write a function that, when run, will enable the following behavior:
+
++ Any time you click an `li`, the content of the `li` should be set to say `I have been clicked.`.
+
+You may assume there is only one `ul` on the page.
+
+### Naive Solution
+
+Select all `li` elements and add an event listener to each one of them individually. That may look something like this:
+
+```js
+const lis = document.getElementsByTagName('li');
+
+for (let i = 0; i < lis.length; i++) {
+  lis[i].addEventListener('click', e => e.currentTarget.innerHTML = 'I have been clicked.');
+}
+```
+
+While this would work, this a very inefficient way of doing about this for several reasons. Prompt your partner with these two questions:
+
+1) How many different click handlers are we putting on our page? How many different functions are we making?
+> A: If there are 100 li's, we are creating 100 click handlers and 100 functions
+
+2) What if `li` elements could be dynamically added to the page (i.e. a comments or reviews section), and we wanted them to have the same functionality. Would this version of the function work?
+> A: No, this wouldn't work because the click handlers were only added to each individual element with the page loaded.
+
+How could we do better?
+
+### Better solution
+
+A more reasonable solution would be to add the event listener on the ul. Remember, `Event` objects have a `currentTarget` _and_ a `target` attribute. `target` is the element that triggered the event (e.g., the user clicked on), and `currentTarget` is the element that the event listener is attached to. This concept is called **Event Delegation**.
+
+```js
+const ul = document.getElementsByTagName('ul')[0];
+
+ul.addEventListener('click', e => e.target.innerHTML = 'I have been clicked.');
+```
 
 ---
 
