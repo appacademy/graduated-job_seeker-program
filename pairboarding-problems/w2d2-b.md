@@ -112,7 +112,7 @@ We have an HTML page with a single `Click Me!` button on it. When we click anywh
 
 Clicking anywhere on the page _**again**_ should then return the button to it's original state. I should be able to keep clicking the page, and see the button toggle back and forth.
 
-Additionally, clicking on the button itself should not do anything -- It's just there for fun 😌
+Additionally, clicking on the button itself should not do anything or trigger any events -- It's just there for fun 😌
 
 Write a function, `toggleButton`, that implements this functionality!
 
