@@ -104,7 +104,7 @@ function sayHello() {
 
 * [List css specificity rules from most specific to least specific](#list-css-specificity-rules-from-most-specific-to-least-specific)
 * [Explain variable hoisting](#explain-variable-hoisting)
-* [Does javascript pass parameter by value or by reference?](#does-javascript-pass-parameter-by-value-or-by-reference?)
+* [Does javascript pass parameter by value or by reference?](#does-javascript-pass-parameter-by-value-or-by-reference)
 * [In what order with the numbers 1-4 be logged to the console when the code below is executed? Why?](#event-loop)
 
 ```js
