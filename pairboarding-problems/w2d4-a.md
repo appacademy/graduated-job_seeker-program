@@ -58,7 +58,7 @@ How can we improve this algorithm?
 ```js
 function numJewels(jewels, allStones) {
   let count = 0;
-  let store = {};
+  const store = {};
 
   for (let i = 0; i < jewels.length; i++) {
     store[jewels[i]] = true;
