@@ -160,7 +160,7 @@ function foo2()
 * [What is a closure in javascript?](#what-is-a-closure-in-javascript)
 * [When you zoom in on your browser and the page gets bigger, what exactly happens?](#zoom)
 * [What is asynchronous programming?](#what-is-asynchronous-programming)
-* [What are the proper keywords for error handling in JavaScript?](#what-are-the-proper-keywords-for-error-handling-in-javaScript)
+* [What are the proper keywords for error handling in JavaScript?](#what-are-the-proper-keywords-for-error-handling-in-javascript)
 
 =====
 
