@@ -118,6 +118,11 @@ function counter() {
 counter();
 ```
 * [What are the three phases of event propagation?](#what-are-the-three-phases-of-event-propagation)
+* [Is javascript compiled or interpreted?](#is-javascript-compiled-or-interpreted)
+* [What does the global object refer to in JavaScript?](#what-does-the-global-object-refer-to-in-javaScript)
+* [What does the `length` property of the JavaScript Function object return?](#what-does-the-length-property-of-the-javaScript-function-object-return)
+* [When inspecting a MouseEvent object, which of the following do target and currentTarget represent?](#current-target)
+* [What is a prototype in JavaScript?](#what-is-a-prototype-in-javaScript)
 
 ## Round Four
 
@@ -155,6 +160,7 @@ function foo2()
 * [What is a closure in javascript?](#what-is-a-closure-in-javascript)
 * [When you zoom in on your browser and the page gets bigger, what exactly happens?](#zoom)
 * [What is asynchronous programming?](#what-is-asynchronous-programming)
+* [What are the proper keywords for error handling in JavaScript?](#what-are-the-proper-keywords-for-error-handling-in-javaScript)
 
 =====
 
@@ -442,6 +448,43 @@ is read as:
   3. Bubbling phase: Event walks back outwards towards root; all encountered event handlers are run on the way.
 
 [Back to Round Three qs](#round-three)
+
+##### Is Javascript compiled or interpreted?
+
+* Interpreted.
+
+[Back to Round Three qs](#round-three)
+
+##### What does the global object refer to in JavaScript?
+
+* A POJO that exists to provide all built-in methods and global variables.
+
+[Back to Round Three qs](#round-three)
+
+##### What does the "length" property of the JavaScript Function object return?
+
+* The number of arguments taken by the function (not including rest parameters)
+
+[Back to Round Three qs](#round-three)
+
+##### <a name='current-target'></a> When inspecting a MouseEvent object, which of the following do `target` and `currentTarget` represent?
+
+* `currentTarget`: the element the listener is set on, `target`: the element the mouse is on.
+
+[Back to Round Three qs](#round-three)
+
+##### What are the proper keywords for error handling in JavaScript?
+
+* "try...catch"
+
+[Back to Round Three qs](#round-three)
+
+##### What is a prototype in JavaScript?
+
+* An object.
+
+[Back to Round Three qs](#round-three)
+
 =====
 
 ##### What are the differences between div and span?
