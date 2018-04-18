@@ -46,7 +46,7 @@ Whenever we are answering technical questions, we should always keep the followi
 * [What is a primitive datatype in Javascript?](#what-is-a-primitive-datatype-in-javascript)
 * [Consider the following expression: `var y = 1, x = y = typeof x`. What will be the value of x?](#value-of-x)
 * [If `const a = 2, b = 3` what would be value of `a && b`?](#a-and-b)
-* [Why does the following code work?](#why-does-the-following-code-work)
+* [Does the following code throw a reference error? Why/Why not?](#why-does-the-following-code-work)
 
 ```js
 sayHello(); // OUTPUT: "Hello";
@@ -56,9 +56,6 @@ function sayHello() {
 }
 ```
 * [Is null an object?](#is-null-an-object)
-
-
-
 * [Are `let` and `const` hoisted?](#are-let-and-const-hoisted)
 * [Briefly describe the concept of memoization](#briefly-describe-the-concept-of-memoization)
 
@@ -80,6 +77,7 @@ function sayHello() {
 * [Can you directly compare two objects in Javascript?](#can-you-directly-compare-two-objects-in-javascript)
 * [What does the bind method do?](#what-does-bind-do)
 * [What is the difference between window and document?](#what-is-the-difference-between-window-and-document)
+* [What are two-way data binding and one-way data flow, and how are they different?](#data-binding)
 
 
 ## Round Three
@@ -112,14 +110,14 @@ function sayHello() {
 ```js
 function counter() {
     console.log(1);
-    setTimeout(function(){console.log(2)}, 1000);
-    setTimeout(function(){console.log(3)}, 0);
+    setTimeout(() => console.log(2), 1000);
+    setTimeout(() => console.log(3), 0);
     console.log(4);
 }
 
 counter();
 ```
-* [What is the difference between classical inheritance and prototypal inheritance?](#what-is-the-difference-between-classical-inheritance-and-prototypal-inheritance)
+* [What are the three phases of event propagation?](#what-are-the-three-phases-of-event-propagation)
 
 ## Round Four
 
@@ -154,15 +152,10 @@ function foo2()
 ```
 
 * [What is NaN? What is its type? How can you reliably test if a value is equal to NaN?](#nan)
-* [What will the code below output? Explain your answer.](#what-will-the-code-below-output)
-
-```js
-console.log(0.1 + 0.2);
-console.log(0.1 + 0.2 == 0.3);
-```
-
 * [What is a closure in javascript?](#what-is-a-closure-in-javascript)
 * [When you zoom in on your browser and the page gets bigger, what exactly happens?](#zoom)
+* [What is asynchronous programming?](#what-is-asynchronous-programming)
+
 =====
 
 ## Answers
@@ -362,6 +355,12 @@ console.log(0.1 + 0.2 == 0.3);
 
 [Back to Round Two qs](#round-two)
 
+##### <a name='data-binding'></a> What are two-way data binding and one-way data flow, and how are they different?
+
+* This a tough-y 😎. Here's the deal: **Two-way data binding** means that UI fields are bound to model data dynamically. I.e., when a UI field changes, the model data changes with it and vice-versa. An example of this is Angular.js, which uses two-way binding. **One way data flow** means that the model is the **single source of truth**. A change in UI is not _directly_ bound to the model. An example of a one-way data flow framework is React. Only the model, or `store` in this case, has access to the application's state.  
+
+[Back to Round Two qs](#round-two)
+
 
 =====
 
@@ -436,12 +435,13 @@ is read as:
 
 [Back to Round Three qs](#round-three)
 
-##### What is the difference between classical inheritance and prototypal inheritance?
+##### What are the three phases of event propagation?
 
-* **Class Inheritance:**
+* 1. Capturing phase: Events begin at the top level and move inwards towards the target (the node you clicked)
+  2. Target node: If there are registered handlers at the target node, they are run.
+  3. Bubbling phase: Event walks back outwards towards root; all encountered event handlers are run on the way.
 
 [Back to Round Three qs](#round-three)
-
 =====
 
 ##### What are the differences between div and span?
@@ -525,17 +525,6 @@ is read as:
 
 [Back to Round Four qs](#round-four)
 
-##### What will the code below output?
-
-```js
-console.log(0.1 + 0.2);
-console.log(0.1 + 0.2 == 0.3)
-```
-
-* `NaN`s type is `Number`. `NaN` compared to _anything_, even itself, is false. One way to check if they are equal is using the built in `isNaN()` function.
-
-[Back to Round Four qs](#round-four)
-
 ##### What is a closure in javascript?
 
 * Specifically: A closure is an inner function that has access to the variables in the outer (enclosing) function’s scope chain. The closure has access to variables in three scopes; specifically: (1) variable in its own scope, (2) variables in the enclosing function’s scope, and (3) global variables.
@@ -545,6 +534,12 @@ console.log(0.1 + 0.2 == 0.3)
 ##### When you zoom in on your browser and the page gets bigger, what exactly happens?
 
 * The browser increases the size of each pixel by the percentage of the zoom.
+
+[Back to Round Four qs](#round-four)
+
+##### What is asynchronous programming?
+
+* Synchronous programming means code is executed sequentially from top-to-bottom, blocking on long-running tasks such as network requests and disk I/O. Asynchronous programming means that the engine runs in an event loop. When a blocking operation is needed, the request is started, and the code keeps running without blocking for the result.
 
 [Back to Round Four qs](#round-four)
 
