@@ -333,7 +333,18 @@ function foo2()
 
 ##### What is the Temporal Dead Zone?
 
-* This has to do with the topic of hoisting. The temporal deadzone is the time between entering a scope where a variable is declared (i.e. an `if` statement or `while` loop), and the actual declaration and initialization of that variable. During this period, `let` and `const` variables cannot be accessed, even though they have been hoisted.
+* This has to do with the topic of hoisting. The temporal deadzone is the time between entering a scope where a variable is declared (i.e. an `if` statement or `while` loop), and the actual declaration and initialization of that variable. During this period, `let` and `const` variables cannot be accessed (you will get a `Reference Error`), even though they have been hoisted. Example:
+
+```js
+console.log('out of scope');
+
+if (true) {
+  // Enter temporal deadzone. `x` is created and hoisted as soon as we enter scope.
+  console.log('In the scope!');  // TEMPORAL DEADZONE
+  // TEMPORAL DEADZONE
+  let x = "Test Variable"; // No longer in the temporal deadzone
+}
+```
 
 [Back to Round Two qs](#round-two)
 
