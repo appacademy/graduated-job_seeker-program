@@ -122,7 +122,7 @@ counter();
 * [What does the global object refer to in JavaScript?](#what-does-the-global-object-refer-to-in-javascript)
 * [What does the `length` property of the JavaScript Function object return?](#what-does-the-length-property-of-the-javaScript-function-object-return)
 * [When inspecting a MouseEvent object, which of the following do target and currentTarget represent?](#current-target)
-* [What is a prototype in JavaScript?](#what-is-a-prototype-in-javaScript)
+* [What is a prototype in JavaScript?](#what-is-a-prototype-in-javascript)
 
 ## Round Four
 
