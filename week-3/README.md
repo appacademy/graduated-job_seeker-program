@@ -16,7 +16,8 @@
 
 ## Day Three
 
-* Linked Lists (9:30 - 11:00)
+* 10:30AM Check In (there will be a fire drill from 10:00 - 10:30)
+* Linked Lists (10:30 - 12:00)
 * Online Networking (11:00 - 12:00)
 * Lunch (12:00 - 1:00)
 * [Pairboarding](https://github.com/appacademy/graduated-job_seeker-program/tree/master/pairboarding-problems) (1:00 - 3:00)
