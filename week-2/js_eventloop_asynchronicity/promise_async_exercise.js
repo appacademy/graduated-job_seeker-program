@@ -169,3 +169,41 @@ const promise4 = "Goodbye for real!";
 //   f2();
 //   console.log("When do I show up?");
 // };
+
+
+
+
+
+
+
+// async function f4() {
+//   const promise8 = new Promise(function(resolve, reject) {
+//     setTimeout(resolve, 5000, 'foo');
+//   });
+//   const promise9 = new Promise(function(resolve, reject) {
+//     setTimeout(resolve, 5000, 'bar');
+//   });
+//
+//   let foo = await promise8;
+//   console.log('waiting...');
+//   let bar = await promise9;
+//
+//   console.log(`async/await + ${[foo, bar]}`);
+// }
+//
+// function f5() {
+//   const promise10 = new Promise(function(resolve, reject) {
+//     setTimeout(resolve, 5000, 'biz');
+//   });
+//   const promise11 = new Promise(function(resolve, reject) {
+//     setTimeout(resolve, 5000, 'biz');
+//   });
+//
+//   Promise.all([promise10, promise11]).then( values => console.log(`Promises + ${values}`) );
+//   console.log('not waiting!');
+// }
+//
+// const lastFunc = () => {
+//     f4();
+//     f5();
+// };
