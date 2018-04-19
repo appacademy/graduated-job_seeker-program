@@ -17,13 +17,15 @@ isIsomorphic("egg", 'add'); // true
 isIsomorphic("paper", 'title'); // true
 isIsomorphic("kick", 'side'); // false
 ```
+This problem should be completed in O(N) time and O(N) space. 
 
 ### Solution
+
 
 ```js
 function isIsomorphic(firstString, secondString) {
 
-  // Check if the same lenght. If not, they cannot be isomorphic
+  // Check if the same length. If not, they cannot be isomorphic
   if (firstString.length !== secondString.length) return false
 
   const letterMap = {};
@@ -37,7 +39,7 @@ function isIsomorphic(firstString, secondString) {
     if (letterMap[letterA] === undefined) {
       letterMap[letterA] = letterB;
     } else if (letterMap[letterA] !== letterB) {
-      // Eles if letterA already exists in the map, but it does not map to
+      // If letterA already exists in the map, but it does not map to
       // letterB, that means that A is mapping to more than one letter.
       return false;
     }
@@ -60,57 +62,15 @@ Output: True
 ```
 
 ```
-Input: "()(())"
+Input: "()())"
 
 Output: False
 ```
 
 
-**Before we get started:**
-
-First, ask your partner to go over a basic API for a `Stack`. It should follow the following constraints:
-
-* It takes 1 argument in the constructor, `store`, that defaults to an empty array
-* It should have the following methods:
-  * `pop()`: removes and returns last element from the store
-  * `push()`: adds element to the end of the store
-  * `size()`: returns the size of the store
-  * `peek()`: shows the top element of the stack (without removing it)
-  * `isEmpty()`: returns `true` or `false` if the stack is empty
-
-Ask your partner to implement a stack. We will use it to solve our ultimate problem. Their implementation should look something like this (if they did it ES6 style):
-```js
-class Stack {
-    constructor(store = []) {
-      this.store = store;
-    }
-
-    pop() {
-      return this.store.pop();
-    }
-
-    push(el) {
-      this.store.push(el);
-    }
-
-    size() {
-      return this.store.length;
-    }
-
-    peek() {
-      return this.store[this.store.length - 1];
-    }
-
-    isEmpty() {
-      return !this.store.length
-    }
-}
-```
-
-Great! Now ask your partner to implement our `isBalanced` method using our `Stack` class. If they get stuck, you can go over the basic idea with them.
 
 **The Idea:**
-* First, we will create a stack. This will only hold our opening parentheses
+* First, we will create a stack using an Arrau. This will only hold our opening parentheses
 * Every time we encounter a closing parentheses, we will call `pop()` on our stack
 * We know that the string is `unbalanced` in **two scenarios:**
   * If we ever call `pop()` and it returns `undefined`, we know we have called pop on an empty stack
