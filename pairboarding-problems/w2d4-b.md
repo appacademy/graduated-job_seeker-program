@@ -67,8 +67,8 @@ Input: "()())"
 Output: False
 ```
 
-> **Hint:** If your partner gets stuck, ask them if using a stack might help us?
-What would happen if every time we saw an **opening** parenthesis, we put it on the stack, and every time we saw a closing parenthesis, we called pop on our stack? When would we know if or parentheses weren't matching up?
+> **Hint:** If your partner gets stuck, ask them if using a stack might help us.
+What would happen if every time we saw an **opening** parenthesis, we put it on the stack, and every time we saw a closing parenthesis, we called pop on our stack? When would we know if our parentheses weren't matching up?
 
 ### Solution \#1
 
@@ -103,7 +103,7 @@ What is the time complexity of this approach? What is the space complexity?
 
 ### Solution \#2
 
-Instead of using a stack, we could simply use a counter. Every time we encounter an opening parenthesis, we increment our counter.
+Instead of using a stack, we could use a counter. Every time we encounter an opening parenthesis, we increment our counter.
 
 The logic is very similar to using a stack. If we encounter a closing parenthesis, we decrement our count. If our count falls below `0`, we know we have encountered an unbalanced amount of parantheses. Additionally, if the count is not `0` after the iteration, we have not encountered enough closing parentheses.
 
