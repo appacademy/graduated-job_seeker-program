@@ -8,7 +8,7 @@ You are given two strings, `J` and `S`. String `J` represents the types of stone
 
 **Contraints**
 
-* The letters in `J` are guraranteed distinct.
+* The letters in `J` are guaranteed distinct.
 * All characters in `J` and `S` are letters.
 * Letters are case-sensitive, so `"a"` is considered a different type of stone from `"A"`.
 
