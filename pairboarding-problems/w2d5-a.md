@@ -1,7 +1,5 @@
 # Partner A Asks Partner B
 
-## Problem 1
-
 ### Shortest Distance Between Nodes
 
 Write a method, `shortestDistance`, that takes in a `root` node and two node _values_. This method should return the shortest distance between these two nodes.
