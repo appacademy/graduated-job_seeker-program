@@ -67,7 +67,8 @@ Input: "()())"
 Output: False
 ```
 
-> **Hint:** If your partner gets stuck, ask them if we could use a stack for this. What would happen if every time we saw an **opening** parenthesis, we put it on the stack, and every time we saw a closing parenthesis, we called pop on our stack? When would we know if or parentheses weren't matching up?
+> **Hint:** If your partner gets stuck, ask them if using a stack might help us?
+What would happen if every time we saw an **opening** parenthesis, we put it on the stack, and every time we saw a closing parenthesis, we called pop on our stack? When would we know if or parentheses weren't matching up?
 
 ### Solution \#1
 
