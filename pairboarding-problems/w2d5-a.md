@@ -80,6 +80,6 @@ function findDepth(root, value) {
 **Explanation:**
 The idea here is that we want to do this problem in 3 steps:
 * First, we need to find the least common ancestor for both values. We can write a helper function, `leastCommonAncestor`
-* How can we find this? We know that we are at the LCA for two values if the values are in different sub-trees (i.e. `val1` lives in the `left` subtree, `val2` lives in the `right` subtree). If they are both in the same subtree (_both_ greater than current value, or _both_ less than current value), then we look for the ancestor in that subtree.
+  * How can we find this? We know that we are at the LCA for two values if the values are in different sub-trees (i.e. `val1` lives in the `left` subtree, `val2` lives in the `right` subtree). If they are both in the same subtree (_both_ greater than current value, or _both_ less than current value), then we look for the ancestor in that subtree.
 * Find the distance from the LCA to each node. We can write a helper function, `findDepth`
 * Sum the two distances.
