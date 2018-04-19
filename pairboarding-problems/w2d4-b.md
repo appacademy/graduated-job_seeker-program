@@ -107,7 +107,7 @@ class Stack {
 }
 ```
 
-Great! Now we should use our Stack class in checking if our parentheses are balanced.
+Great! Now ask your partner to implement our `isBalanced` method using our `Stack` class. If they get stuck, you can go over the basic idea with them.
 
 **The Idea:**
 * First, we will create a stack. This will only hold our opening parentheses
