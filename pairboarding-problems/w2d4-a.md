@@ -2,13 +2,13 @@
 
 ## Problem 1
 
-### Problem: Jewels and Stones
+### Jewels and Stones
 
 You are given two strings, `J` and `S`. String `J` represents the types of stones that are jewels. String `S` represents all of the stones that you have. Each character in string `S` is a type of stone you have. You want to know how many of your stones are _also_ jewels.
 
 **Contraints**
 
-* The letters in `J` are guraranteed distinct.
+* The letters in `J` are guaranteed distinct.
 * All characters in `J` and `S` are letters.
 * Letters are case-sensitive, so `"a"` is considered a different type of stone from `"A"`.
 
@@ -43,10 +43,9 @@ function numJewels(jewels, allStones) {
 
 **Questions for you partner:**
 
-If your partner took this approach, ask them to consider the following:
+If your partner took this approach, ask them about the time complexity of this implementation.
 
-* **Q:** What is the time complexity of this implementation?  
-* **A:** If we have a string of stones of size `N`, and a string of jewels of size `K`, this algorithm would be `O(N * K)`
+* If we have a string of stones of size `N`, and a string of jewels of size `K`, this algorithm would be `O(N * K)`
 > **Why? For every stone in our collection `S`, we are calling `includes` on the string `J`. Includes is an O(K) operation, happening N times.**
 
 How can we improve this algorithm?
@@ -58,7 +57,7 @@ How can we improve this algorithm?
 ```js
 function numJewels(jewels, allStones) {
   let count = 0;
-  let store = {};
+  const store = {};
 
   for (let i = 0; i < jewels.length; i++) {
     store[jewels[i]] = true;
@@ -79,57 +78,117 @@ What is the time complexity of this implementation? Why?
 
 ## Problem 2
 
-In a 2 dimensional array grid, each value `grid[i][j]` represents the height of a building located there. You may think of the grid as a square city from a bird's eye view. Example:
+### Trapping Rain Water
+
+You are given an array of `n` non-negative integers, where each number represents a ground elevation. Each point of elevation has a width of 1. For example, given an array `[5, 2, 4, 3, 1, 4]`, the elevation map would look something like this:
+```
+ ___
+|   |    ___         ___
+|   |   |   |___    |   |
+|   |___|       |   |   |
+|               |___|   |
+| 5   2   4   3   1   4 |
+```
+
+Our goal is to compute how much water our elevation map would be able to trap if it rained. Referring to the above example, it would look like this if it rained:
+```
+ ___
+|   |,,, ___ ,,,,,,, ___
+|   |///|   |///////|   |
+|   |///|       |///|   |
+|               |///|   |
+| 5   2   4   3   1   4 |
+```
+
+Thus, for an input of `[5, 2, 4, 3, 1, 4]`, the total sum of water that would be trapped is `6` units.
+
+Write a method, `trappedWater`, that calculates this for you.
+
+**Before your partner begins to write code, talk through the logic of this problem. Lead them to think about what determines how much water a single bar can hold above it.**
+
+The idea is that, at any point, the amount of water it can hold is determined by the _minimum_ of the maximum point to the right and maximum point to the left (`min(maxRight, maxLeft)`). For the above example, the water that `2` can hold is the minimum of `4` (right max) and `5` (left max). The amount of water it can hold above it (`2 units`) is determined by the difference between this min-max and itself (`4 - 2`).
+
+### Brute Force Solution
+
+**Overview:** For each element in the array, we find the maximum level of water it can trap after the rain, which is equal to the minimum of the maximum height of bars on both sides, minus its own height.
 
 ```js
-const grid = [
-  [2, 3, 9, 7],
-  [1, 4, 5, 4],
-  [6, 0, 2, 8],
-  [4, 1, 7, 7],
-];
+function trappedWater(nums) {
+  let totalWater = 0;
+
+  for (let i = 1; i < nums.length - 1; i++) {
+    let maxLeft = 0, maxRight = 0;
+
+    for (let j = i; j >= 0; j--) {
+      maxLeft = Math.max(maxLeft, nums[j]);
+    }
+
+    for (let j = i; j < nums.length; j++) {
+      maxRight = Math.max(maxRight, nums[j]);
+    }
+
+    totalWater += (Math.min(maxLeft, maxRight) - nums[i]);
+  }
+
+  return totalWater;
+}
 ```
 
-We are allowed to increase the height of any number of buildings, by any amount (the amounts can be different for different buildings). Height 0 is considered to be a building as well.
+**Complexity Analysis:** (Ask your partner)
 
-At the end, the "skyline" when viewed from all four directions of the grid, i.e. top, bottom, left, and right, must be the same as the skyline of the original grid. A city's skyline is the outer contour of the rectangles formed by all the buildings when viewed from a distance. For the `grid` example above, the skyline from the **south** would be `6, 4, 9, 8`. From the **west**: `9, 5, 8, 7`.
+* What is the time complexity? `O(n ^ 2)`. For each element of array, we iterate the left and right parts
+* What is the space complexity? `O(1)`
 
-What is the maximum total sum that the height of the buildings can be increased?
+**How can we do this in O(N) time?**
 
-**Example**:
+### Efficient Solution
 
+In the brute force solution, we iterate over the left and right parts again and again just to find the highest bar size up to that index. But, this could be stored!
+
+**The Idea:**
+* Create two arrays -- one to store the left maximums at each index, and one to store the right maximums at each index
+* Instantiate an integer, `totalWater`, which will be returned at the end
+* Instantiate a variable, `leftMax`, to be the first element in the array
+* Iterate left to right.
+  * If the element at the current index is greater than `leftMax`, reassign `leftMax` to that element.
+  * Store `leftMax` at that index in our array of left maximums.
+* Now, iterate back. Right to left. Instantiate a variable, `rightMax`, that will start as the right-most element.
+  * Similar to our first iteration, if the element at the current index is greater than `rightMax`, reassign `rightMax` to be that element
+  * Store `rightMax` at that index in our array of _right_ maximums
+* Perform one last iteration to find how much water can be held at each index. The steps to find that are:
+  * Find the **minimum** of the two maximums for that index, found in our `leftMaxArray` and `rightMaxArray`
+  * Find the difference between that minimum and the elevation at the same index
+  * Add this difference to our `totalWater` sum.
+* Return `totalWater` at the end.
+
+```js
+function trappedWater(elevation) {
+  let totalWater = 0;
+
+  const rightMaxArray = [];
+  const leftMaxArray = [];
+  const size = elevation.length
+
+  let leftMax = elevation[0];
+
+  for (let i = 0; i < size; i++) {
+    if (elevation[i] > leftMax) leftMax = elevation[i];
+
+    leftMaxArray[i] = leftMax;
+  }
+
+  let rightMax = elevation[size - 1];
+
+  for (let i = size - 1; i >= 0; i--) {
+    if (elevation[i] > rightMax) rightMax = elevation[i];
+
+    rightMaxArray[i] = rightMax;
+  }
+
+  for (let i = 0; i < size; i++) {
+    totalWater += Math.min(leftMaxArray[i], rightMaxArray[i]) - elevation[i];
+  }
+
+  return totalWater;
+}
 ```
-Input: grid = [
-  [3,0,8,4],
-  [2,4,5,7],
-  [9,2,6,3],
-  [0,3,1,0]
-]
-
-Output: 35
-```
-
-**Explanation**:
-
-The skyline viewed from top or bottom is: [9, 4, 8, 7]
-The skyline viewed from left or right is: [8, 7, 9, 3]
-
-The grid after increasing the height of buildings without affecting skylines is:
-
-```
-gridNew = [
-  [8, 4, 8, 7],
-  [7, 4, 7, 7],
-  [9, 4, 8, 7],
-  [3, 3, 3, 3]
-]
-```
-
-**Constraints:**
-
-* `1 < grid.length ``
-* `grid[0].length <= 50.`
-* All heights `grid[i][j]` are in the range [0, 100].
-* All buildings in `grid[i][j]` occupy the entire grid cell: that is, they are a `1 x 1 x grid[i][j]` rectangular prism.
-
-## Solution

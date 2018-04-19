@@ -30,6 +30,7 @@
 ## Day Four
 
 * Networking Lecture (9:30 - 11:00)
+  * [Networking Lecture Slides](https://docs.google.com/presentation/d/1hCC-uR8ESDgHwMbJqI74pzOmVW2XLr9gQI33KFbiKvQ/edit#slide=id.g38aa51186a_0_139)
 * Online Networking (11:00 - 12:00)
 * Lunch (12:00 - 1:00)
 * Application Sprint (1:00 - 3:00)
