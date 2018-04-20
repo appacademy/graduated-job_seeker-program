@@ -87,9 +87,9 @@ function isBST(node) {
 }
 ```
 
-This method assumes that we have two helper functions, `maxValue` and `minValue`, that just return the max and minimum values in the subtree of a given node.
+This method assumes that we have two helper functions, `maxValue` and `minValue`, that return the maximum and minimum values in the subtree of a given node.
 
-While this method would work, it is still extremely inefficient. Calling `maxValue` and `minValue` for every single node makes this implementation `O(n * log(n))`.
+While this method would work, it is not the most efficient solution. Calling `maxValue` and `minValue` for every single node makes this implementation `O(n * log(n))`.
 How can we do better?
 
 ### Method \#3 (Improved)
