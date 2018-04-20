@@ -31,6 +31,9 @@ isBST(NULL)
 Output: True
 ```
 
+Keep in mind, an empty Binary Search Tree is still a valid Binary Search Tree. `isBST(null)` should return `true`.
+
+
 ### Common Mistake
 
 A very common solution to this algorithm is to write a method that, for each node, checks if the right node is greater and the left node is smaller. That might look something like this:
