@@ -54,7 +54,7 @@ function isBST(root) {
   return isBST(root.left) && isBST(root.right);
 }
 ```
-> **If your partner starts with this intuition, let them follow it, and then ask them if they see how it could go wrong**
+**If your partner starts with this intuition, let them follow it. Ask them if they see anything wrong with this approach. If they still can't see it, draw out an example of an invalid tree that would pass as valid (see below).**
 
 At first, this makes sense intuitively. The issue is that this method would return true for the following Binary Tree:
 ```
