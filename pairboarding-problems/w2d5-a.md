@@ -37,7 +37,7 @@ Output: 0
 
 **Approach:** Remember that we will only need a `Node` class, not a `Tree` class. The `Node` should be a simple constructor function that takes in a value, a left node (defaults to null), and a right node (also defaults to null). **The Node class should not hold onto a `parent` value.**
 
-Your partner may be inclined to start at each node and try and go up. If they take this approach, tell that they should consider taking a **top down** approach
+Your partner may be inclined to start at each node and try and go up. If they take this approach, tell them that they should consider taking a **top down** approach.
 
 Let your partner discuss their thoughts. Encourage them to consider using helper methods. If we draw out a tree, and find the distance manually, does your partner have any realizations? What information to we need to find _first_ before we can calculate the distance?
 
