@@ -1,6 +1,6 @@
 # Partner B Asks Partner A
 
-## Kth Largest Node
+## Validate Binary Search Tree
 
 Write a method, `isBST`, that checks if a given Binary Tree is a **Binary Search Tree**.
 
