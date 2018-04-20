@@ -121,4 +121,4 @@ We can check if it is valid by following these steps:
 * Start at the root (`13`). `minValue` and `maxValue` are undefined in our first call to the method, so we don't run the comparison. Because we don't have these values, we make the recursive call to see if both the left and right subtrees are valid
   * When we make our recursive call to the left, we pass our _own_ value (`13`) down as the max value we have seen so far. That is because, if we are searching the **left** tree, we know we want every single node to have a value smaller than `13`
   * Vice verse for the right subtree. Pass `13` down as the minimum value we have seen. We know that there cannot be any nodes smaller than 13 in the **right** subtree.
-* Recurse until there are no more children. We know the tree is valid if we have gotten to the bottom without returning false.
+* Once we get to the node `14`, the `maxValue` will point to `13`, and the `minValue` will point to `8`. In our comparison check, this call will return `false` because `14` is greater than the `maxValue`, making this tree invalid. 
