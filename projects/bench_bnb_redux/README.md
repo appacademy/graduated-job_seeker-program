@@ -45,6 +45,8 @@ The goal of this project is to rebuild the missing Redux state. **This project a
 ```  
 
 ### Step One: Re-Acquaint Yourself
+Download the [skeleton](https://github.com/appacademy/graduated-job_seeker-program/raw/master/projects/bench_bnb_redux/skeleton.zip)
+
 Take a moment to look over the provided backend and frontend files and remember how BenchBnB works.  Pay close attention to the schema and how the information is served up in the jBuilder views.  Remember, you can always reference the instructions (and solution if ABSOLUTELY necessary) from the original project.
 
 As with any rails project make sure you run the following:
