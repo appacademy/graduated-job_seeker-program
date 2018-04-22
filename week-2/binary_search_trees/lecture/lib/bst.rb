@@ -34,7 +34,7 @@ class BinarySearchTree
     # if node has no children: simply set node to nil
     # if node has one child, replace node with the child.
     # if node has two children, replace node with the maximum of it's smaller children. If that node has a left side, promote that left side to the node's previous position.
-      @root = delete_from_tree(@root, value)
+    @root = delete_from_tree(@root, value)
   end
 
   # helper method for #delete:
@@ -73,6 +73,21 @@ class BinarySearchTree
   end
 
   def in_order_traversal(tree_node = @root, arr = [])
+
+    # We need to make sure we're taking in an array in our args to make this recursive.
+    # Pattern should always be left, self, right.
+    # Why does this work?  Why do we not need to assign the recursive call to a variable?
+    if tree_node.left
+      in_order_traversal(tree_node.left, arr)
+    end
+
+    arr.push(tree_node.value)
+
+    if tree_node.right
+      in_order_traversal(tree_node.right, arr)
+    end
+
+    arr
   end
 
 
