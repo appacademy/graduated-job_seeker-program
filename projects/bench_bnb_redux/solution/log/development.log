@@ -1,0 +1,302 @@
+  [1m[35mSQL (5.9ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "benches" CASCADE[0m
+  [1m[35m (46.7ms)[0m  [1m[35mCREATE TABLE "benches" ("id" bigserial primary key, "description" character varying, "lat" float, "lng" float, "seating" integer DEFAULT 2 NOT NULL, "picture_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "favorites" CASCADE[0m
+  [1m[35m (18.3ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" bigserial primary key, "user_id" integer NOT NULL, "bench_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_favorites_on_bench_id_and_user_id" ON "favorites"  ("bench_id", "user_id")[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_bench_id" ON "favorites"  ("bench_id")[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_user_id" ON "favorites"  ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "reviews" CASCADE[0m
+  [1m[35m (12.4ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "body" character varying DEFAULT '' NOT NULL, "rating" integer NOT NULL, "bench_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE  INDEX  "index_reviews_on_bench_id" ON "reviews"  ("bench_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (11.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  [1m[35m (13.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170802010308)[0m
+  [1m[35m (3.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170802005858),
+(20170802010041),
+(20170802010223);
+
+[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-04-22 19:59:20.363098"], ["updated_at", "2018-04-22 19:59:20.363098"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "benches" CASCADE[0m
+  [1m[35m (36.6ms)[0m  [1m[35mCREATE TABLE "benches" ("id" bigserial primary key, "description" character varying, "lat" float, "lng" float, "seating" integer DEFAULT 2 NOT NULL, "picture_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "favorites" CASCADE[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" bigserial primary key, "user_id" integer NOT NULL, "bench_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_favorites_on_bench_id_and_user_id" ON "favorites"  ("bench_id", "user_id")[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_bench_id" ON "favorites"  ("bench_id")[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_user_id" ON "favorites"  ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "reviews" CASCADE[0m
+  [1m[35m (13.6ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "body" character varying DEFAULT '' NOT NULL, "rating" integer NOT NULL, "bench_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_reviews_on_bench_id" ON "reviews"  ("bench_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (29.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170802010308)[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170802005858),
+(20170802010041),
+(20170802010223);
+
+[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-04-22 19:59:20.576408"], ["updated_at", "2018-04-22 19:59:20.576408"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2018-04-22 19:59:20.580527"], ["key", "environment"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[31mDELETE FROM "benches"[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "benches" ("description", "lat", "lng", "seating", "picture_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["description", "alamo square, many dogs"], ["lat", 37.775769], ["lng", -122.43496], ["seating", 4], ["picture_url", "https://c2.staticflickr.com/4/3035/2309664044_486f5a0327_z.jpg?zz=1"], ["created_at", "2018-04-22 19:59:20.649008"], ["updated_at", "2018-04-22 19:59:20.649008"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "benches" ("description", "lat", "lng", "picture_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["description", "UN plaza, food truck access"], ["lat", 37.77976], ["lng", -122.41382], ["picture_url", "http://www.concretedecor.net/CD/assets/Image/archives/CD1405/1405i_Page_32_Image_0001_600.jpg"], ["created_at", "2018-04-22 19:59:20.656149"], ["updated_at", "2018-04-22 19:59:20.656149"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "benches" ("description", "lat", "lng", "seating", "picture_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["description", "Ocean Beach, gnarly breh"], ["lat", 37.769996], ["lng", -122.511281], ["seating", 3], ["picture_url", "http://marmaladeandmileposts.com/wp-content/uploads/2012/05/2012-4-16-San-Francisco-Road-Trip-San-Francisco-1301.jpg"], ["created_at", "2018-04-22 19:59:20.659932"], ["updated_at", "2018-04-22 19:59:20.659932"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vdz92WBw_jgRWoQmEZOm0Q"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "guest"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "guest"], ["password_digest", "$2a$10$2uHilEworSM9ESycLLr7re5UeUyKlyzvPckBh6ryWTjugDY/R0Vfq"], ["session_token", "vdz92WBw_jgRWoQmEZOm0Q"], ["created_at", "2018-04-22 19:59:20.755275"], ["updated_at", "2018-04-22 19:59:20.755275"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2018-04-22 12:59:42 -0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 2783ms (Views: 2777.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/benches?bounds%5BnorthEast%5D%5Blat%5D=37.80788593713507&bounds%5BnorthEast%5D%5Blng%5D=-122.38838165576169&bounds%5BsouthWest%5D%5Blat%5D=37.74004249934129&bounds%5BsouthWest%5D%5Blng%5D=-122.47421234423825&minSeating=1&maxSeating=10" for 127.0.0.1 at 2018-04-22 12:59:47 -0700
+Processing by Api::BenchesController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.80788593713507", "lng"=>"-122.38838165576169"}, "southWest"=>{"lat"=>"37.74004249934129", "lng"=>"-122.47421234423825"}}, "minSeating"=>"1", "maxSeating"=>"10"}
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (4.8ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE (lat < '37.80788593713507') AND (lat > '37.74004249934129') AND (lng > '-122.47421234423825') AND (lng < '-122.38838165576169') AND ("benches"."seating" BETWEEN $1 AND $2)[0m  [["seating", 1], ["seating", 10]]
+  [1m[36mReview Load (4.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."bench_id" IN (1, 2)[0m
+  [1m[36mFavorite Load (4.4ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."bench_id" IN (1, 2)[0m
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."bench_id" = $1[0m  [["bench_id", 1]]
+  Rendered api/benches/_bench.json.jbuilder (12.6ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."bench_id" = $1[0m  [["bench_id", 2]]
+  Rendered api/benches/_bench.json.jbuilder (1.4ms)
+  Rendered api/benches/index.json.jbuilder (201.5ms)
+Completed 200 OK in 251ms (Views: 186.8ms | ActiveRecord: 36.9ms)
+
+
+Started GET "/api/benches?bounds%5BnorthEast%5D%5Blat%5D=37.817784756699766&bounds%5BnorthEast%5D%5Blng%5D=-122.38310271599426&bounds%5BsouthWest%5D%5Blat%5D=37.7499504073848&bounds%5BsouthWest%5D%5Blng%5D=-122.46893340447082&minSeating=1&maxSeating=10" for 127.0.0.1 at 2018-04-22 13:00:03 -0700
+Processing by Api::BenchesController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.817784756699766", "lng"=>"-122.38310271599426"}, "southWest"=>{"lat"=>"37.7499504073848", "lng"=>"-122.46893340447082"}}, "minSeating"=>"1", "maxSeating"=>"10"}
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.5ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE (lat < '37.817784756699766') AND (lat > '37.7499504073848') AND (lng > '-122.46893340447082') AND (lng < '-122.38310271599426') AND ("benches"."seating" BETWEEN $1 AND $2)[0m  [["seating", 1], ["seating", 10]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."bench_id" IN (1, 2)[0m
+  [1m[36mFavorite Load (0.7ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."bench_id" IN (1, 2)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."bench_id" = $1[0m  [["bench_id", 1]]
+  Rendered api/benches/_bench.json.jbuilder (3.1ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."bench_id" = $1[0m  [["bench_id", 2]]
+  Rendered api/benches/_bench.json.jbuilder (1.6ms)
+  Rendered api/benches/index.json.jbuilder (14.2ms)
+Completed 200 OK in 28ms (Views: 22.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/benches?bounds%5BnorthEast%5D%5Blat%5D=37.81073288540513&bounds%5BnorthEast%5D%5Blng%5D=-122.42739135124816&bounds%5BsouthWest%5D%5Blat%5D=37.74289206129398&bounds%5BsouthWest%5D%5Blng%5D=-122.51322203972472&minSeating=1&maxSeating=10" for 127.0.0.1 at 2018-04-22 13:00:07 -0700
+Processing by Api::BenchesController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.81073288540513", "lng"=>"-122.42739135124816"}, "southWest"=>{"lat"=>"37.74289206129398", "lng"=>"-122.51322203972472"}}, "minSeating"=>"1", "maxSeating"=>"10"}
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.5ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE (lat < '37.81073288540513') AND (lat > '37.74289206129398') AND (lng > '-122.51322203972472') AND (lng < '-122.42739135124816') AND ("benches"."seating" BETWEEN $1 AND $2)[0m  [["seating", 1], ["seating", 10]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."bench_id" IN (1, 3)[0m
+  [1m[36mFavorite Load (0.5ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."bench_id" IN (1, 3)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."bench_id" = $1[0m  [["bench_id", 1]]
+  Rendered api/benches/_bench.json.jbuilder (2.3ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."bench_id" = $1[0m  [["bench_id", 3]]
+  Rendered api/benches/_bench.json.jbuilder (1.6ms)
+  Rendered api/benches/index.json.jbuilder (11.2ms)
+Completed 200 OK in 24ms (Views: 19.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/benches?bounds%5BnorthEast%5D%5Blat%5D=37.7989330561245&bounds%5BnorthEast%5D%5Blng%5D=-122.4569171080841&bounds%5BsouthWest%5D%5Blat%5D=37.73108140010003&bounds%5BsouthWest%5D%5Blng%5D=-122.54274779656066&minSeating=1&maxSeating=10" for 127.0.0.1 at 2018-04-22 13:00:08 -0700
+Processing by Api::BenchesController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.7989330561245", "lng"=>"-122.4569171080841"}, "southWest"=>{"lat"=>"37.73108140010003", "lng"=>"-122.54274779656066"}}, "minSeating"=>"1", "maxSeating"=>"10"}
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.5ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE (lat < '37.7989330561245') AND (lat > '37.73108140010003') AND (lng > '-122.54274779656066') AND (lng < '-122.4569171080841') AND ("benches"."seating" BETWEEN $1 AND $2)[0m  [["seating", 1], ["seating", 10]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."bench_id" = 3[0m
+  [1m[36mFavorite Load (0.7ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."bench_id" = 3[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."bench_id" = $1[0m  [["bench_id", 3]]
+  Rendered api/benches/_bench.json.jbuilder (3.6ms)
+  Rendered api/benches/index.json.jbuilder (10.8ms)
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/benches?bounds%5BnorthEast%5D%5Blat%5D=37.783902961270975&bounds%5BnorthEast%5D%5Blng%5D=-122.41609661852692&bounds%5BsouthWest%5D%5Blat%5D=37.716037512212964&bounds%5BsouthWest%5D%5Blng%5D=-122.50192730700348&minSeating=1&maxSeating=10" for 127.0.0.1 at 2018-04-22 13:01:57 -0700
+Processing by Api::BenchesController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.783902961270975", "lng"=>"-122.41609661852692"}, "southWest"=>{"lat"=>"37.716037512212964", "lng"=>"-122.50192730700348"}}, "minSeating"=>"1", "maxSeating"=>"10"}
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.6ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE (lat < '37.783902961270975') AND (lat > '37.716037512212964') AND (lng > '-122.50192730700348') AND (lng < '-122.41609661852692') AND ("benches"."seating" BETWEEN $1 AND $2)[0m  [["seating", 1], ["seating", 10]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."bench_id" = 1[0m
+  [1m[36mFavorite Load (0.5ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."bench_id" = 1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."bench_id" = $1[0m  [["bench_id", 1]]
+  Rendered api/benches/_bench.json.jbuilder (2.8ms)
+  Rendered api/benches/index.json.jbuilder (10.2ms)
+Completed 200 OK in 22ms (Views: 18.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/benches?bounds%5BnorthEast%5D%5Blat%5D=37.80734489767033&bounds%5BnorthEast%5D%5Blng%5D=-122.37664616110703&bounds%5BsouthWest%5D%5Blat%5D=37.73950096318628&bounds%5BsouthWest%5D%5Blng%5D=-122.4624768495836&minSeating=1&maxSeating=10" for 127.0.0.1 at 2018-04-22 13:01:58 -0700
+Processing by Api::BenchesController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.80734489767033", "lng"=>"-122.37664616110703"}, "southWest"=>{"lat"=>"37.73950096318628", "lng"=>"-122.4624768495836"}}, "minSeating"=>"1", "maxSeating"=>"10"}
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.5ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE (lat < '37.80734489767033') AND (lat > '37.73950096318628') AND (lng > '-122.4624768495836') AND (lng < '-122.37664616110703') AND ("benches"."seating" BETWEEN $1 AND $2)[0m  [["seating", 1], ["seating", 10]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."bench_id" IN (1, 2)[0m
+  [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."bench_id" IN (1, 2)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."bench_id" = $1[0m  [["bench_id", 1]]
+  Rendered api/benches/_bench.json.jbuilder (1.7ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."bench_id" = $1[0m  [["bench_id", 2]]
+  Rendered api/benches/_bench.json.jbuilder (1.5ms)
+  Rendered api/benches/index.json.jbuilder (10.3ms)
+Completed 200 OK in 21ms (Views: 17.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/benches?bounds%5BnorthEast%5D%5Blat%5D=37.82540628551711&bounds%5BnorthEast%5D%5Blng%5D=-122.40105421438636&bounds%5BsouthWest%5D%5Blat%5D=37.757578935196186&bounds%5BsouthWest%5D%5Blng%5D=-122.48688490286293&minSeating=1&maxSeating=10" for 127.0.0.1 at 2018-04-22 13:02:00 -0700
+Processing by Api::BenchesController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.82540628551711", "lng"=>"-122.40105421438636"}, "southWest"=>{"lat"=>"37.757578935196186", "lng"=>"-122.48688490286293"}}, "minSeating"=>"1", "maxSeating"=>"10"}
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.6ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE (lat < '37.82540628551711') AND (lat > '37.757578935196186') AND (lng > '-122.48688490286293') AND (lng < '-122.40105421438636') AND ("benches"."seating" BETWEEN $1 AND $2)[0m  [["seating", 1], ["seating", 10]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."bench_id" IN (1, 2)[0m
+  [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."bench_id" IN (1, 2)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."bench_id" = $1[0m  [["bench_id", 1]]
+  Rendered api/benches/_bench.json.jbuilder (2.2ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."bench_id" = $1[0m  [["bench_id", 2]]
+  Rendered api/benches/_bench.json.jbuilder (2.9ms)
+  Rendered api/benches/index.json.jbuilder (12.1ms)
+Completed 200 OK in 27ms (Views: 21.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/api/benches?bounds%5BnorthEast%5D%5Blat%5D=37.78440971979145&bounds%5BnorthEast%5D%5Blng%5D=-122.3927141518842&bounds%5BsouthWest%5D%5Blat%5D=37.71654473570672&bounds%5BsouthWest%5D%5Blng%5D=-122.47854484036077&minSeating=1&maxSeating=10" for 127.0.0.1 at 2018-04-22 13:02:26 -0700
+Processing by Api::BenchesController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.78440971979145", "lng"=>"-122.3927141518842"}, "southWest"=>{"lat"=>"37.71654473570672", "lng"=>"-122.47854484036077"}}, "minSeating"=>"1", "maxSeating"=>"10"}
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.7ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE (lat < '37.78440971979145') AND (lat > '37.71654473570672') AND (lng > '-122.47854484036077') AND (lng < '-122.3927141518842') AND ("benches"."seating" BETWEEN $1 AND $2)[0m  [["seating", 1], ["seating", 10]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."bench_id" IN (1, 2)[0m
+  [1m[36mFavorite Load (0.5ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."bench_id" IN (1, 2)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."bench_id" = $1[0m  [["bench_id", 1]]
+  Rendered api/benches/_bench.json.jbuilder (2.7ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."bench_id" = $1[0m  [["bench_id", 2]]
+  Rendered api/benches/_bench.json.jbuilder (2.3ms)
+  Rendered api/benches/index.json.jbuilder (14.7ms)
+Completed 200 OK in 26ms (Views: 21.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/benches?bounds%5BnorthEast%5D%5Blat%5D=37.79817250471659&bounds%5BnorthEast%5D%5Blng%5D=-122.4266272914216&bounds%5BsouthWest%5D%5Blat%5D=37.73032015062604&bounds%5BsouthWest%5D%5Blng%5D=-122.51245797989816&minSeating=1&maxSeating=10" for 127.0.0.1 at 2018-04-22 13:02:28 -0700
+Processing by Api::BenchesController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.79817250471659", "lng"=>"-122.4266272914216"}, "southWest"=>{"lat"=>"37.73032015062604", "lng"=>"-122.51245797989816"}}, "minSeating"=>"1", "maxSeating"=>"10"}
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.5ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE (lat < '37.79817250471659') AND (lat > '37.73032015062604') AND (lng > '-122.51245797989816') AND (lng < '-122.4266272914216') AND ("benches"."seating" BETWEEN $1 AND $2)[0m  [["seating", 1], ["seating", 10]]
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."bench_id" IN (1, 3)[0m
+  [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."bench_id" IN (1, 3)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."bench_id" = $1[0m  [["bench_id", 1]]
+  Rendered api/benches/_bench.json.jbuilder (2.0ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."bench_id" = $1[0m  [["bench_id", 3]]
+  Rendered api/benches/_bench.json.jbuilder (1.9ms)
+  Rendered api/benches/index.json.jbuilder (11.9ms)
+Completed 200 OK in 21ms (Views: 16.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/api/benches?bounds%5BnorthEast%5D%5Blat%5D=37.80753124105828&bounds%5BnorthEast%5D%5Blng%5D=-122.42937387345285&bounds%5BsouthWest%5D%5Blat%5D=37.73968747764229&bounds%5BsouthWest%5D%5Blng%5D=-122.51520456192941&minSeating=1&maxSeating=10" for 127.0.0.1 at 2018-04-22 13:02:30 -0700
+Processing by Api::BenchesController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.80753124105828", "lng"=>"-122.42937387345285"}, "southWest"=>{"lat"=>"37.73968747764229", "lng"=>"-122.51520456192941"}}, "minSeating"=>"1", "maxSeating"=>"10"}
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.5ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE (lat < '37.80753124105828') AND (lat > '37.73968747764229') AND (lng > '-122.51520456192941') AND (lng < '-122.42937387345285') AND ("benches"."seating" BETWEEN $1 AND $2)[0m  [["seating", 1], ["seating", 10]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."bench_id" IN (1, 3)[0m
+  [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."bench_id" IN (1, 3)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."bench_id" = $1[0m  [["bench_id", 1]]
+  Rendered api/benches/_bench.json.jbuilder (1.9ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."bench_id" = $1[0m  [["bench_id", 3]]
+  Rendered api/benches/_bench.json.jbuilder (1.4ms)
+  Rendered api/benches/index.json.jbuilder (11.1ms)
+Completed 200 OK in 21ms (Views: 16.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/benches?bounds%5BnorthEast%5D%5Blat%5D=37.80788593713507&bounds%5BnorthEast%5D%5Blng%5D=-122.38838165576169&bounds%5BsouthWest%5D%5Blat%5D=37.74004249934129&bounds%5BsouthWest%5D%5Blng%5D=-122.47421234423825&minSeating=1&maxSeating=10" for 127.0.0.1 at 2018-04-22 13:05:41 -0700
+Processing by Api::BenchesController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.80788593713507", "lng"=>"-122.38838165576169"}, "southWest"=>{"lat"=>"37.74004249934129", "lng"=>"-122.47421234423825"}}, "minSeating"=>"1", "maxSeating"=>"10"}
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (1.4ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE (lat < '37.80788593713507') AND (lat > '37.74004249934129') AND (lng > '-122.47421234423825') AND (lng < '-122.38838165576169') AND ("benches"."seating" BETWEEN $1 AND $2)[0m  [["seating", 1], ["seating", 10]]
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."bench_id" IN (1, 2)[0m
+  [1m[36mFavorite Load (0.6ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."bench_id" IN (1, 2)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."bench_id" = $1[0m  [["bench_id", 1]]
+  Rendered api/benches/_bench.json.jbuilder (7.6ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."bench_id" = $1[0m  [["bench_id", 2]]
+  Rendered api/benches/_bench.json.jbuilder (2.7ms)
+  Rendered api/benches/index.json.jbuilder (39.0ms)
+Completed 200 OK in 65ms (Views: 47.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-22 13:05:42 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 795ms (Views: 786.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-22 13:06:36 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 78ms (Views: 73.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/benches?bounds%5BnorthEast%5D%5Blat%5D=37.80788593713507&bounds%5BnorthEast%5D%5Blng%5D=-122.38838165576169&bounds%5BsouthWest%5D%5Blat%5D=37.74004249934129&bounds%5BsouthWest%5D%5Blng%5D=-122.47421234423825&minSeating=1&maxSeating=10" for 127.0.0.1 at 2018-04-22 13:06:37 -0700
+Processing by Api::BenchesController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.80788593713507", "lng"=>"-122.38838165576169"}, "southWest"=>{"lat"=>"37.74004249934129", "lng"=>"-122.47421234423825"}}, "minSeating"=>"1", "maxSeating"=>"10"}
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.8ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE (lat < '37.80788593713507') AND (lat > '37.74004249934129') AND (lng > '-122.47421234423825') AND (lng < '-122.38838165576169') AND ("benches"."seating" BETWEEN $1 AND $2)[0m  [["seating", 1], ["seating", 10]]
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."bench_id" IN (1, 2)[0m
+  [1m[36mFavorite Load (0.7ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."bench_id" IN (1, 2)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."bench_id" = $1[0m  [["bench_id", 1]]
+  Rendered api/benches/_bench.json.jbuilder (3.9ms)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."bench_id" = $1[0m  [["bench_id", 2]]
+  Rendered api/benches/_bench.json.jbuilder (3.1ms)
+  Rendered api/benches/index.json.jbuilder (22.3ms)
+Completed 200 OK in 45ms (Views: 38.5ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-22 13:07:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 516ms (Views: 513.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/benches?bounds%5BnorthEast%5D%5Blat%5D=37.80788593713507&bounds%5BnorthEast%5D%5Blng%5D=-122.38838165576169&bounds%5BsouthWest%5D%5Blat%5D=37.74004249934129&bounds%5BsouthWest%5D%5Blng%5D=-122.47421234423825&minSeating=1&maxSeating=10" for 127.0.0.1 at 2018-04-22 13:07:29 -0700
+Processing by Api::BenchesController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.80788593713507", "lng"=>"-122.38838165576169"}, "southWest"=>{"lat"=>"37.74004249934129", "lng"=>"-122.47421234423825"}}, "minSeating"=>"1", "maxSeating"=>"10"}
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (1.1ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE (lat < '37.80788593713507') AND (lat > '37.74004249934129') AND (lng > '-122.47421234423825') AND (lng < '-122.38838165576169') AND ("benches"."seating" BETWEEN $1 AND $2)[0m  [["seating", 1], ["seating", 10]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."bench_id" IN (1, 2)[0m
+  [1m[36mFavorite Load (0.7ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."bench_id" IN (1, 2)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."bench_id" = $1[0m  [["bench_id", 1]]
+  Rendered api/benches/_bench.json.jbuilder (2.9ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."bench_id" = $1[0m  [["bench_id", 2]]
+  Rendered api/benches/_bench.json.jbuilder (2.4ms)
+  Rendered api/benches/index.json.jbuilder (43.0ms)
+Completed 200 OK in 58ms (Views: 52.1ms | ActiveRecord: 3.5ms)
+
+

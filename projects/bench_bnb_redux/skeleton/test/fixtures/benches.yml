@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  lat: 1.5
+  lng: 1.5
+  seating: 1
+  picture_url: MyString
+
+two:
+  description: MyString
+  lat: 1.5
+  lng: 1.5
+  seating: 1
+  picture_url: MyString
