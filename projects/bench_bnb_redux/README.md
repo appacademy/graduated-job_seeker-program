@@ -118,7 +118,9 @@ There will be one more thing missing to attach redux to your application.  Do yo
 ### Step Seven: Wash, Rinse, Redux
 Congratulations!  You just built out the foundation of your redux state management and its' first piece of reduced frontend state.
 
-Follow this same order of operations to build out the ```session_errors_reducer``` and your errors slice of state, the benches slice of state, then eventually the ui slice of state incorporating the GoogleMapsAPI.   
+Follow this same order of operations to build out the ```session_errors_reducer``` and your errors slice of state, the benches slice of state, then eventually the ui slice of state incorporating the GoogleMapsAPI.
+
+_**NB:** things will get a little more complicated when it comes to managing the ui slice of state.  It's definitely recommended you use the original project instructions to help you through that phase._
 
 Remember: this app will not function properly until redux is fully rebuilt.  Use ```getState()``` on the window to keep track of your state shape as you're building until you can interact with the app again.  
 
