@@ -1,3 +1,41 @@
+# Question \#1
+## Find Missing Number
+
+You are given an **unsorted** array, and are told that this array contains (n - 1) of n consecutive numbers (where the bounds are defined). Write a method, `findMissingNumber`, that finds the missing number in `O(N)` time
+
+**Example:**
+```js
+// arrayOfIntegers: [2, 5, 1, 4, 9, 6, 3, 7];
+// upperBound: 9;
+// lowerBound: 1;
+
+findMissingNumber(arrayOfIntegers, upperBound, lowerBound); // Output: 8
+```
+
+## Solution
+
+```js
+function findMissingNumber(array, upperBound, lowerBound) {
+  // Iterate through array to find the sum of the numbers
+  let sumOfIntegers = 0;
+  for (let i = 0; i < array.length; i++) {
+    sumOfIntegers += array[i];
+  }
+
+  // Find theoretical sum of the consecutive numbers using a variation of Gauss Sum.
+  // Formula: [(N * (N + 1)) / 2] - [(M * (M - 1)) / 2];
+  // N is the upper bound and M is the lower bound
+
+  const upperLimitSum = (upperBound * (upperBound + 1)) / 2;
+  const lowerLimitSum = (lowerBound * (lowerBound - 1)) / 2;
+
+  const theoreticalSum = upperLimitSum - lowerLimitSum;
+
+  return theoreticalSum - sumOfIntegers;
+}
+```
+
+# Question \#2
 ## Magic Index
 
 The `magic index` of an array occurs when the element at that index is the same as the index itself. More simply, the magic index is when `array[i] === i`. Write a **recursive** method, `findMagicIndex`, that takes in an array and returns the `index` that is the magic index. **The method must take `O(logN)` time and `O(logN)` space.**
