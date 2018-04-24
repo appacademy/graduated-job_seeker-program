@@ -69,3 +69,51 @@ function checksum(matrix) {
   return totalSum;
 }
 ```
+
+# Question \#3
+## Queues From Stacks
+
+Implement a Queue using two Stacks. Assume you already have a `Stack` class with the appropriate methods: `push`, `pop`, `peek`, `isEmpty`, and `size`. Create a class, `StackQueue`, that implements this.
+
+**Constraints:**
+
+* `enqueue`: `O(1)`
+* `dequeue:` `O(N)`, but `O(1)` amortized
+
+## Solution
+
+**Overview:**
+* We instantiate our `StackQueue` with two stacks, left and right.
+* The goal is to **always** dequeue from the right stack, and always enqueue on the left stack
+* If the right stack is empty, that means we have to flip the left stack into the right one
+  * We can implement a helper method, `flipStacks`, that calls pops every element from the left stack _onto_ the right stack until the left stack is empty  
+
+```js
+class StackQueue {
+  constructor() {
+    this.leftStack = new Stack();
+    this.rightStack = new Stack();
+  }
+
+  flipStacks() {
+    while (!this.leftStack.isEmpty()) {
+      this.rightStack.push(this.leftStack.pop());
+    }
+  }
+
+  enqueue(data) {
+    this.leftStack.push(data);
+  }
+
+  dequeue() {
+    if (this.rightStack.isEmpty())
+      this.flipStacks();
+
+    return this.rightStack.pop();
+  }
+}
+```
+
+**Takeaway Question:**
+* What is amortization? Why does the `dequeue` method _amortize_ to `O(1)`?
+> Amortization means that, over time, our `dequeue` method will **average out** to be `O(1)`. This happens because, even though `flipStacks` is `O(N)`, it gives us `N` free `O(1)` operations. 
