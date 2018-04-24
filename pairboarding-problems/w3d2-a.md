@@ -26,3 +26,46 @@ function sillySum(digits) {
   return sum;
 }
 ```
+
+# Question \#2
+## Checksum
+
+You are given a 2D array of random integers. Your goal is to calculate the `checksum` of these integers. For each row, determine the difference between the largest value and the smallest value; the checksum is the sum of all these differences.
+
+**Examples:**
+
+```
+[
+ [5, 1, 9, 5],
+ [7, 3],
+ [2, 6, 8]
+]
+```
+
+* The first row's largest and smallest values are `9` and `1`, and their difference is `8`
+* The second row's largest and smallest values are `7` and `3`, and their difference is `4`
+* The third row's difference is `6`
+
+**This method should take `O(N * K)` time, where N is the number if integers in each row, and K is the number of rows. It should take O(1) extra space**
+
+## Solution
+
+```js
+
+function checksum(matrix) {
+  let totalSum = 0;
+
+  matrix.forEach(row => {
+    let min = row[0], max = row[0];
+
+    row.forEach(int => {
+      if (int < min) min = int;
+      if (int > max) max = int;
+    })
+
+    totalSum += max - min;
+  })
+
+  return totalSum;
+}
+```
