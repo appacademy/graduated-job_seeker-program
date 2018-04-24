@@ -4,6 +4,7 @@
 * Online Networking (11:00 - 12:00)
 * Lunch (12:00 - 1:00)
 * Redux Pattern Practical (1:00 - 3:00)
+  * [Bench BnB Redux!](https://github.com/appacademy/graduated-job_seeker-program/blob/master/projects/bench_bnb_redux)
 * Application Sprint (3:00 - 5:00)
 
 ## Day Two

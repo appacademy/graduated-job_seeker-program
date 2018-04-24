@@ -31,6 +31,9 @@ isBST(NULL)
 Output: True
 ```
 
+Keep in mind, an empty Binary Search Tree is still a valid Binary Search Tree. `isBST(null)` should return `true`.
+
+
 ### Common Mistake
 
 A very common solution to this algorithm is to write a method that, for each node, checks if the right node is greater and the left node is smaller. That might look something like this:
@@ -51,7 +54,7 @@ function isBST(root) {
   return isBST(root.left) && isBST(root.right);
 }
 ```
-> **If your partner starts with this intuition, let them follow it, and then ask them if they see how it could go wrong**
+**If your partner starts with this intuition, let them follow it. Ask them if they see anything wrong with this approach. If they still can't see it, draw out an example of an invalid tree that would pass as valid (see below).**
 
 At first, this makes sense intuitively. The issue is that this method would return true for the following Binary Tree:
 ```
@@ -84,9 +87,9 @@ function isBST(node) {
 }
 ```
 
-This method assumes that we have two helper functions, `maxValue` and `minValue`, that just return the max and minimum values in the subtree of a given node.
+This method assumes that we have two helper functions, `maxValue` and `minValue`, that return the maximum and minimum values in the subtree of a given node.
 
-While this method would work, it is still extremely inefficient. Calling `maxValue` and `minValue` for every single node makes this implementation `O(n * log(n))`.
+While this method would work, it is not the most efficient solution. Calling `maxValue` and `minValue` for every single node makes this implementation `O(n * log(n))`.
 How can we do better?
 
 ### Method \#3 (Improved)
