@@ -1,12 +1,12 @@
 # Question \#1
 ## Silly Sum
 
-Write a method, `sillySum`, that takes in a sequence of digits as a string and returns the sum of all digits that match the **_next_** digit in the list. The list is "circular", so the digit after the last digit is the **first* digit in the list.
+Write a method, `sillySum`, that takes in a sequence of digits as a string and returns the sum of all digits that match the **_next_** digit in the list. The list is "circular", so the digit after the last digit is the *first* digit in the list.
 
 **Examples:**
 
 - `1122` produces a sum of `3` (`1` + `2`) because the first digit (`1`) matches the second digit and the third digit (`2`) matches the fourth digit.
-- `1111` produces `4` because each digit (all `1`) matches the fourth digit.
+- `1111` produces `4` because each digit (all `1`) matches the next digit.
 - `1234` produces `0` because no digit matches the next.
 - `91212129` produces `9` because the only digit that matches the next one is the last digit, `9`.
 
@@ -116,4 +116,4 @@ class StackQueue {
 
 **Takeaway Question:**
 * What is amortization? Why does the `dequeue` method _amortize_ to `O(1)`?
-> Amortization means that, over time, our `dequeue` method will **average out** to be `O(1)`. This happens because, even though `flipStacks` is `O(N)`, it gives us `N` free `O(1)` operations. 
+> Amortization means that, over time, our `dequeue` method will **average out** to be `O(1)`. This happens because, even though `flipStacks` is `O(N)`, it gives us `N` free `O(1)` operations.
