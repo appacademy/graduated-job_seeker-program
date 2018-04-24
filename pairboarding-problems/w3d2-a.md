@@ -74,7 +74,7 @@ function checksum(matrix) {
 # Question \#3
 ## Queues From Stacks
 
-Implement a Queue using two Stacks. Assume you already have a `Stack` class with the appropriate methods: `push`, `pop`, `peek`, `isEmpty`, and `size`. Create a class, `StackQueue`, that implements this.
+Implement a Queue using two Stacks. Assume you already have a `Stack` class with the appropriate methods: `push`, `pop`, `peek`, `isEmpty`, and `size`. Create a class, `StackQueue`, that implements this. Your `StackQueue` should function through two primary methods, `enqueue` and `dequeue`. However, feel free to write any additional helper methods that you see fit.
 
 **Constraints:**
 
