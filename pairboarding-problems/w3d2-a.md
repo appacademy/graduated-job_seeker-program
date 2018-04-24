@@ -45,6 +45,7 @@ You are given a 2D array of random integers. Your goal is to calculate the `chec
 * The first row's largest and smallest values are `9` and `1`, and their difference is `8`
 * The second row's largest and smallest values are `7` and `3`, and their difference is `4`
 * The third row's difference is `6`
+* The total `checksum` of this input would be `8 + 4 + 6 = 18`
 
 **This method should take `O(N * K)` time, where N is the number if integers in each row, and K is the number of rows. It should take O(1) extra space**
 
