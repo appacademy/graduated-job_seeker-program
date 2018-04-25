@@ -65,7 +65,7 @@ function sayHello() {
 
 * [How can you change the direction of html text?](#how-can-you-change-the-direction-of-html-text)
 * [How do you highlight text in html?](#how-can-you-highlight-text-in-html)
-* [How can you apply css to only part of an html document](#can-you-apply-css-to-a-part-of-html-document-only)
+* [Which of these executes first: ```document.onload``` or ```window.onload``` ?](#which-of-these-executes-first)
 * [Does margin-top or margin-bottom effect inline elements?](#does-margin-top-or-margin-bottom-effect-inline-elements)
 * [What is position relative?](#what-is-position-relative)
 * [Name three pseudo selectors](#name-three-pseudo-selectors)
@@ -275,9 +275,9 @@ function foo2()
 
 [Back to Round Two qs](#round-two)
 
-##### Can you apply css to a part of html document only?
+##### Which of these executes first
 
-* Yes. by using "scoped" in the style tag. [MDN reference.](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style)
+* ```document.onload``` executes first
 
 [Back to Round Two qs](#round-two)
 
