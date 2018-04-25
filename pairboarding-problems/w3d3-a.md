@@ -18,7 +18,7 @@ maxOfThree([1, -4, 3, -6, 7, 0]) // Output: 168
 
 ## Naive Solution (Not Accepted)
 
-One naive solution would be `O(n^3)` time and `O(1)` space. That may look something like this:
+One naive solution would be `O(n^3)` time and `O(1)` space. It involves simply doing 3 nested loops and checking every possibly combination of 3 numbers. That may look something like this:
 
 ```js
 function maxOfThree(arr) {
