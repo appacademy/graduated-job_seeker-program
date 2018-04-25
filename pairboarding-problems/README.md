@@ -28,6 +28,10 @@
 * [Student A](./w3d2-a.md)
 * [Student B](./w3d2-b.md)
 
+### Week 3, Day 3
+* [Student A](./w3d3-a.md)
+* [Student B](./w3d3-b.md)
+
 ### Week 3, Day 4
 * [Student A](./w3d4-a.md)
 * [Student B](./w3d4-b.md)
