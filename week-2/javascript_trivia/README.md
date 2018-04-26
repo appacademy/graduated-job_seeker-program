@@ -43,7 +43,7 @@ _click on the question to navigate to its' answer.  Click on the "back to" link 
 
 * [What is position static?](#what-is-position-static)
 
-* [Is there implicit function return in JavaScript?](#implicit-return-in-JavaScript)
+* [Is there implicit function return in JavaScript?](#implicit-return-in-javajcript)
 
 * [What are the 7 "falsey" values in JavaScript?](#what-are-the-7-falsey-values-in-javascript)
 
@@ -230,7 +230,7 @@ function foo2()
 
 [Back to Round One qs](#round-one)
 
-##### Implicit Return in JavaScript
+##### Implicit return in JavaScript
 
 * Yes, via one line big arrow functions or big arrow functions that wrap their block in parentheses.  
 
