@@ -139,7 +139,6 @@ _click on the question to navigate to its' answer.  Click on the "back to" link 
 * [What is position fixed?](#what-is-position-fixed)
 
 * [What are the differences between == and ===?](#equal)
-* [How could you run event handler in the capturing phase not in bubble phase?](#how-could-you-run-event-handler-in-the-capturing-phase-not-in-bubble-phase)
 * [If you create a function that takes 2 arguments, but invoke it with 3 arguments, how can you access the third variable?](#args)
 * [What is a potential pitfall with using typeof bar === "object" to determine if bar is an object? How can this pitfall be avoided?](#typeof)
 * [What is NaN? What is its type? How can you reliably test if a value is equal to NaN?](#nan)
@@ -165,6 +164,7 @@ _click on the question to navigate to its' answer.  Click on the "back to" link 
 * [How would you differentiate div, section, and article?](#how-would-you-differentiate-div-section-and-article)
 * [What is the difference between a canvas element and an SVG?](#what-is-the-difference-between-a-canvas-element-and-an-svg)
 * [What are the differences between div and span?](#what-are-the-differences-between-div-and-span)
+* [How could you run event handler in the capturing phase not in bubble phase?](#how-could-you-run-event-handler-in-the-capturing-phase-not-in-bubble-phase)
 * [Why can we call methods on certain primitive datatypes?](#why-can-we-call-methods-on-certain-primitive-datatypes)
 * [What is the "this"/context when invoking a function in each of the three possible ways in JS?](#this-context)
 * [Define the Temporal DeadZone](#dead-zone)
