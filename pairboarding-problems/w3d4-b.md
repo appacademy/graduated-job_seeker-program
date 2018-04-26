@@ -4,7 +4,7 @@
 * Tell me about a time you had to work on several projects at once. How did you handle this?
 * Give an example of a time when you didn’t agree with other programmer. Did you stand up for something that you believed was right?
 
-## Easy
+## Question 1
 ### Reverse a Linked List
 
 You are given the pointer to the head node of a linked list. Your goal is to reverse this list. A linked list is implemented using just a `Node` class, which you will be given. The `Node` class is defined as:
@@ -50,7 +50,7 @@ function reverse(head) {
 }
 ```
 
-## Medium
+## Question 2
 ### Cycle Detective
 
 A linked list is said to contain a cycle if any node is visited more than once while traversing the list.
