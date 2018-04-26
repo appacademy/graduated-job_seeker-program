@@ -161,6 +161,24 @@ function foo2()
 * [When you zoom in on your browser and the page gets bigger, what exactly happens?](#zoom)
 * [What is asynchronous programming?](#what-is-asynchronous-programming)
 * [What are the proper keywords for error handling in JavaScript?](#what-are-the-proper-keywords-for-error-handling-in-javascript)
+* [Name two differences between var and let](#var-and-let)
+* [What does ```[] + []``` evaluate to in JS?](#wat)
+* [What does ```"2" + 1``` evaluate to in JS?](#watman)
+* [Name 2 programming paradigms in JS](#paradigms)
+* [Which of these two is hoisted in JS: Function declaration or Function definition?](#declaration-or-definition)
+* [In JS are strings mutable or immutable?](#mutability)
+* [What are the three ways we can invoke a function in JS?](#invocation)
+* [What is the "this"/context when invoking a function in each of the three possible ways in JS?](#this-context)
+* [What is the difference between scope and context?](#scope-context)
+* [Define the Temporal DeadZone](#dead-zone)
+* [What is the difference between position relative and position absolute?](#css-positions)
+* [What does ORM stand for and name an example?](#orm)
+* [What is {} + {} in JS?](#watwatwat)
+* [What is a Stack and what is a Stack Overflow?](#stacks-on-stacks)
+* [What is the difference between a GET request and a POST request?](#get-post)
+* [What are the three ways to pass params in an http request?](#http-params)
+* [Besides syntax, name one principle difference between an arrow function and normal function in JS.](#fat-arrow)
+* [What is the difference between .call and .apply?](#call-apply)
 
 =====
 
@@ -596,6 +614,102 @@ is read as:
 * Synchronous programming means code is executed sequentially from top-to-bottom, blocking on long-running tasks such as network requests and disk I/O. Asynchronous programming means that the engine runs in an event loop. When a blocking operation is needed, the request is started, and the code keeps running without blocking for the result.
 
 [Back to Round Four qs](#round-four)
+
+##### <a name='what-are-the-proper-keywords-for-error-handling-in-javascript'></a> What are the proper keywords for error handling in JavaScript?
+
+*
+[Back to Round Four qs](#round-four)
+
+##### <a name='var-and-let'></a> Name two differences between var and let
+
+*
+[Back to Round Four qs](#round-four)
+
+##### <a name='wat'></a> What does ```[] + []``` evaluate to in JS?
+
+*
+[Back to Round Four qs](#round-four)
+
+##### <a name='watman'></a> What does ```"2" + 1``` evaluate to in JS?
+
+*
+[Back to Round Four qs](#round-four)
+
+##### <a name='paradigms'></a> Name 2 programming paradigms in JS
+
+*
+[Back to Round Four qs](#round-four)
+
+##### <a name='declaration-or-definition'></a> Which of these two is hoisted in JS: Function declaration or Function definition?
+
+*
+[Back to Round Four qs](#round-four)
+
+##### <a name='mutability'></a> In JS are strings mutable or immutable?
+
+*
+[Back to Round Four qs](#round-four)
+
+##### <a name='invocation'></a> What are the three ways we can invoke a function in JS?
+
+*
+[Back to Round Four qs](#round-four)
+
+##### <a name='this-context'></a> What is the "this"/context when invoking a function in each of the three possible ways in JS?
+
+*
+[Back to Round Four qs](#round-four)
+
+##### <a name='scope-context'></a> What is the difference between scope and context?
+
+*
+[Back to Round Four qs](#round-four)
+
+##### <a name='dead-zone'></a> Define the Temporal DeadZone
+
+*
+[Back to Round Four qs](#round-four)
+
+##### <a name='css-positions'></a> What is the difference between position relative and position absolute?
+
+*
+[Back to Round Four qs](#round-four)
+
+##### <a name='orm'></a> What does ORM stand for and name an example?
+
+*
+[Back to Round Four qs](#round-four)
+
+##### <a name='watwatwat'></a> What is {} + {} in JS?
+
+*
+[Back to Round Four qs](#round-four)
+
+##### <a name='stacks-on-stacks'></a> What is a Stack and what is a Stack Overflow?
+
+*
+[Back to Round Four qs](#round-four)
+
+##### <a name='get-post'></a> What is the difference between a GET request and a POST request?
+
+*
+[Back to Round Four qs](#round-four)
+
+##### <a name='http-params'></a> What are the three ways to pass params in an http request?
+
+*
+[Back to Round Four qs](#round-four)
+
+##### <a name='fat-arrow'></a> Besides syntax, name one principle difference between an arrow function and normal function in JS.
+
+*
+[Back to Round Four qs](#round-four)
+
+##### <a name='call-apply'></a> What is the difference between .call and .apply?
+
+*
+[Back to Round Four qs](#round-four)
+
 
 =====
 
