@@ -43,9 +43,9 @@ _click on the question to navigate to its' answer.  Click on the "back to" link 
 
 * [What is position static?](#what-is-position-static)
 
-* [How can you apply css rules specific to media/screen-size?](#how-can-you-apply-css-rules-specific-to-media/scree-size)
+* [Is there implicit function return in JavaScript?](#implicit-return-in-JavaScript)
 
-* [What are the 7 "falsey" values in javascript?](#what-are-the-7-falsey-values-in-javascript)
+* [What are the 7 "falsey" values in JavaScript?](#what-are-the-7-falsey-values-in-javascript)
 
 * [What is a primitive datatype in Javascript?](#what-is-a-primitive-datatype-in-javascript)
 * [Consider the following expression: `var y = 1, x = y = typeof x`. What will be the value of x?](#value-of-x)
@@ -229,6 +229,10 @@ function foo2()
 * The default position value for an html element.  Not relative, absolute, fixed, or sticky.
 
 [Back to Round One qs](#round-one)
+
+##### Implicit Return in JavaScript
+
+* Yes, via one line big arrow functions or big arrow functions that wrap their block in parentheses.  
 
 ##### How can you apply css rules specific to media/screen-size?
 
