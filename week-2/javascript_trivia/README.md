@@ -8,21 +8,23 @@ Technical trivia is a huge part of the interview process.  Both phone screens an
 
 Whenever we are answering technical questions, we should always keep the following in mind:
 
-* **Simple and concise answers:** There's no need to go in depth.  Try to keep your answers in one sentence.  If the interviewer wants you to go more into depth, they will ask you to.
-* **Examples:** In some cases, a single sentence isn't enough, or perhaps your understanding of a concept isn't 100%.  In those cases use an example of whatever the answer is to the question, but try to keep the example in as few sentences as possible. as well.
+* **Simple and concise answers:** There's no need to go in depth.  Try to keep your answers to one sentence.  If the interviewer wants you to go more into depth, they will ask you to.
+* **Examples:** In some cases, a single sentence isn't enough, or perhaps your understanding of a concept isn't 100%.  In those cases use an example of whatever the answer is to the question, but try to keep the example in as few sentences as possible as well.
 * **Be honest:** Do not try to answer if you know you do not have the answer. Dead air when you are grasping for an answer (especially over the phone) is never helpful. State confidently that you are not familiar with the answer and let the process continue.
 * **KEEP STUDYING!** At the end of the day, the only sure fire way to get better is to keep studying.  We can never know all the answers, but we can always learn more.
 
 ## Instructions:
 
-* Groups of three will ask one another trivia in four rounds.  
+For today's technical trivia event:
+
+* Groups of three will ask one another trivia in three rounds.
 * for each round:
   * One person will ask the questions
   * One person will answer the questions
-  * One person will be score keeper, keeping track of how many answers are correct and the time. Correct answers are at the score keeper's discretion.
-* Answerers will have a maximum of ten minutes to answer as many questions as they can.
-* After the first three rounds, the two participants with the highest scores will take turns answering trivia Spelling-Bee style while the other participant asks the questions.  
-* If one player misses a question, the other player has the opportunity to answer.  If the second player answers correctly, they are the winner!  
+  * One person will be score keeper, keeping track of how many answers are correct. Correct answers are at the score keeper's discretion.
+  * Answerers will have a maximum of 8 minutes to answer as many questions as they can. The person asking the questions will monitor time.
+* After the first three rounds, the participants from each group with the highest score will take turns answering trivia Spelling-Bee style while the moderator asks them questions one by one.  
+* If a player cannot answer their question or answers incorrectly they will be disqualified.  If there are only two participants left, and a participant cannot answer their question, the same question will be asked to the other participant.  If neither can answer the question, both will stay in the game and a new question will be asked.
 * Questions are asked until a winner is declared.
 * Questions are different for each round and will vary in difficulty.
 
@@ -30,6 +32,8 @@ Whenever we are answering technical questions, we should always keep the followi
 ***_NB_**: _This is just a sample of some common technical trivia questions. The reality is there's no knowing what trivia might be asked, so it's important to maintain your study habits on practical coding._   
 
 ## Round One
+
+_click on the question to navigate to its' answer.  Click on the "back too" link from the answer to return to the questions_
 
 * [Why do you need doctype?](#why-do-you-need-doctype)
 * [What is the use of data-* attribute?](#what-is-the-use-of-the-data--attribute)
@@ -63,6 +67,8 @@ function sayHello() {
 
 ## Round Two
 
+_click on the question to navigate to its' answer.  Click on the "back too" link from the answer to return to the questions_
+
 * [How can you change the direction of html text?](#how-can-you-change-the-direction-of-html-text)
 * [How do you highlight text in html?](#how-can-you-highlight-text-in-html)
 * [Which of these executes first: ```document.onload``` or ```window.onload``` ?](#which-of-these-executes-first)
@@ -81,6 +87,8 @@ function sayHello() {
 
 
 ## Round Three
+
+_click on the question to navigate to its' answer.  Click on the "back too" link from the answer to return to the questions_
 
 * [Will the browser make an http request for the following case?](#will-the-browser-make-an-http-request-for-the-following-case)
   ```HTML
@@ -126,6 +134,8 @@ counter();
 
 ## Round Four
 
+_click on the question to navigate to its' answer.  Click on the "back too" link from the answer to return to the questions_
+
 * [What are the differences between div and span?](#what-are-the-differences-between-div-and-span)
 * [How would you differentiate div, section, and article?](#how-would-you-differentiate-div-section-and-article)
 * [What is the difference between a canvas element and an SVG?](#what-is-the-difference-between-a-canvas-element-and-an-svg)
@@ -165,7 +175,7 @@ function foo2()
 * [What does ```[] + []``` evaluate to in JS?](#wat)
 * [What does ```"2" + 1``` evaluate to in JS?](#watman)
 * [Name 2 programming paradigms in JS](#paradigms)
-* [Which of these two is hoisted in JS: Function declaration or Function definition?](#declaration-or-definition)
+* [Which of these two is hoisted in JS: Function declaration or Function expression?](#declaration-or-expression)
 * [In JS are strings mutable or immutable?](#mutability)
 * [What are the three ways we can invoke a function in JS?](#invocation)
 * [What is the "this"/context when invoking a function in each of the three possible ways in JS?](#this-context)
@@ -617,97 +627,116 @@ is read as:
 
 ##### <a name='what-are-the-proper-keywords-for-error-handling-in-javascript'></a> What are the proper keywords for error handling in JavaScript?
 
-*
+* ```try``` and ```catch```
+
 [Back to Round Four qs](#round-four)
 
 ##### <a name='var-and-let'></a> Name two differences between var and let
 
-*
+*```var``` is globally scoped and returns undefined before it is declared.  ```let``` is block scoped and throws an error if accessed before it is defined.
+
 [Back to Round Four qs](#round-four)
 
 ##### <a name='wat'></a> What does ```[] + []``` evaluate to in JS?
 
-*
+* "", empty string
+
 [Back to Round Four qs](#round-four)
 
 ##### <a name='watman'></a> What does ```"2" + 1``` evaluate to in JS?
 
-*
+* "21"
+
 [Back to Round Four qs](#round-four)
 
 ##### <a name='paradigms'></a> Name 2 programming paradigms in JS
 
-*
+* OOP, functional programming, also imperative
+
 [Back to Round Four qs](#round-four)
 
-##### <a name='declaration-or-definition'></a> Which of these two is hoisted in JS: Function declaration or Function definition?
+##### <a name='declaration-or-expression'></a> Which of these two is hoisted in JS: Function declaration or Function expression?
 
-*
+* Function declaration
+
 [Back to Round Four qs](#round-four)
 
 ##### <a name='mutability'></a> In JS are strings mutable or immutable?
 
-*
+* immutable
+
 [Back to Round Four qs](#round-four)
 
 ##### <a name='invocation'></a> What are the three ways we can invoke a function in JS?
 
-*
+* Function style, method style, constructor style
+
 [Back to Round Four qs](#round-four)
 
 ##### <a name='this-context'></a> What is the "this"/context when invoking a function in each of the three possible ways in JS?
 
-*
+* Function: the global environment("window"), Constructor: The instance of the object, Method: the object the function is being called on.
+
 [Back to Round Four qs](#round-four)
 
 ##### <a name='scope-context'></a> What is the difference between scope and context?
 
-*
+* Scope is the lexical environment of the code/function("block scoped, function scoped, globally scoped") while context is to what the invoked function 'belongs' or what the function is being called upon, referred to as "this".
+
 [Back to Round Four qs](#round-four)
 
 ##### <a name='dead-zone'></a> Define the Temporal DeadZone
 
-*
+* The time between the hoisting of a variable and the variables assignment in the code. When var returns undefined and when let and const return Errors
+
 [Back to Round Four qs](#round-four)
 
 ##### <a name='css-positions'></a> What is the difference between position relative and position absolute?
 
-*
+*  Position relative places an element on the page in relation to its' normal position in the flow of the document, keeping the element within the flow of the document. The element can then be offset using 'top', 'bottom', 'left', or 'right' css properties.  Position absolute places the element in relation to it's closest non-static ancestor and removes the element from the normal flow of the document. The same css properties can move the element around the page.
+
 [Back to Round Four qs](#round-four)
 
 ##### <a name='orm'></a> What does ORM stand for and name an example?
 
-*
+* Object Relational Mapping.  Ex: ActiveRecord, Mongoose
+
 [Back to Round Four qs](#round-four)
 
 ##### <a name='watwatwat'></a> What is {} + {} in JS?
 
-*
+* NaN
+
 [Back to Round Four qs](#round-four)
 
 ##### <a name='stacks-on-stacks'></a> What is a Stack and what is a Stack Overflow?
 
-*
+* A stack is an abstract data type that follows a first-in; last-out model.  Stacks are made up of stack frames that can be placed on the top of the stack, then popped off the top of the stack, like a pile of trays.  A stack overflow is when the number of stack frames on the stack reaches a predetermined limit and execution of stack frames is stopped to prevent infinitely processed operations.
+
 [Back to Round Four qs](#round-four)
 
 ##### <a name='get-post'></a> What is the difference between a GET request and a POST request?
 
-*
+* A GET request requests information to be displayed on the client side from the DB.  A POST request uploads data to be inserted into the DB.
+
 [Back to Round Four qs](#round-four)
 
 ##### <a name='http-params'></a> What are the three ways to pass params in an http request?
 
-*
+* In the URL, In the Query String, or in the body of the request
+
 [Back to Round Four qs](#round-four)
 
 ##### <a name='fat-arrow'></a> Besides syntax, name one principle difference between an arrow function and normal function in JS.
 
-*
+* Either implicit return in one line signatures, or auto-binding of context from function declaration.
+
 [Back to Round Four qs](#round-four)
 
 ##### <a name='call-apply'></a> What is the difference between .call and .apply?
 
-*
+* ```.call``` allows you to bind context while passing individual arguments to the function.  ```.apply``` allows you to bind context and pass in an array of arguments.
+
 [Back to Round Four qs](#round-four)
 
 
