@@ -341,7 +341,7 @@ console.log(sum3(1)(2)(3)) // 6
 
 ```
 
-Although this tool might be difficult to think about practically, we've actually been using currying whenever we make container components!
+Although this tool might be difficult to think about practically, we've actually been using currying whenever we make container components using React and Redux!
 
 ```JavaScript
 export default connect(mapStateToProps)(TodoApp)
