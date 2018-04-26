@@ -11,6 +11,8 @@ JavaScript Event Loop and Asynchronicity
   * 📖 [Event Loop and Async Programming](https://blog.sessionstack.com/how-javascript-works-event-loop-and-the-rise-of-async-programming-5-ways-to-better-coding-with-2f077c4438b5)
   * 📖 [JavaScript Closures with Ease](http://javascriptissexy.com/understand-javascript-closures-with-ease/)
   * 📖 [Parallel vs Concurrent](https://bytearcher.com/articles/parallel-vs-concurrent/)
+  * 📖 [Hoisting from MDN](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting)
+
 ---
 ## How do we talk about JavaScript?
 
@@ -312,5 +314,36 @@ The second example works as expected because even though the variable is declare
 _**NB:**_ Always default to using ```const```.  If you learn later that you need your variable to change/update, switch it to a ```let```.  If for whatever reason that doesn't work for you, then move on to a ```var```, but, if everything is scoped properly, you shouldn't need to.  
 
 
+### Currying
 
-## Now it's time for [Technical Trivia!](https://github.com/appacademy/graduated-job_seeker-program/tree/master/week-2/javascript_trivia)
+Named after Haskell Brooks Curry, currying is the process of breaking down a function into a series of functions that each take a single argument.
+
+This is the non-curried version of a function ```sum3``` that takes in three numbers and returns the sum of those numbers:
+```JavaScript
+function sum3(x, y, z) {
+  return x + y + z;
+}
+console.log(sum3(1, 2, 3) // 6
+
+```
+
+and here is the curried version:
+
+```JavaScript
+function sum3(x) {
+  return (y) => {
+    return (z) => {
+      return x + y + z;
+    };
+  };
+}
+console.log(sum3(1)(2)(3)) // 6
+
+```
+
+Although this tool might be difficult to think about practically, we've actually been using currying whenever we make container components!
+
+```JavaScript
+export default connect(mapStateToProps)(TodoApp)
+
+```
