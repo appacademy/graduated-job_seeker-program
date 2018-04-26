@@ -250,7 +250,7 @@ both are completely valid and usable blocks of code, but the async/await version
 
 Hoisting is JavaScript's default behavior of moving all _declarations_ (not initializations or assignments) to the top of the current scope (ie: current script or function).  
 
-##### Functions
+#### Functions
 
 Function declarations are hoisted with their signatures to the top of their scope, making them immediately available to use before their definitions in your script:
 
@@ -283,7 +283,7 @@ The result of the code above is: Uncaught TypeError: catName is not a function"
 
 
 
-##### Variables
+#### Variables
 Variable declarations are hoisted to the top of their scope, but they remain undefined until they are assigned:
 
 ```JavaScript
@@ -304,7 +304,7 @@ The first example prints undefined because even though we have access to the var
 
 The second example works as expected because even though the variable is declared beneath the invocation of console.log, that declaration is hoisted to the top of the scope.  The variable is then assigned before it is passed to console.log.
 
-##### ```var```, ```let```, and ```const```
+#### ```var```, ```let```, and ```const```
 
 ```var```, ```let```, and ```const``` are all hoisted in JavaScript, but there are two key differences in their behavior:
 * ```var``` is globally scoped to its' lexical environment.  This means it is hoisted to the top of (and accessible to) anything within the scope in which it was declared (globally, the function, etc.). ```let``` and ```const``` are block scoped. They are only hoisted to the top of the block in which they are defined.
