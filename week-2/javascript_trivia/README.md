@@ -33,7 +33,7 @@ For today's technical trivia event:
 
 ## Round One
 
-_click on the question to navigate to its' answer.  Click on the "back too" link from the answer to return to the questions_
+_click on the question to navigate to its' answer.  Click on the "back to" link from the answer to return to the questions_
 
 * [Why do you need doctype?](#why-do-you-need-doctype)
 * [What is the use of data-* attribute?](#what-is-the-use-of-the-data--attribute)
@@ -67,7 +67,7 @@ function sayHello() {
 
 ## Round Two
 
-_click on the question to navigate to its' answer.  Click on the "back too" link from the answer to return to the questions_
+_click on the question to navigate to its' answer.  Click on the "back to" link from the answer to return to the questions_
 
 * [How can you change the direction of html text?](#how-can-you-change-the-direction-of-html-text)
 * [How do you highlight text in html?](#how-can-you-highlight-text-in-html)
@@ -88,7 +88,7 @@ _click on the question to navigate to its' answer.  Click on the "back too" link
 
 ## Round Three
 
-_click on the question to navigate to its' answer.  Click on the "back too" link from the answer to return to the questions_
+_click on the question to navigate to its' answer.  Click on the "back to" link from the answer to return to the questions_
 
 * [Will the browser make an http request for the following case?](#will-the-browser-make-an-http-request-for-the-following-case)
   ```HTML
@@ -134,7 +134,7 @@ counter();
 
 ## Round Four
 
-_click on the question to navigate to its' answer.  Click on the "back too" link from the answer to return to the questions_
+_click on the question to navigate to its' answer.  Click on the "back to" link from the answer to return to the questions_
 
 * [What are the differences between div and span?](#what-are-the-differences-between-div-and-span)
 * [How would you differentiate div, section, and article?](#how-would-you-differentiate-div-section-and-article)
