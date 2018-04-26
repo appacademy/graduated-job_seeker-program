@@ -244,4 +244,73 @@ both are completely valid and usable blocks of code, but the async/await version
 
 ```async/await``` is not the perfect solution for every problem, but it is another valuable tool to have when you are building the functionality of your JavaScript code.
 
+### Hoisting:
+
+Hoisting is JavaScript's default behavior of moving all _declarations_ (not initializations or assignments) to the top of the current scope (ie: current script or function).  
+
+##### Functions
+
+Function declarations are hoisted with their signatures to the top of their scope, making them immediately available to use before their definitions in your script:
+
+```JavaScript
+catName("Chloe");
+
+function catName(name) {
+  console.log("My cat's name is " + name);
+}
+/*
+The result of the code above is: "My cat's name is Chloe"
+*/
+
+```
+
+This, however, is only true for function declarations. Function expressions are **NOT** hoisted.
+
+```JavaScript
+catName("Chloe");
+
+var catName = function(name) {
+  console.log("My cat's name is " + name);
+}
+/*
+The result of the code above is: Uncaught TypeError: catName is not a function"
+*/
+
+```
+
+
+
+
+##### Variables
+Variable declarations are hoisted to the top of their scope, but they remain undefined until they are assigned:
+
+```JavaScript
+console.log(num); // Prints undefined
+var num;
+num = 6;
+
+```
+
+```JavaScript
+num = 6;
+console.log(num); // Prints 6
+var num;
+
+```
+
+The first example prints undefined because even though we have access to the variable because it has been hoisted to the top of the scope, the variable has not been initialized/assigned when we invoke console.log. Variables remain undefined until they are assigned in our scripts.
+
+The second example works as expected because even though the variable is declared beneath the invocation of console.log, that declaration is hoisted to the top of the scope.  The variable is then assigned before it is passed to console.log.
+
+##### ```var```, ```let```, and ```const```
+
+```var```, ```let```, and ```const``` are all hoisted in JavaScript, but there are two key differences in their behavior:
+* ```var``` is globally scoped to its' lexical environment.  This means it is hoisted to the top of (and accessible to) anything within the scope in which it was declared (globally, the function, etc.). ```let``` and ```const``` are block scoped. They are only hoisted to the top of the block in which they are defined.
+
+* A variable declared with ```var``` will return ```undefined``` if you attempt to use it before it has been assigned/initialized.  ```let``` and ```const``` variables are designed to throw an error if you attempt to use them before they are assigned/initialized (making it much easier and safer to debug).
+
+_**NB:**_ Always default to using ```const```.  If you learn later that you need your variable to change/update, switch it to a ```let```.  If for whatever reason that doesn't work for you, then move on to a ```var```, but, if everything is scoped properly, you shouldn't need to.  
+
+
+
 ## Now it's time for [Technical Trivia!](https://github.com/appacademy/graduated-job_seeker-program/tree/master/week-2/javascript_trivia)
