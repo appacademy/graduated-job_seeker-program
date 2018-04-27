@@ -75,3 +75,127 @@ You can also get references to the top level node returned by any component's re
 ```ReactDOM.findDOMNode(componentInstance)```
 
 [React.js By Example: Interacting with the DOM](http://jamesknelson.com/react-js-by-example-interacting-with-the-dom/)
+
+## CSS in React
+
+What are the four ways to style React components?
+
+## Solution (inspired by [this Codeburst article](https://codeburst.io/4-four-ways-to-style-react-components-ac6f323da822))
+
+### Import a Stylesheet
+
+```javascript
+import React from 'react';
+import './Style.css';
+
+const SpaceCard = () => (
+  <div className="SpaceCard">
+    <p className="Caption">The universe is under no obligation to make sense to you.</p>
+  </div>
+);
+
+export default SpaceCard;
+```
+
+#### ```Style.css```
+```javascript
+.SpaceCard {
+  padding: 40px;
+  border: 1px solid #030303;
+  background-color: #000;
+}
+
+.Content {
+  font-size: 20px;
+  text-align: center;
+}
+```
+
+### Inline Styling
+
+```javascript
+import React from 'react';
+
+const divStyle = {
+  padding: 40px;
+  border: 1px solid #030303;
+  backgroundColor: #000;
+};
+
+const pStyle = {
+  fontSize: 20px;
+  textAlign: center;
+};
+
+const SpaceCard = () => (
+  <div style={divStyle}>
+    <p style={pStyle}>That's one small step for man, one giant leap for mankind.</p>
+  </div>
+);
+```
+
+### CSS Modules
+
+```javascript
+import React from 'react';
+import styles from './Style.css';
+
+const SpaceCard = () => (
+  <div className={styles.container}>
+    <p className={styles.content}>Make an empty space in any corner of your mind, and creativity will instantly fill it.</p>
+  </div>
+);
+
+export default SpaceCard;
+```
+
+#### ```Style.css```
+```javascript
+ :local(.container) {
+   padding: 40px;
+   border: 1px solid #030303;
+   background-color: #000;
+ }
+ :local(.content) {
+   font-size: 20px;
+   text-align: center;
+ }
+```
+
+To make CSS modules work with webpack, we simply add the following to our webpack.config.js file:
+
+```
+{
+  test: /\.css$/,
+  loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]' 
+}
+```
+
+### Styled-Components
+
+```javascript
+import React from 'react';
+import styled from 'styled-components';
+
+const Div = styled.div`
+  padding: 40px;
+  border: 1px solid #030303;
+  background-color: #000;
+  &:hover {
+   background-color: #4286f4;
+ }
+`;
+
+const Paragraph = styled.p`
+  font-size: 20px;
+  text-align: center;
+`;
+
+const SpaceCard = () => (
+  <Div>
+    <Paragraph>I would like to die on Mars. Just not on impact.</Paragraph>
+  </Div>
+);
+
+export default SpaceCard;
+```
