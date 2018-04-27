@@ -3,7 +3,7 @@
 ## Weak Sauce (1 minute)
 What is your greatest weakness as a software engineer? What are you doing to overcome that weakness?
 
-## Knowledge Question (5 minutes)
+## React Component Lifecycle (5 minutes)
 What happens during the lifecycle of a React component?
 
 ### Solution
@@ -56,103 +56,22 @@ class MyComponent extends React.Component {
 ```
 **For more specific details**, go through [React docs on component lifecycle](https://facebook.github.io/react/docs/react-component.html)
 
-## Whiteboarding Question (40 minutes)
-Given two nodes in a binary tree, design an algorithm that computes their Least Common Ancestor (LCA). Assume that each node has a parent pointer.
+## Using React (10 mins)
+Say that you have an index.html page, what do you you need to do to use React on your site?
 
-For example, given this BST:
-```
-           (A)
-          /   \
-        (B)   (F)
-       /   \
-    (C)    (E)
-    /
-  (D)
-```
-The LCA of `D` and `E` would be `B`.
-
-### Notes for the interviewer
-* Please set a timer for 40 minutes for this problem.
-* If your interviewee comes up with a sub-optimal solution before 40 minutes, then push them to keep working towards the optimal solution until the 40 minutes is up.
-* Be sure to ask about time and space complexity.
-* Bonus: If your interviewee reaches the optimal solution, thoroughly and clearly performs the time/space complexity analysis, and tests the solution before the 40 minutes, consider challenging your interviewee to solve the same problem **assuming that each node DOES NOT have a parent pointer.** In the bonus scenario, assume that the tree is being given as an input.
+What do you need to do with React to interact with elements on the page and how does it do that?
 
 ### Solution
-A brute-force approach is to store the nodes on the search path from the root to one of the nodes in a hash table. This is easily done since we can use the parent field. Then we go up from the second node, stopping as soon as we hit a node in the hash table. The time and space complexity are both O(h), where h is the height of the tree.
+Part A: npm install the correct packages for React and Babel (why?), set up webpack and entry file, OR...use a CDN to just give you the libraries on your HTML page and write your code! [How to add React to a simple HTML file](https://medium.com/@to_pe/how-to-add-react-to-a-simple-html-file-a11511c0235f)
 
-Brute-force solution:
-```ruby
-def lca(node_0, node_1)
-  node_zero_path = {}
+Part B: From within a component class, this.refs gives you an object containing key:value pairs of refs and DOM nodes that you will have created within this class. When you create an HTML element in your code, you can pass it a ref prop.
 
-  while node_0.parent
-    node_zero_path[node_0.parent] = true
-    node_0 = node_0.parent
-  end
+```render: function() { return <input placeholder='Email' ref='email' onFocus={this.onEmailFocus} />; },```
 
-  while node_1
-    shared_ancestor = node_zero_path[node_1.parent]
-    return shared_ancestor if shared_ancestor
-    node_1 = node_1.parent
-  end
+```onEmailFocus: function() { this.refs.email.blur(); }```
 
-  nil
-end
-```
+You can also get references to the top level node returned by any component's render function by calling
 
-We know the two nodes have a common ancestor, namely the root. If the nodes are at the same depth, we can move up the tree in tandem from both nodes, stopping at the first common node, which is the LCA. However, if they are not the same depth, we need to keep the set of traversed nodes to know when we find the first common node. We can circumvent having to store these nodes by ascending from the deeper node to get the same depth as the shallower node, and then performing the tandem upward movement.
+```ReactDOM.findDOMNode(componentInstance)```
 
-For example, given this BST:
-```
-                    A(314)
-                /           \
-            B(6)              I(6)
-          /     \             /    \
-      C(217)    F(561)      J(2)    O(271)
-    /    \            \        \        \
-D(28)   E(0)         G(3)      K(1)      P(28)
-                    /         /    \
-                H(17)       L(401)  N(257)
-                                \
-                              M(641)
-```
-Nodes M and P are depths 5 and 3, respectively. Their search paths are [A, I, J, K, L, M] and [A, I, O, P]. If we ascend to depth 3 from M, we get to K. Now when we move upwards in tandem, the first common node is I, which is the LCA of M and P.
-
-Computing the depth is straightforward since we have the parent field --the time complexity is O(h) and the space complexity is O(1). Once we have the depths, we can perform the tandem move to get the LCA.
-
-```ruby
-def lca(node_0, node_1)
-  depth_0 = get_depth(node_0)
-  depth_1 = get_depth(node_1)
-
-  # Makes node_0 as the deeper node in order to simplify the code.
-  if depth_1 > depth_0
-    node_0, node_1 = node_1, node_0
-  end
-
-  # Ascends from the deeper node.
-  depth_diff = (depth_0 - depth_1).abs
-  while depth_diff
-    node_0 = node_0.parent
-    depth_diff -= 1
-  end
-
-  # Now ascends both nodes until we reach the LCA.
-  while node_0 != node_1
-    node_0 = node_0.parent
-    node_1 = node_1.parent
-  end
-
-  # Return the LCA
-  node_0
-end
-
-def get_depth(node)
-  depth = 0
-  while node
-    depth += 1
-    node = node.parent
-  end
-  depth
-end
-```
+[React.js By Example: Interacting with the DOM](http://jamesknelson.com/react-js-by-example-interacting-with-the-dom/)
