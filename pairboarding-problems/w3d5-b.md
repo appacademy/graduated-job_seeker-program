@@ -80,9 +80,9 @@ You can also get references to the top level node returned by any component's re
 
 What are the four ways to style React components? (10 minutes)
 
-## Solution (inspired by [this Codeburst article](https://codeburst.io/4-four-ways-to-style-react-components-ac6f323da822))
+### Solution (inspired by [this Codeburst article](https://codeburst.io/4-four-ways-to-style-react-components-ac6f323da822))
 
-### Import a Stylesheet
+#### Import a Stylesheet
 
 ```javascript
 import React from 'react';
@@ -97,7 +97,7 @@ const SpaceCard = () => (
 export default SpaceCard;
 ```
 
-#### ```Style.css```
+##### ```Style.css```
 ```javascript
 .SpaceCard {
   padding: 40px;
@@ -111,7 +111,7 @@ export default SpaceCard;
 }
 ```
 
-### Inline Styling
+#### Inline Styling
 
 ```javascript
 import React from 'react';
@@ -134,7 +134,7 @@ const SpaceCard = () => (
 );
 ```
 
-### CSS Modules
+#### CSS Modules
 
 ```javascript
 import React from 'react';
@@ -149,7 +149,7 @@ const SpaceCard = () => (
 export default SpaceCard;
 ```
 
-#### ```Style.css```
+##### ```Style.css```
 ```javascript
  :local(.container) {
    padding: 40px;
@@ -171,7 +171,7 @@ To make CSS modules work with webpack, we simply add the following to our webpac
 }
 ```
 
-### Styled-Components
+#### Styled-Components
 
 ```javascript
 import React from 'react';
