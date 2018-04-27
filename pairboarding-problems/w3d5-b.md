@@ -1,11 +1,9 @@
 # Partner B
 This interview has two questions, a knowledge question and a whiteboarding question.
 
-Please spend no more than 5 minutes in answering the knowledge question and no more than 40 minutes in answering the whiteboarding question. **Set a timer for each part**
+Please spend no more than 5 minutes in answering the knowledge question and no more than 40 minutes in answering the whiteboarding question.
 
-Remember to score them throughout the interview so that you have concrete, constructive feedback at the end during the debrief. Treat this like a real interview!
-
-At the end of the 45 minute interview, spend 5 minutes debriefing.
+At the end of the interview, spend 5 minutes debriefing.
 
 ## Knowledge Question (take no longer than 5 minutes)
 What happens during the lifecycle of a React component?
