@@ -37,6 +37,6 @@
 * React and Inline Styling (9:30 - 11:00)
 * Online Networking (11:00 - 12:00)
 * Lunch (12:00 - 1:00)
-* React Practical (1:00 - 3:00)
+* Pairboarding (1:00 - 3:00)
 * Application Sprint (3:00 - 4:00)
 * Circle Time (4:00 - 4:30)
