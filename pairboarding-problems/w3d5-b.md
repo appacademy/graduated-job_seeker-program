@@ -78,7 +78,7 @@ You can also get references to the top level node returned by any component's re
 
 ## CSS in React
 
-What are the four ways to style React components?
+What are the four ways to style React components? (10 minutes)
 
 ## Solution (inspired by [this Codeburst article](https://codeburst.io/4-four-ways-to-style-react-components-ac6f323da822))
 
