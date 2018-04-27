@@ -129,7 +129,7 @@ const pStyle = {
 
 const SpaceCard = () => (
   <div style={divStyle}>
-    <p style={pStyle}>That's one small step for man, one giant leap for mankind.</p>
+    <p style={pStyle}>That is one small step for man, one giant leap for mankind.</p>
   </div>
 );
 ```
@@ -178,24 +178,23 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Div = styled.div`
-  padding: 40px;
-  border: 1px solid #030303;
-  background-color: #000;
+  margin: 40px;
+  border: 5px outset pink;
   &:hover {
-   background-color: #4286f4;
+   background-color: yellow;
  }
 `;
 
 const Paragraph = styled.p`
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
 `;
 
-const SpaceCard = () => (
+const OutsetBox = () => (
   <Div>
-    <Paragraph>I would like to die on Mars. Just not on impact.</Paragraph>
+    <Paragraph>Get started with styled-components 💅</Paragraph>
   </Div>
 );
 
-export default SpaceCard;
+export default OutsetBox;
 ```
