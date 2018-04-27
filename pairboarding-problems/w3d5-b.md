@@ -178,23 +178,24 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Div = styled.div`
-  margin: 40px;
-  border: 5px outset pink;
+  padding: 40px;
+  border: 1px solid #030303;
+  background-color: #000;
   &:hover {
-   background-color: yellow;
+   background-color: #4286f4;
  }
 `;
 
 const Paragraph = styled.p`
-  font-size: 15px;
+  font-size: 20px;
   text-align: center;
 `;
 
-const OutsetBox = () => (
+const SpaceCard = () => (
   <Div>
-    <Paragraph>Get started with styled-components 💅</Paragraph>
+    <Paragraph>I would like to die on Mars. Just not on impact.</Paragraph>
   </Div>
 );
 
-export default OutsetBox;
+export default SpaceCard;
 ```
