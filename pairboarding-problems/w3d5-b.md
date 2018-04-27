@@ -1,11 +1,9 @@
 # Partner B
-This interview has two questions, a knowledge question and a whiteboarding question.
 
-Please spend no more than 5 minutes in answering the knowledge question and no more than 40 minutes in answering the whiteboarding question.
+## Weak Sauce (1 minute)
+What is your greatest weakness as a software engineer? What are you doing to overcome that weakness?
 
-At the end of the interview, spend 5 minutes debriefing.
-
-## Knowledge Question (take no longer than 5 minutes)
+## Knowledge Question (5 minutes)
 What happens during the lifecycle of a React component?
 
 ### Solution
@@ -58,7 +56,7 @@ class MyComponent extends React.Component {
 ```
 **For more specific details**, go through [React docs on component lifecycle](https://facebook.github.io/react/docs/react-component.html)
 
-## Whiteboarding Question
+## Whiteboarding Question (40 minutes)
 Given two nodes in a binary tree, design an algorithm that computes their Least Common Ancestor (LCA). Assume that each node has a parent pointer.
 
 For example, given this BST:
@@ -77,7 +75,6 @@ The LCA of `D` and `E` would be `B`.
 * Please set a timer for 40 minutes for this problem.
 * If your interviewee comes up with a sub-optimal solution before 40 minutes, then push them to keep working towards the optimal solution until the 40 minutes is up.
 * Be sure to ask about time and space complexity.
-* Don't forget to score them as they go so that you can have specific and constructive feedback to provide during the debrief.
 * Bonus: If your interviewee reaches the optimal solution, thoroughly and clearly performs the time/space complexity analysis, and tests the solution before the 40 minutes, consider challenging your interviewee to solve the same problem **assuming that each node DOES NOT have a parent pointer.** In the bonus scenario, assume that the tree is being given as an input.
 
 ### Solution
