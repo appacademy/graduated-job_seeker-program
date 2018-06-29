@@ -150,47 +150,38 @@ The second loop calculate the maximum increasing height for every building
 
 ```O(N^2)```
 
-```C++
-   int maxIncreaseKeepingSkyline(vector<vector<int>>& grid) {
-        int n = grid.size();
-        vector<int> col(n, 0), row(n, 0);
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                row[i] = max(row[i], grid[i][j]);
-                col[j] = max(col[j], grid[i][j]);
-            }
+```javascript
+const maxIncreaseKeepingSkyline = grid => {
+    const maxXArr = [];
+    const maxYArr = [];
+    const length = grid.length;
+    let maxIncrease = 0;
+    
+    for (let i = 0; i < length; ++i) {
+        let rowMax = 0;
+        let colMax = 0;
+        
+        for (let j = 0; j < length; ++j) {
+            const row = grid[i][j];
+            const col = grid[j][i];
+            
+            rowMax = row > rowMax ? row : rowMax;
+            colMax = col > colMax ? col : colMax;
         }
-        int res = 0;
-        for (int i = 0; i < n; i++)
-            for (int j = 0; j < n; j++)
-                res += min(row[i], col[j]) - grid[i][j];
-        return res;
+        
+        maxXArr.push(rowMax);
+        maxYArr.push(colMax);
     }
-```
-```java
-   public int maxIncreaseKeepingSkyline(int[][] grid) {
-        int n = grid.length;
-        int[] col = new int[n], row = new int[n];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                row[i] = Math.max(row[i], grid[i][j]);
-                col[j] = Math.max(col[j], grid[i][j]);
-            }
-        }
-        int res = 0;
-        for (int i = 0; i < n; i++)
-            for (int j = 0; j < n; j++)
-                res += Math.min(row[i], col[j]) - grid[i][j];
-        return res;
+    
+    for (let i = 0; i < length * length; ++i) {
+        const x = i % length;
+        const y = Math.floor(i / length);
+        
+        const minMaxHeight = Math.min(maxXArr[y], maxYArr[x]);
+        
+        maxIncrease += minHeight - grid[x][y];
     }
-```
-```python
-   class Solution(object):
-    def maxIncreaseKeepingSkyline(self, grid):
-        row_maxes = [max(row) for row in grid]
-        col_maxes = [max(col) for col in zip(*grid)]
-
-        return sum(min(row_maxes[r], col_maxes[c]) - val
-                   for r, row in enumerate(grid)
-                   for c, val in enumerate(row))
+    
+    return maxIncrease;
+};
 ```
