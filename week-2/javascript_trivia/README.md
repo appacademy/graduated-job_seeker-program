@@ -169,12 +169,6 @@ _click on the question to navigate to its' answer.  Click on the "back to" link 
 * [Define the Temporal DeadZone](#dead-zone)
 * [What does ORM stand for and name an example?](#orm)
 * [Consider the following two functions below. Will they both return the same thing? Why or why not?](#twofunctions)
-* [Can you user .forEach on a node list?](#for-each-on-node-list)
-* [Name the two ways you can create a node element](#two-ways)
-* [What is createDocumentFragment?](#document-fragment)
-* [What are repaint and reflow?](#repaint-and-reflow)
-* [How could you capture every click on a page?](#every-click)
-
 ```js
 function foo1()
 {
@@ -191,6 +185,11 @@ function foo2()
   };
 }
 ```
+* [Can you user .forEach on a node list?](#for-each-on-node-list)
+* [Name the two ways you can create a node element](#two-ways)
+* [What is createDocumentFragment?](#document-fragment)
+* [What are repaint and reflow?](#repaint-and-reflow)
+* [How could you capture every click on a page?](#every-click)
 
 
 =====
