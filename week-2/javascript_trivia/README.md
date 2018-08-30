@@ -169,6 +169,7 @@ _click on the question to navigate to its' answer.  Click on the "back to" link 
 * [Define the Temporal DeadZone](#dead-zone)
 * [What does ORM stand for and name an example?](#orm)
 * [Consider the following two functions below. Will they both return the same thing? Why or why not?](#twofunctions)
+* [Can you user .forEach on a node list?](for-each-on-node-list)
 
 ```js
 function foo1()
@@ -742,6 +743,14 @@ is read as:
 * ```.call``` allows you to bind context while passing individual arguments to the function.  ```.apply``` allows you to bind context and pass in an array of arguments.
 
 [Back to Round Four qs](#round-four)
+
+##### <a name='for-each-on-node-list'></a> What is the difference between .call and .apply?
+
+* No - a node list is not an array. You can convert it to an array by using ```Array.from(node-list)``` or ```.splice```
+
+[Back to Round Four qs](#round-four)
+
+
 
 
 =====
