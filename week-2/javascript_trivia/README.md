@@ -171,6 +171,7 @@ _click on the question to navigate to its' answer.  Click on the "back to" link 
 * [Consider the following two functions below. Will they both return the same thing? Why or why not?](#twofunctions)
 * [Can you user .forEach on a node list?](for-each-on-node-list)
 * [Name the two ways you can create a node element](two-ways)
+* [What is createDocumentFragment?](document-fragment)
 
 ```js
 function foo1()
@@ -757,9 +758,11 @@ is read as:
 
 [Back to Round Four qs](#round-four)
 
+##### <a name='document-fragment'></a> What is createDocumentFragment?
 
+* createDocumentFragment is like a mini DOM you can append elements to in order to avoid costly insertions. Once you've appended elements to the fragment, you can append the fragment to a node element and the fragment itself will disappear.
 
-
+[Back to Round Four qs](#round-four)
 
 =====
 
