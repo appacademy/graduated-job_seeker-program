@@ -170,6 +170,7 @@ _click on the question to navigate to its' answer.  Click on the "back to" link 
 * [What does ORM stand for and name an example?](#orm)
 * [Consider the following two functions below. Will they both return the same thing? Why or why not?](#twofunctions)
 * [Can you user .forEach on a node list?](for-each-on-node-list)
+* [Name the two ways you can create a node element](two-ways)
 
 ```js
 function foo1()
@@ -744,11 +745,18 @@ is read as:
 
 [Back to Round Four qs](#round-four)
 
-##### <a name='for-each-on-node-list'></a> What is the difference between .call and .apply?
+##### <a name='for-each-on-node-list'></a> Can you use forEach on a node list?
 
 * No - a node list is not an array. You can convert it to an array by using ```Array.from(node-list)``` or ```.splice```
 
 [Back to Round Four qs](#round-four)
+
+##### <a name='two-ways'></a> Name the two ways you can create a node element
+
+* You can either create a node element using ```document.createElement``` or set the ```innerHTML``` of the parent element.
+
+[Back to Round Four qs](#round-four)
+
 
 
 
