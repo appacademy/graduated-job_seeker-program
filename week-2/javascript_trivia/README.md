@@ -172,6 +172,7 @@ _click on the question to navigate to its' answer.  Click on the "back to" link 
 * [Can you user .forEach on a node list?](for-each-on-node-list)
 * [Name the two ways you can create a node element](two-ways)
 * [What is createDocumentFragment?](document-fragment)
+* [What are repaint and reflow?](repaint-and-reflow)
 
 ```js
 function foo1()
@@ -761,6 +762,12 @@ is read as:
 ##### <a name='document-fragment'></a> What is createDocumentFragment?
 
 * createDocumentFragment is like a mini DOM you can append elements to in order to avoid costly insertions. Once you've appended elements to the fragment, you can append the fragment to a node element and the fragment itself will disappear.
+
+[Back to Round Four qs](#round-four)
+
+##### <a name='repaint-and-reflow'></a> What are repaint and reflow?
+
+* Repaint happens when you change the look of an element without changing the size and shape. Reflow happens when the flow of the elements in the page is changed by the insertion or removal of an element which takes up space.
 
 [Back to Round Four qs](#round-four)
 
