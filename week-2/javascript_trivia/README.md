@@ -39,18 +39,18 @@ _click on the question to navigate to its' answer.  Click on the "back to" link 
 * [What is the use of data-* attribute?](#what-is-the-use-of-the-data--attribute)
 * [What is createDocumentFragment?](#document-fragment)
 * [What does float do?](#what-does-float-do)
-* **[Are CSS properties case sensitive?](#are-css-properties-case-sensitive)**
+* [Are CSS properties case sensitive?](#are-css-properties-case-sensitive)
 
 * [What is position static?](#what-is-position-static)
 
-* **[Is there implicit function return in JavaScript?](#implicit-return-in-javascript)**
+* [Is there implicit function return in JavaScript?](#implicit-return-in-javascript)
 
 * [What are 5 of the 7 "falsey" values in JavaScript?](#what-are-the-7-falsey-values-in-javascript)
 
 * [What is a primitive datatype in Javascript?](#what-is-a-primitive-datatype-in-javascript)
 * [Consider the following expression: `var y = 1, x = y = typeof x`. What will be the value of x?](#value-of-x)
 * [If `const a = 2, b = 3` what would be value of `a && b`?](#a-and-b)
-* **[Does the following code throw a reference error? Why/Why not?](#why-does-the-following-code-work)**
+* [Does the following code throw a reference error? Why/Why not?](#why-does-the-following-code-work)
 
 ```js
 sayHello(); // OUTPUT: "Hello";
@@ -76,14 +76,14 @@ _click on the question to navigate to its' answer.  Click on the "back to" link 
 * [What is position relative?](#what-is-position-relative)
 * [Name three pseudo selectors](#name-three-pseudo-selectors)
 * [Name all six primitive data-types in Javascript](#name-all-six-primitive-data-types-in-javascript)
-* **[What is the difference between `null` and `undefined`?](#what-is-the-difference-between-null-and-undefined)**
-* **[What is the value of `this` inside of a `setTimeout` function?](#what-is-the-value-of-this-inside-of-a-settimeout-function)**
+* [What is the difference between `null` and `undefined`?](#what-is-the-difference-between-null-and-undefined)
+* [What is the value of `this` inside of a `setTimeout` function?](#what-is-the-value-of-this-inside-of-a-settimeout-function)
 * [What is the Value of `this` inside of a constructor function?](#what-is-the-value-of-this-inside-of-a-constructor-function)
 * [What is the Temporal Dead Zone?](#what-is-the-temporal-dead-zone)
 * [Can you directly compare two objects in Javascript?](#can-you-directly-compare-two-objects-in-javascript)
 * [What does the bind method do?](#what-does-bind-do)
 * [What is the difference between window and document?](#what-is-the-difference-between-window-and-document)
-* **[What are two-way data binding and one-way data flow, and how are they different?](#data-binding)**
+* [What are two-way data binding and one-way data flow, and how are they different?](#data-binding)
 
 
 ## Round Three
@@ -140,10 +140,10 @@ _click on the question to navigate to its' answer.  Click on the "back to" link 
 
 * [What are the differences between == and ===?](#equal)
 * [If you create a function that takes 2 arguments, but invoke it with 3 arguments, how can you access the third variable?](#args)
-* **[What is a potential pitfall with using typeof bar === "object" to determine if bar is an object? How can this pitfall be avoided?](#typeof)**
-* **[What is NaN? What is its type? How can you reliably test if a value is equal to NaN?](#nan)**
+* [What is a potential pitfall with using typeof bar === "object" to determine if bar is an object? How can this pitfall be avoided?](#typeof)
+* [What is NaN? What is its type? How can you reliably test if a value is equal to NaN?](#nan)
 * [What is a closure in javascript?](#what-is-a-closure-in-javascript)
-* **[When you zoom in on your browser and the page gets bigger, what exactly happens?](#zoom)**
+* [When you zoom in on your browser and the page gets bigger, what exactly happens?](#zoom)
 * [What is asynchronous programming?](#what-is-asynchronous-programming)
 * [What are the proper keywords for error handling in JavaScript?](#what-are-the-proper-keywords-for-error-handling-in-javascript)
 * [Name two differences between var and let](#var-and-let)
@@ -151,7 +151,7 @@ _click on the question to navigate to its' answer.  Click on the "back to" link 
 * [What does ```"2" + 1``` evaluate to in JS?](#watman)
 * [Name 2 programming paradigms in JS](#paradigms)
 * [Which of these two is hoisted in JS: Function declaration or Function expression?](#declaration-or-expression)
-* **[In JS are strings mutable or immutable?](#mutability)**
+* [In JS are strings mutable or immutable?](#mutability)
 * [What is the difference between scope and context?](#scope-context)
 * [What is the difference between position relative and position absolute?](#css-positions)
 * [What is {} + {} in JS?](#watwatwat)
