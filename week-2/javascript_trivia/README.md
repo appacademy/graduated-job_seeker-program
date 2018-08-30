@@ -190,6 +190,7 @@ function foo2()
 * [What is createDocumentFragment?](#document-fragment)
 * [What are repaint and reflow?](#repaint-and-reflow)
 * [How could you capture every click on a page?](#every-click)
+* [What is the difference between the javascript engine and the JS runtime environment?](#JSRE-vs-SJI)
 
 
 =====
@@ -774,6 +775,13 @@ is read as:
 ##### <a name='every-click'></a> How could you capture every click on a page?
 
 * Just add a click event listener on the body element - each click will be captured during the bubbling phases since the body encapsulates all visible information on a web page.
+
+[Back to Round Four qs](#round-four)
+
+##### <a name='JSRE-vs-SJI'></a> What is the difference between the javascript engine and the JS runtime environment?
+
+* interprets your JS code and turns it into runnable commands.
+* supports your JavaScript by providing it with common objects and ways to communicate with the world outside your code.
 
 [Back to Round Four qs](#round-four)
 
