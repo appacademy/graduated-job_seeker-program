@@ -173,6 +173,7 @@ _click on the question to navigate to its' answer.  Click on the "back to" link 
 * [Name the two ways you can create a node element](two-ways)
 * [What is createDocumentFragment?](document-fragment)
 * [What are repaint and reflow?](repaint-and-reflow)
+* [How could you capture every click on a page?](every-click)
 
 ```js
 function foo1()
@@ -770,6 +771,13 @@ is read as:
 * Repaint happens when you change the look of an element without changing the size and shape. Reflow happens when the flow of the elements in the page is changed by the insertion or removal of an element which takes up space.
 
 [Back to Round Four qs](#round-four)
+
+##### <a name='every-click'></a> How could you capture every click on a page?
+
+* Just add a click event listener on the body element - each click will be captured during the bubbling phases since the body encapsulates all visible information on a web page.
+
+[Back to Round Four qs](#round-four)
+
 
 =====
 
