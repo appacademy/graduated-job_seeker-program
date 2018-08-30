@@ -191,6 +191,7 @@ function foo2()
 * [What are repaint and reflow?](#repaint-and-reflow)
 * [How could you capture every click on a page?](#every-click)
 * [What is the difference between the javascript engine and the JS runtime environment?](#JSRE-vs-SJI)
+* [Is javascript concurrent, parallel or both?](#javascript-concurrent)
 
 
 =====
@@ -785,6 +786,11 @@ is read as:
 
 [Back to Round Four qs](#round-four)
 
+##### <a name='javascript-concurrent'></a> Is javascript concurrent, parallel or both?
+
+* Just concurrent.
+
+[Back to Round Four qs](#round-four)
 
 =====
 
