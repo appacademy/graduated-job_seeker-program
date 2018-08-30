@@ -37,7 +37,7 @@ _click on the question to navigate to its' answer.  Click on the "back to" link 
 
 * [Why do you need doctype?](#why-do-you-need-doctype)
 * [What is the use of data-* attribute?](#what-is-the-use-of-the-data--attribute)
-* **[How can you generate a public key in html?](#how-can-you-generate-a-public-key-in-html)**
+* [What is createDocumentFragment?](#document-fragment)
 * [What does float do?](#what-does-float-do)
 * **[Are CSS properties case sensitive?](#are-css-properties-case-sensitive)**
 
@@ -187,7 +187,6 @@ function foo2()
 ```
 * [Can you user .forEach on a node list?](#for-each-on-node-list)
 * [Name the two ways you can create a node element](#two-ways)
-* [What is createDocumentFragment?](#document-fragment)
 * [What are repaint and reflow?](#repaint-and-reflow)
 * [How could you capture every click on a page?](#every-click)
 * [What is the difference between the javascript engine and the JS runtime environment?](#JSRE-vs-SJI)
@@ -208,12 +207,10 @@ function foo2()
 * It allows you to store extra information/ data in the DOM. You can write valid html with embedded private data. You can easily access the data attribute by using javascript and hence a lot of libraries like knockout use it.
 [Back to Round One qs](#round-one)
 
-##### How can you generate a public key in html?
+##### <a name='document-fragment'></a> What is createDocumentFragment?
 
-*  Html has a keygen element that facilitates generation of a key and submission via a form.
-```html
-<keygen name="name" challenge="challenge string" keytype="type" keyparams="pqg-params">
-```
+* createDocumentFragment is like a mini DOM you can append elements to in order to avoid costly insertions. Once you've appended elements to the fragment, you can append the fragment to a node element and the fragment itself will disappear.
+
 [Back to Round One qs](#round-one)
 
 ##### What does float do?
@@ -758,12 +755,6 @@ is read as:
 ##### <a name='two-ways'></a> Name the two ways you can create a node element
 
 * You can either create a node element using ```document.createElement``` or set the ```innerHTML``` of the parent element.
-
-[Back to Round Four qs](#round-four)
-
-##### <a name='document-fragment'></a> What is createDocumentFragment?
-
-* createDocumentFragment is like a mini DOM you can append elements to in order to avoid costly insertions. Once you've appended elements to the fragment, you can append the fragment to a node element and the fragment itself will disappear.
 
 [Back to Round Four qs](#round-four)
 
