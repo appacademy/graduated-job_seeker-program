@@ -422,7 +422,7 @@ if (true) {
 
 [Back to Round Three qs](#round-three)
 
-##### Does style1.css have to be downloaded before Paragraph 1 is rendered?
+##### <a name='will-the-browser-make-an-http-request-for-the-following-case'></a>Does style1.css have to be downloaded before Paragraph 1 is rendered?
 
 * Yes!
 
