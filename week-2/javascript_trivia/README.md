@@ -94,7 +94,7 @@ _click on the question to navigate to its' answer.  Click on the "back to" link 
   ```HTML
   <img src="mypic.jpg" style="visibility: hidden" alt="My photo">
   ```
-* [Is style1.css downloaded before Paragraph 1 is rendered?](#does-style1.css-have-to-be-downloaded-before-paragraph-1-is-rendered)
+* [Is style1.css downloaded before Paragraph 1 is rendered?](#does-style1css-have-to-be-downloaded-before-paragraph-1-is-rendered)
 ```HTML
 <head>
     <link href="style1.css" rel="stylesheet">
@@ -422,7 +422,7 @@ if (true) {
 
 [Back to Round Three qs](#round-three)
 
-##### <a name='will-the-browser-make-an-http-request-for-the-following-case'></a>Does style1.css have to be downloaded before Paragraph 1 is rendered?
+##### <a name='#does-style1css-have-to-be-downloaded-before-paragraph-1-is-rendered'></a>Does style1.css have to be downloaded before Paragraph 1 is rendered?
 
 * Yes!
 
