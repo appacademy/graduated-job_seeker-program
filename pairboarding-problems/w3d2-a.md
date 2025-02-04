@@ -10,7 +10,7 @@ Write a method, `sillySum`, that takes in a sequence of digits as a string and r
 - `1234` produces `0` because no digit matches the next.
 - `91212129` produces `9` because the only digit that matches the next one is the last digit, `9`.
 
-Your solution should run in `O(logN)` time and take up `O(1)` extra space.
+Your solution should run in `O(N)` time and take up `O(1)` extra space.
 
 ## Solution
 
