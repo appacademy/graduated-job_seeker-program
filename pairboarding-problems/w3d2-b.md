@@ -43,23 +43,23 @@ The `magic index` of an array occurs when the element at that index is the same 
 **Constraints:**
 * The array is sorted
 * The array may have **multiple magic indices**. If this is the case, return the **leftmost** occurance.
-* The elements in the array don't have to be distinct
+* The elements in the array have to be distinct
 * The magic index doesn't always exist; return `-1` if it doesn't exist
 * The array may have negative values
 
 **Examples:**
 
 ```
-a[i]  -4, -2, 2, 6, 6, 6, 6, 10
+a[i]  -4, -2, 2, 4, 5, 6, 7, 10
 i      0,  1, 2, 3, 4, 5, 6, 7
 Result: 2
 
-a[i]  -4 -2  1  6  6  6  6 10
-  i    0  1  2  3  4  5  6  7
+a[i]  -4 -2  -1  0  1  4  6 10
+  i    0  1   2  3  4  5  6  7
 Result: 6
 
-a[i]  -4 -2  1  6  6  6  7 10
-  i    0  1  2  3  4  5  6  7
+a[i]  -4 -2  -1  0  1  2  7 10
+  i    0  1   2  3  4  5  6  7
 Result: -1
 ```
 
@@ -69,59 +69,62 @@ If your partner gets stuck, ask them: What an algorithm can run in `O(logN)` tim
 ## Solution
 
 ```js
-function findMagicIndex(array, start, end) {
-  if (end < start || start < 0 || end >= array.length)
+function findMagicIndex(array, start = 0, end = array.length - 1) {
+  // if the start or end are out of the array bounds,
+  // or the start and end are on the wrong side of each other
+  if (start < 0 || array.length <= end || end < start)
     return -1;
 
-  const mid = Math.floor((start + end) / 2);
+  const index = Math.floor((start + end) / 2);
+  const item = array[index];
 
-  if (mid === array[mid])
-    return mid;
-
-  const leftEnd = Math.min(mid - 1, array[mid]);
-  const leftResult = findMagicIndex(array, start, leftEnd);
-
-  if (leftResult !== -1)
-    return leftResult;
-
-  const rightStart = Math.max(mid + 1, array[mid]);
-  const rightResult = findMagicIndex(array, rightStart, end);
-
-  if (rightResult !== -1)
-    return rightResult;
-
-  return -1;
+  // rule out left or right half
+  // if current index is at or to left of item,
+  // then the magic index cannot be in right half
+  if (index <= item) {
+    // search to the left of index for a magic index
+    const left = findMagicIndex(array, start, index - 1);
+    if (0 <= left) {
+      return left;
+    }
+    if (index === item) {
+      return index;
+    }
+    // magic index cannot be in right half
+    return -1;
+  } else {
+    // magic index must be in right half, if it exists
+    return findMagicIndex(array, index + 1, end);
+  }
 }
 ```
 
 **Explanation:**
 
-We'll use a binary search to split the search space in half on each iteration. To obtain more efficiency, we can do a little better than a naive left and half split.
+We'll use a binary search to split the search space in half on each
+recursion.
 
-In the example below, we see that `i == 5` cannot be the magic index, otherwise a[5] would have to equal 5 (note a[4] == 6).
+For each change of 1 in `index`, `item` must change by at least 1.  If
+`i < array[i]`, then `k < array[k]` for all `i <= k`.  Therefore, `k
+!= array[k]` for all `k >= i`.  The magic index, if it exists, cannot
+be in the right half.
 
-```
-a[i]  -4 -2  2  6  6  6  6 10
-  i    0  1  1  3  4  5  6  7
-                  mid
-```
-
-Similarly, in the example below we can further trim the left search space.
-
-```
-a[i]  -4 -2  2  2  2  6  6 10
-  i    0  1  2  3  4  5  6  7
-                  mid
-```
 Steps:
-* Calculate mid
-* If mid == array[mid], return mid
-* Recurse on the left side of the array
-  * start: 0
-  * end: min(mid-1, array[mid]
-* Recurse on the right side of the array
-  * start: max(mid+1, array[mid]
-  * end: end
+* Check if we hit a contradiction, stop searching and return -1.
+  * `start` or `end` might be out of bounds.
+  * There might be no `index` left to check such that `start <= index
+    <= end`.
+* Calculate current `index` to inspect in the middle of `start` and
+  `end`, and what retrieve the `item` at that `index`.
+* Determine wheter the magic index (if it exists) must be in the left
+  half, or right half.
+  * If it must be in left half,
+    * Look for the left most occurence of a magic index.
+    * If there's a magic index to the left, stop looking and return
+      that
+    * If the current spot is a magic index, return that.
+    * Otherwise, there is no magic index, return -1 to indicate that.
+  * Otherwise, search the right half of the array.
 
 **Complexity:**
 Time: O(log(n))
